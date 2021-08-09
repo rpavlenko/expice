@@ -30,6 +30,11 @@
     line-height: 2.4rem;
     text-align: center;
     color: $blue;
+
+    &:hover {
+      color: $primary-red;
+      transition: color 0.3s;
+    }
   }
 
   .navigationLink:not(:last-child) {
@@ -44,6 +49,7 @@
   border-radius: 1rem;
 
   .userName {
+    display: flex;
     font-style: normal;
     font-weight: normal;
     font-size: 1.6rem;
@@ -52,11 +58,11 @@
   }
 
   .userName::after {
+    display: block;
     content: url('../../images/icons/arrow-down.svg');
     margin-left: 0.7rem;
     width: 1rem;
     height: 0.4rem;
-    vertical-align: super;
   }
 
   .userIcon {

@@ -1,6 +1,8 @@
 @import '../../styles/variables.scss';
 
 .layout {
-  background: $main url('../../images/hero-bg.jpg') no-repeat right top;
+  max-width: 192rem;
   height: 100vh;
+  margin: 0 auto;
+  background: $main url('../../images/hero-bg.jpg') no-repeat right top;
 }
