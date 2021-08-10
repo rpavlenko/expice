@@ -16,8 +16,10 @@ body {
 }
 
 html,
-body {
-  min-height: 100%;
+body,
+#___gatsby,
+#gatsby-focus-wrapper {
+  height: 100%;
 }
 
 img {

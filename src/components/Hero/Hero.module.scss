@@ -1,9 +1,10 @@
 @import '../../styles/variables.scss';
 
 .hero {
+  position: relative;
   display: flex;
   margin-top: -18.5rem;
-  padding-bottom: 9rem;
+  margin-bottom: 9rem;
 
   .heroContent {
     margin-right: 3.85rem;
@@ -38,7 +39,6 @@
       padding-top: 0.9rem;
       padding-bottom: 0.9rem;
       padding-right: 0.6rem;
-      margin-bottom: 17.9rem;
 
       .searchInput {
         flex-grow: 1;
@@ -81,7 +81,8 @@
     }
   }
 
-  .heroImage {
+  .heroSlider {
     max-width: 87.8rem;
+    position: relative;
   }
 }

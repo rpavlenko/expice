@@ -1,8 +1,12 @@
 import { StaticImage } from 'gatsby-plugin-image';
+import SwiperCore, { Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import * as styles from './Hero.module.scss';
 import 'swiper/swiper.scss';
+import 'swiper/components/navigation/navigation.scss';
+
+SwiperCore.use([Navigation]);
 
 export default function Hero() {
   return (
@@ -24,8 +28,13 @@ export default function Hero() {
           </div>
         </div>
         <Swiper
-          className={styles.heroImage}
+          className={styles.heroSlider}
           slidesPerView={1}
+          loop={true}
+          navigation={{
+            prevEl: '.prevSlide',
+            nextEl: '.nextSlide',
+          }}
           onSlideChange={() => console.log('slide change')}
           onSwiper={swiper => console.log(swiper)}
         >
@@ -40,7 +49,7 @@ export default function Hero() {
             <StaticImage
               src="../../images/hero-image.png"
               alt="salad hero image"
-              className={styles.heroImage}
+              className={styles.heroSlider}
             />
           </SwiperSlide>
           <SwiperSlide>
@@ -51,6 +60,8 @@ export default function Hero() {
             />
           </SwiperSlide>
         </Swiper>
+        <button className="prevSlide"></button>
+        <button className="nextSlide"></button>
       </section>
     </>
   );

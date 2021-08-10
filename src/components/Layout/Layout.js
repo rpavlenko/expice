@@ -19,7 +19,6 @@ export default function Layout({ children }) {
 
   return (
     <div className={styles.layout}>
-      {/* <Hero /> */}
       <div className="container">
         <Navbar />
         <div className="content">{children}</div>
