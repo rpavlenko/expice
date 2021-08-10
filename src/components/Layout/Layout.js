@@ -2,6 +2,7 @@ import Navbar from '../Navbar/Navbar';
 import { graphql, useStaticQuery } from 'gatsby';
 import * as styles from './Layout.module.scss';
 import Hero from '../Hero/Hero';
+import CityLabel from '../Label/CityLabel';
 
 export default function Layout({ children }) {
   const data = useStaticQuery(graphql`
@@ -22,10 +23,11 @@ export default function Layout({ children }) {
       <div className="container">
         <Navbar />
         <div className="content">{children}</div>
-        <footer>
-          <p>{copyright}</p>
-        </footer>
       </div>
+      <CityLabel />
+      <footer>
+        <p>{copyright}</p>
+      </footer>
     </div>
   );
 }

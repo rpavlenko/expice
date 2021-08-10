@@ -6,6 +6,7 @@
   align-items: center;
   padding-top: 2rem;
   margin-bottom: 13rem;
+  max-width: 165.2rem;
 
   .link {
     max-width: 24.5rem;
@@ -34,7 +35,8 @@
 
     &:hover {
       color: $primary-red;
-      transition: color 0.3s;
+      border-bottom: 1px solid $primary-red;
+      transition: all 0.1s ease-in-out;
     }
   }
 

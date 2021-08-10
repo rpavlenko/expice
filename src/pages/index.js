@@ -6,7 +6,9 @@ import '../styles/style.sass';
 export default function Home() {
   return (
     <Layout>
+      {/* <div className="container"> */}
       <Hero />
+      {/* </div> */}
     </Layout>
   );
 }
