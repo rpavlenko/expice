@@ -27,8 +27,21 @@
   border: none;
   cursor: pointer;
   z-index: 2;
+  transition: all 0.2s;
 
   &:disabled {
     display: block;
+  }
+}
+
+.prevSlide {
+  &:hover {
+    transform: translate(-10%);
+  }
+}
+
+.nextSlide {
+  &:hover {
+    transform: translate(10%);
   }
 }
