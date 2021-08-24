@@ -1,15 +1,15 @@
 @import '../../styles/variables.scss';
 
+.heroWrapper {
+  min-height: 100vh;
+}
+
 .hero {
   position: relative;
   display: flex;
-  margin-top: -18.5rem;
   margin-bottom: 9rem;
 
   .heroContent {
-    margin-right: 3.85rem;
-    flex-basis: 76.5rem;
-
     .heroTitle {
       margin-top: 13rem;
       margin-bottom: 0;
@@ -82,7 +82,7 @@
   }
 
   .heroSlider {
-    max-width: 87.8rem;
+    max-width: 80rem;
     position: relative;
   }
 }

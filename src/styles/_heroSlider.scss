@@ -1,5 +1,5 @@
 .prevSlide {
-  right: 12.6rem;
+  right: 24rem;
   background-image: url('../images/icons/arrow-left.svg');
   background-repeat: no-repeat;
   background-size: 100% auto;
@@ -10,7 +10,7 @@
 }
 
 .nextSlide {
-  right: 2rem;
+  right: 13.5rem;
   background-image: url('../images/icons/arrow-right.svg');
   background-repeat: no-repeat;
   background-size: 100% auto;
@@ -22,10 +22,11 @@
   position: absolute;
   width: 6.6rem;
   height: 4.5rem;
-  bottom: -5%;
+  bottom: -20%;
   background-color: transparent;
   border: none;
   cursor: pointer;
+  z-index: 2;
 
   &:disabled {
     display: block;
