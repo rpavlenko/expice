@@ -2,7 +2,8 @@ import { Helmet } from 'react-helmet';
 import { graphql, useStaticQuery } from 'gatsby';
 import Hero from '../components/Hero/Hero';
 import Layout from '../components/Layout/Layout';
-import Navbar from '../components/Navbar/Navbar';
+import TopRestaurants from '../components/TopRestaurants/TopRestaurants';
+import Footer from '../components/Footer/Footer';
 import '../styles/style.sass';
 
 export default function Home() {
@@ -27,6 +28,8 @@ export default function Home() {
       <Layout>
         <Hero />
       </Layout>
+      <TopRestaurants />
+      <Footer />
     </>
   );
 }
