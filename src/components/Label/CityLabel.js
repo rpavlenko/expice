@@ -1,7 +1,7 @@
 import { StaticImage } from 'gatsby-plugin-image';
 import * as styles from './CityLabel.module.scss';
 
-export default function CityLabel() {
+export default function CityLabel({ cityName }) {
   return (
     <div className={styles.cityLabel}>
       <StaticImage
@@ -9,7 +9,7 @@ export default function CityLabel() {
         alt="city label"
         className={styles.cityLabelIcon}
       />
-      <span className={styles.cityName}>Rajshahi</span>
+      <span className={styles.cityName}>{cityName}</span>
     </div>
   );
 }

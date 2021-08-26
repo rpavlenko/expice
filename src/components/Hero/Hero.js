@@ -74,7 +74,7 @@ export default function Hero() {
           <button className="prevSlide"></button>
           <button className="nextSlide"></button>
         </section>
-        <CityLabel />
+        <CityLabel cityName={'Rajshahi'} />
       </div>
     </>
   );
