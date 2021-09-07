@@ -1,3 +1,5 @@
+@use 'variables';
+
 *,
 *:before,
 *:after {
@@ -12,7 +14,7 @@ html {
 
 body {
   font-size: 1.4rem;
-  background: $main;
+  background: variables.$main;
 }
 
 html,
@@ -31,5 +33,5 @@ img {
   padding: 0;
   text-decoration: none;
   font-family: 'Poppins', sans-serif;
-  color: $gray;
+  color: variables.$gray;
 }

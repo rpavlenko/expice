@@ -1,4 +1,4 @@
-@import '../../styles/variables.scss';
+@use '../../styles/variables';
 
 .cityLabel {
   display: flex;
@@ -7,7 +7,7 @@
   padding-top: 2rem;
   padding-bottom: 2rem;
   padding-left: 5rem;
-  background: #fe043c;
+  background: variables.$primary-red;
   border-radius: 0px 100px 100px 0px;
 
   .cityLabelIcon {

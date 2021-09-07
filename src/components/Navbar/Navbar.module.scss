@@ -1,4 +1,4 @@
-@import '../../styles/variables.scss';
+@use '../../styles/variables';
 
 .navigation {
   display: flex;
@@ -20,7 +20,7 @@
     font-weight: bold;
     font-size: 7.2rem;
     line-height: 10.8rem;
-    color: $primary-red;
+    color: variables.$primary-red;
   }
 
   .navigationLinks {
@@ -31,11 +31,11 @@
     font-size: 1.6rem;
     line-height: 2.4rem;
     text-align: center;
-    color: $blue;
+    color: variables.$blue;
 
     &:hover {
-      color: $primary-red;
-      border-bottom: 1px solid $primary-red;
+      color: variables.$primary-red;
+      border-bottom: 1px solid variables.$primary-red;
       // transition: all 0.1s;
     }
   }
@@ -57,7 +57,7 @@
     font-weight: normal;
     font-size: 1.6rem;
     line-height: 2.4rem;
-    color: $white;
+    color: variables.$white;
   }
 
   .userName::after {

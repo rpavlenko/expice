@@ -1,7 +1,8 @@
-@import '../../styles/variables.scss';
+@use '../../styles/variables';
 
 .layout {
   max-width: 192rem;
   margin: 0 auto;
-  background: $white url('../../images/hero-bg.jpg') no-repeat right top;
+  background: variables.$white url('../../images/hero-bg.jpg') no-repeat right
+    top;
 }

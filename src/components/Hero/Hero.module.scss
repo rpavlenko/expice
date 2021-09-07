@@ -1,4 +1,4 @@
-@import '../../styles/variables.scss';
+@use '../../styles/variables';
 
 .heroWrapper {
   min-height: 100vh;
@@ -19,7 +19,7 @@
       font-weight: 900;
       font-size: 20rem;
       text-transform: capitalize;
-      color: $blue;
+      color: variables.$blue;
       opacity: 0.05;
     }
 
@@ -32,7 +32,7 @@
       font-size: 7.2rem;
       line-height: 9rem;
       text-transform: capitalize;
-      color: $blue;
+      color: variables.$blue;
     }
 
     .heroSearch {
@@ -48,7 +48,7 @@
         padding-left: 5rem;
         border: none;
         text-transform: capitalize;
-        color: $primary-red;
+        color: variables.$primary-red;
         background: transparent;
 
         &::placeholder {
@@ -59,7 +59,7 @@
 
       .searchButton {
         padding: 2.1rem 7.6rem 2.1rem 7.7rem;
-        background-color: $primary-red;
+        background-color: variables.$primary-red;
         border: none;
         border-radius: 6rem 0 0 0;
         cursor: pointer;
@@ -75,7 +75,7 @@
         }
 
         &:hover {
-          background-color: $blue;
+          background-color: variables.$blue;
           -webkit-box-shadow: 9px 7px 15px 5px rgba(46, 38, 111, 0.47);
           box-shadow: 9px 7px 15px 5px rgba(46, 38, 111, 0.47);
           transition: all 0.1s ease-in-out;
