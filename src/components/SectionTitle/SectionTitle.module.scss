@@ -1,1 +1,24 @@
 @use '../../styles/variables';
+
+.sectionTitle {
+  position: relative;
+  max-width: 63.6rem;
+  margin-left: 5.5rem;
+  margin-right: 14.9rem;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 62px;
+  text-transform: capitalize;
+  color: variables.$blue;
+
+  &::before {
+    position: absolute;
+    content: '';
+    width: 25px;
+    height: 100%;
+    left: -5.5rem;
+    top: 0;
+    background-color: variables.$primary-red;
+  }
+}

@@ -4,88 +4,85 @@
   min-height: 100vh;
 }
 
-.heroImage {
-}
-
-.hero {
+.heroInner {
   position: relative;
   display: flex;
-  margin-bottom: 9rem;
+  margin-bottom: 6rem;
+}
 
-  .heroContent {
-    .heroTitle {
-      margin-top: 13rem;
-      margin-bottom: 0;
-      font-weight: 900;
-      font-size: 20rem;
-      text-transform: capitalize;
-      color: variables.$blue;
-      opacity: 0.05;
-    }
+.heroSlider {
+  max-width: 80rem;
+  position: relative;
+}
 
-    .heroText {
-      margin-top: -4.5rem;
-      margin-left: 0.4rem;
-      margin-bottom: 4rem;
-      max-width: 76.5rem;
-      font-weight: bold;
-      font-size: 7.2rem;
-      line-height: 9rem;
-      text-transform: capitalize;
-      color: variables.$blue;
-    }
+.heroContent {
+  .heroTitle {
+    margin-top: 13rem;
+    margin-bottom: 0;
+    font-weight: 900;
+    font-size: 20rem;
+    text-transform: capitalize;
+    color: variables.$blue;
+    opacity: 0.05;
+  }
 
-    .heroSearch {
-      display: flex;
-      align-items: center;
-      max-width: 67rem;
-      padding-top: 0.9rem;
-      padding-bottom: 0.9rem;
-      padding-right: 0.6rem;
+  .heroText {
+    margin-top: -4.5rem;
+    margin-left: 0.4rem;
+    margin-bottom: 4rem;
+    max-width: 76.5rem;
+    font-weight: bold;
+    font-size: 7.2rem;
+    line-height: 9rem;
+    text-transform: capitalize;
+    color: variables.$blue;
+  }
+}
 
-      .searchInput {
-        flex-grow: 1;
-        padding-left: 5rem;
-        border: none;
-        text-transform: capitalize;
-        color: variables.$primary-red;
-        background: transparent;
+.heroSearch {
+  display: flex;
+  align-items: center;
+  max-width: 67rem;
+  padding-top: 0.9rem;
+  padding-bottom: 0.9rem;
+  padding-right: 0.6rem;
 
-        &::placeholder {
-          color: #2e266f;
-          opacity: 0.6;
-        }
-      }
+  .searchInput {
+    flex-grow: 1;
+    padding-left: 5rem;
+    border: none;
+    text-transform: capitalize;
+    color: variables.$primary-red;
+    background: transparent;
 
-      .searchButton {
-        padding: 2.1rem 7.6rem 2.1rem 7.7rem;
-        background-color: variables.$primary-red;
-        border: none;
-        border-radius: 6rem 0 0 0;
-        cursor: pointer;
-
-        .searchButtonText {
-          display: block;
-          line-height: 30px;
-          font-style: normal;
-          text-transform: uppercase;
-          font-weight: 600;
-          font-size: 3rem;
-          color: #ffffff;
-        }
-
-        &:hover {
-          background-color: variables.$blue;
-          -webkit-box-shadow: 9px 7px 15px 5px rgba(46, 38, 111, 0.47);
-          box-shadow: 9px 7px 15px 5px rgba(46, 38, 111, 0.47);
-          transition: all 0.1s ease-in-out;
-        }
-      }
+    &::placeholder {
+      color: #2e266f;
+      opacity: 0.6;
     }
   }
 
-  .heroSlider {
-    max-width: 80rem;
-    position: relative;
+  .searchButton {
+    padding: 2.1rem 7.6rem 2.1rem 7.7rem;
+    background-color: variables.$primary-red;
+    border: none;
+    border-radius: 6rem 0 0 0;
+    cursor: pointer;
+
+    .searchButtonText {
+      display: block;
+      line-height: 30px;
+      font-style: normal;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 3rem;
+      color: #ffffff;
+    }
+
+    &:hover {
+      background-color: variables.$blue;
+      -webkit-box-shadow: 9px 7px 15px 5px rgba(46, 38, 111, 0.47);
+      box-shadow: 9px 7px 15px 5px rgba(46, 38, 111, 0.47);
+      transition: all 0.1s ease-in-out;
+    }
   }
 }
