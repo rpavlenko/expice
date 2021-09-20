@@ -1,0 +1,43 @@
+@use '../../styles/variables';
+
+.cardText {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  padding: 4rem 0 3.7rem 6rem;
+  margin-top: -25.7rem;
+  max-width: 63.9rem;
+  width: 100%;
+  background-color: rgba(variables.$primary-red, 0.7);
+  border-radius: 0px 0px 20px 20px;
+}
+
+.cardTitle {
+  margin-bottom: 2rem;
+  font-size: 24px;
+  line-height: 24px;
+  color: variables.$white;
+  text-transform: capitalize;
+}
+
+.cardDescription {
+  max-width: 38.6rem;
+  margin-bottom: 2rem;
+  font-size: 14px;
+  line-height: 24px;
+  color: variables.$white;
+  text-transform: capitalize;
+}
+
+.cardLabelIcon {
+  width: 2rem;
+  height: 2.5rem;
+  margin-right: 1rem;
+}
+
+.cardLabelText {
+  font-size: 14px;
+  line-height: 24px;
+  color: variables.$white;
+  text-transform: capitalize;
+}

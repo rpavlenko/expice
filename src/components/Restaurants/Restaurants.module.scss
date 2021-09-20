@@ -9,7 +9,12 @@
   margin-bottom: 12.2rem;
 }
 
-.restaurantsCard {
+.restaurantsOffer {
+  display: flex;
+  gap: 4rem;
+}
+
+.restaurantCard {
   position: relative;
 
   &::before {
@@ -31,50 +36,11 @@
   font-weight: normal;
   font-size: 1.4rem;
   line-height: 2.4rem;
+  text-transform: capitalize;
 }
 
 .restaurantImage {
   max-width: 63.9rem;
   height: 63.6rem;
   border-radius: 2rem;
-}
-
-.cardText {
-  display: flex;
-  flex-direction: column;
-  padding: 4rem 0 3.7rem 6rem;
-  margin-top: -27.9rem;
-  max-width: 63.9rem;
-  background: #fe043c;
-  opacity: 0.7;
-  border-radius: 0px 0px 20px 20px;
-}
-
-.cardTitle {
-  margin-bottom: 2rem;
-  font-size: 24px;
-  line-height: 24px;
-  color: variables.$white;
-  text-transform: capitalize;
-}
-
-.cardDescription {
-  margin-bottom: 2.7rem;
-  font-size: 14px;
-  line-height: 24px;
-  color: variables.$white;
-  text-transform: capitalize;
-}
-
-.cardLabelIcon {
-  width: 2rem;
-  height: 2.5rem;
-  margin-right: 1rem;
-}
-
-.cardLabelText {
-  font-size: 14px;
-  line-height: 24px;
-  color: variables.$white;
-  text-transform: capitalize;
 }

@@ -2,7 +2,7 @@ import SectionTitle from '../SectionTitle/SectionTitle';
 import { StaticImage } from 'gatsby-plugin-image';
 
 import * as styles from './Restaurants.module.scss';
-import BookButton from '../BookButton/BookButton';
+import RestaurantCard from '../RestaurantCard/RestaurantCard';
 
 export default function Restaurants() {
   const title = 'Some top restaurant for dining in or Take away!';
@@ -23,28 +23,31 @@ export default function Restaurants() {
         </div>
       </div>
       <div className={styles.restaurantsOffer}>
-        <div className={styles.restaurantsCard}>
+        <div className={styles.restaurantCard}>
           <StaticImage
             src="../../images/fire-water.jpg"
             alt="fire water restaurant"
             className={styles.restaurantImage}
           />
-          <div className={styles.cardText}>
-            <h3 className={styles.cardTitle}>Fire Water</h3>
-            <p className={styles.cardDescription}>
-              we are all about we are all about to the fullest and all content
-              dining out or in!dining out or in!
-            </p>
-            <div className={styles.cardLabel}>
-              <StaticImage
-                src="../../images/icons/geolabel.svg"
-                alt="geolocation label"
-                className={styles.cardLabelIcon}
-              />
-              <span className={styles.cardLabelText}>New Market</span>
-            </div>
-            <BookButton buttonText={'Book Now'} />
-          </div>
+          <RestaurantCard
+            cardTitle={'Fire Water'}
+            cardDescription={`we are all about we are all 
+          about to the fullest and all content
+          dining out or in!dining out or in!`}
+            cardLabel={'New Market'}
+          />
+        </div>
+        <div className={styles.restaurantCard}>
+          <StaticImage
+            src="../../images/the-wanton.jpg"
+            alt="the wanton restaurant"
+            className={styles.restaurantImage}
+          />
+          <RestaurantCard
+            cardTitle={'The Wonton '}
+            cardDescription={`we are all about we are all about to the fullest and all content dining out or in!dining out or in!`}
+            cardLabel={'Saheb Bazar'}
+          />
         </div>
       </div>
     </section>
