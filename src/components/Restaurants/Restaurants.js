@@ -23,7 +23,7 @@ export default function Restaurants() {
         </div>
       </div>
       <div className={styles.restaurantsOffer}>
-        <div className={styles.restaurantCard}>
+        <div>
           <StaticImage
             src="../../images/fire-water.jpg"
             alt="fire water restaurant"
@@ -37,11 +37,11 @@ export default function Restaurants() {
             cardLabel={'New Market'}
           />
         </div>
-        <div className={styles.restaurantCard}>
+        <div>
           <StaticImage
+            className={styles.restaurantImage}
             src="../../images/the-wanton.jpg"
             alt="the wanton restaurant"
-            className={styles.restaurantImage}
           />
           <RestaurantCard
             cardTitle={'The Wonton '}
@@ -49,6 +49,14 @@ export default function Restaurants() {
             cardLabel={'Saheb Bazar'}
           />
         </div>
+        <a href="#" target="_blank" className={styles.arrow}>
+          <StaticImage
+            className={styles.arrowImage}
+            src="../../images/icons/arrow-right-red.svg"
+            alt="Arrow image"
+          />
+          <span className={styles.arrowText}>See More</span>
+        </a>
       </div>
     </section>
   );

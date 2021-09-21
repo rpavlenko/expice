@@ -2,6 +2,11 @@
 
 .restaurants {
   padding-top: 3.5rem;
+  padding-bottom: 21.1rem;
+  background: url('../../images/section-2-dots-1.png'),
+    url('../../images/section-2-dots-2.png');
+  background-repeat: no-repeat;
+  background-position: left 2rem top 23.2rem, right 35% bottom 25%;
 }
 
 .restaurantsInner {
@@ -11,22 +16,8 @@
 
 .restaurantsOffer {
   display: flex;
+  align-items: center;
   gap: 4rem;
-}
-
-.restaurantCard {
-  position: relative;
-
-  &::before {
-    position: absolute;
-    content: '';
-    width: 100%;
-    height: 50px;
-    background-image: url('../../images/section-2-dots-1.png');
-    background-repeat: no-repeat;
-    top: -7rem;
-    left: 2rem;
-  }
 }
 
 .restaurantsDescription {
@@ -43,4 +34,32 @@
   max-width: 63.9rem;
   height: 63.6rem;
   border-radius: 2rem;
+}
+
+.arrow {
+  display: flex;
+  flex-direction: column;
+}
+
+.arrowText {
+  margin-left: 4rem;
+  color: variables.$primary-red;
+}
+
+.arrowImage {
+  width: 9.8rem;
+  height: 4rem;
+  margin-bottom: 2rem;
+  // background-image: url('../../images/icons/arrow-right-red.svg');
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s;
+
+  &:hover {
+    transform: translate(10%);
+  }
 }

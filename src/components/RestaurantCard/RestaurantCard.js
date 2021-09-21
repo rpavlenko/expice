@@ -9,7 +9,7 @@ export default function RestaurantCard({
   cardLabel,
 }) {
   return (
-    <div className={styles.cardText}>
+    <div className={styles.card}>
       <h3 className={styles.cardTitle}>{cardTitle}</h3>
       <p className={styles.cardDescription}>{cardDescription}</p>
       <div className={styles.cardLabel}>
