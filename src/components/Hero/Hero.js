@@ -23,10 +23,14 @@ export default function Hero() {
                 Discover Restaurant & Delicious Food
               </p>
               <div className={styles.heroSearch}>
-                <input
-                  className={styles.searchInput}
-                  placeholder="search restaurant, food"
-                />
+                <form action="">
+                  <input
+                    className={styles.searchInput}
+                    type="search"
+                    placeholder="search restaurant, food"
+                    required
+                  />
+                </form>
                 <button className={styles.searchButton}>
                   <span className={styles.searchButtonText}>go</span>
                 </button>
