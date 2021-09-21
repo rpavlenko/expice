@@ -58,16 +58,6 @@ export default function Restaurants() {
           <span className={styles.arrowText}>See More</span>
         </a>
       </div>
-      <StaticImage
-        className={styles.dotsHorizontal}
-        src="../../images/section-2-dots-1.png"
-        alt="Arrow image"
-      />
-      <StaticImage
-        className={styles.dotsVertical}
-        src="../../images/section-2-dots-2.png"
-        alt="Arrow image"
-      />
     </section>
   );
 }

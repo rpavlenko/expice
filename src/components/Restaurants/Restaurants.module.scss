@@ -1,26 +1,12 @@
 @use '../../styles/variables';
 
 .restaurants {
-  position: relative;
   padding-top: 3.5rem;
   padding-bottom: 21.1rem;
-  // background: url('../../images/section-2-dots-1.png'),
-  //   url('../../images/section-2-dots-2.png');
-  // background-repeat: no-repeat;
-  // background-position: left 2rem top 23.2rem, right 35% bottom 25%;
-}
-
-.dotsHorizontal {
-  position: absolute;
-  top: 23.2rem;
-  left: 2rem;
-}
-
-.dotsVertical {
-  position: absolute;
-  bottom: 16%;
-  right: 29%;
-  z-index: -1;
+  background: url('../../images/section-2-dots-1.png'),
+    url('../../images/section-2-dots-2.png');
+  background-repeat: no-repeat;
+  background-position: left 2rem top 23.2rem, right 35% bottom 25%;
 }
 
 .restaurantsInner {
