@@ -13,8 +13,10 @@ SwiperCore.use([Navigation]);
 export default function Hero() {
   return (
     <>
-      <div className={styles.heroWrapper}>
+      <header>
         <Navbar />
+      </header>
+      <div className={styles.heroWrapper}>
         <section className={styles.hero}>
           <div className={styles.heroInner}>
             <div className={styles.heroContent}>

@@ -4,8 +4,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 2rem;
   max-width: 165.2rem;
+  padding-top: 2rem;
 }
 
 .link {
@@ -14,9 +14,9 @@
 }
 
 .logo {
+  display: inline-block;
   margin-top: 0;
   margin-bottom: 0;
-  display: inline-block;
   font-weight: bold;
   font-size: 7.2rem;
   line-height: 10.8rem;
@@ -46,7 +46,6 @@
 .user {
   display: flex;
   align-items: center;
-  cursor: pointer;
   border-radius: 1rem;
 
   &:hover {
@@ -65,9 +64,9 @@
   &::after {
     display: block;
     content: url('../../images/icons/arrow-down.svg');
-    margin-left: 0.7rem;
     width: 1rem;
     height: 0.4rem;
+    margin-left: 0.7rem;
   }
 }
 

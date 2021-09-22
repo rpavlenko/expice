@@ -1,0 +1,157 @@
+@use '../../styles/variables';
+
+.booking {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 109rem;
+  background-color: variables.$dark-main;
+  overflow: hidden;
+}
+
+.decorationImageLettuce {
+  position: absolute;
+  top: -2.5rem;
+  left: 0;
+  z-index: 1;
+}
+
+.decorationImageSalad {
+  position: absolute;
+  top: 50%;
+  right: -7%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.bookingWrapper {
+  position: relative;
+  max-width: 123rem;
+  width: 100%;
+  min-height: 56rem;
+  padding-top: 14rem;
+  padding-bottom: 8rem;
+  margin-left: 27.5rem;
+  background-color: variables.$white;
+}
+
+.bookingInner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 54.4rem;
+  margin-left: 41.3rem;
+}
+
+.bookingTitle {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 6rem;
+  font-weight: 500;
+  font-size: 3.6rem;
+  color: variables.$blue;
+  text-transform: lowercase;
+
+  &::before {
+    position: absolute;
+    content: '';
+    top: -4rem;
+    left: 4.5rem;
+    width: 23rem;
+    height: 1.5rem;
+    background-color: variables.$primary-red;
+  }
+}
+
+.bookingSearch {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.inputGroupSearch {
+  display: flex;
+  align-items: center;
+  max-width: 54.4rem;
+  width: 100%;
+  height: 9rem;
+  padding: 1.4rem 1.4rem 1.4rem 0;
+  margin-bottom: 6rem;
+  overflow: hidden;
+  background-color: variables.$white;
+  box-shadow: 2px 2px 30px 2px #fff5ec;
+}
+
+.bookingSearchInput {
+  width: 77.5%;
+  height: 100%;
+  padding-left: 4rem;
+  border: none;
+  color: variables.$blue;
+
+  &::placeholder {
+    font-size: 16px;
+    line-height: 24px;
+    text-transform: lowercase;
+    color: variables.$blue;
+    opacity: 0.6;
+  }
+}
+
+.bookingButton {
+  width: 22.5%;
+  padding: 1.6rem 3.9rem;
+  font-weight: 600;
+  font-size: 3rem;
+  text-transform: uppercase;
+  background-color: variables.$primary-red;
+  color: variables.$white;
+  border: none;
+
+  &:hover {
+    background-color: variables.$blue;
+    transition: all 0.25s;
+  }
+}
+
+.inputGroupSelect {
+  display: flex;
+  justify-content: space-arround;
+  align-items: center;
+  gap: 7rem;
+}
+
+.inputGroupElem {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.inputTitle {
+  position: relative;
+  margin-bottom: 1.2rem;
+  font-size: 1.6rem;
+  line-height: 3rem;
+  text-transform: capitalize;
+  color: variables.$blue;
+
+  &::after {
+    position: absolute;
+    background-image: url('../../images/icons/arrow-down-icon.svg');
+    background-repeat: no-repeat;
+    content: '';
+    bottom: 0.5rem;
+    left: auto;
+    margin-left: 0.5rem;
+    width: 1rem;
+    height: 0.7rem;
+  }
+}
+
+.inputCalendar {
+  border: none;
+  color: variables.$blue;
+  opacity: 0.6;
+}

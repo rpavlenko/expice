@@ -4,6 +4,8 @@ import Hero from '../components/Hero/Hero';
 import Layout from '../components/Layout/Layout';
 import Restaurants from '../components/Restaurants/Restaurants';
 import Footer from '../components/Footer/Footer';
+import Booking from '../components/Booking/Booking';
+
 import '../styles/style.sass';
 
 export default function Home() {
@@ -29,6 +31,7 @@ export default function Home() {
         <Hero />
       </Layout>
       <Restaurants />
+      <Booking />
       <Footer />
     </>
   );
