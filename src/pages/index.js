@@ -7,6 +7,7 @@ import Footer from '../components/Footer/Footer';
 import Booking from '../components/Booking/Booking';
 
 import '../styles/style.sass';
+import Services from '../components/Services/Services';
 
 export default function Home() {
   const data = useStaticQuery(graphql`
@@ -32,6 +33,7 @@ export default function Home() {
       </Layout>
       <Restaurants />
       <Booking />
+      <Services />
       <Footer />
     </>
   );

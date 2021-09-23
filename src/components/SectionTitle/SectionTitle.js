@@ -1,5 +1,5 @@
-import * as styles from './SectionTitle.module.scss';
+import './SectionTitle.scss';
 
-export default function SectionTitle({ sectionTitle }) {
-  return <h2 className={styles.sectionTitle}>{sectionTitle}</h2>;
+export default function SectionTitle({ sectionTitle, className }) {
+  return <h2 className={className}>{sectionTitle}</h2>;
 }

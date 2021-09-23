@@ -1,8 +1,8 @@
-import SectionTitle from '../SectionTitle/SectionTitle';
 import { StaticImage } from 'gatsby-plugin-image';
+import SectionTitle from '../SectionTitle/SectionTitle';
+import RestaurantCard from '../RestaurantCard/RestaurantCard';
 
 import * as styles from './Restaurants.module.scss';
-import RestaurantCard from '../RestaurantCard/RestaurantCard';
 
 export default function Restaurants() {
   const title = 'Some top restaurant for dining in or Take away!';
@@ -10,8 +10,8 @@ export default function Restaurants() {
   return (
     <section className={styles.restaurants}>
       <div className="container">
-        <div className={styles.restaurantsInner}>
-          <SectionTitle sectionTitle={title} />
+        <div className={styles.restaurantsHeading}>
+          <SectionTitle className="sectionTitle" sectionTitle={title} />
           <p className={styles.restaurantsDescription}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est,
             adipiscing cursus auctor eget sed phasellus senectus. Ut tellus

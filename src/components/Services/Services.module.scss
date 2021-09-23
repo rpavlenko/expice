@@ -1,0 +1,24 @@
+@use '../../styles/variables';
+
+.services {
+  padding-top: 14.6rem;
+  padding-bottom: 15rem;
+  min-height: 100vh;
+}
+
+.servicesHeading {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 15rem;
+}
+
+.servicesDescription {
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  color: #707070;
+  text-transform: capitalize;
+}
+
+.servicesOffer {
+  background-image: url('../../images/services-dots.svg');
+}
