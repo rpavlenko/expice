@@ -35,7 +35,7 @@
 
   &:hover {
     color: variables.$primary-red;
-    border-bottom: 1px solid variables.$primary-red;
+    border-bottom: 0.1rem solid variables.$primary-red;
   }
 
   &:not(:last-child) {

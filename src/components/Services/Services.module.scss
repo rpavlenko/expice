@@ -24,4 +24,158 @@
 
 .servicesOffer {
   background-image: url('../../images/services-dots.svg');
+  background-position: left -7.5rem top 27.5rem;
+  background-repeat: no-repeat;
+}
+
+.servicesInner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10rem;
+  padding-top: 10.5rem;
+  padding-bottom: 9.9rem;
+}
+
+.servicesCardItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.servicesAdvanced {
+  width: 76rem;
+}
+
+.servicesFree {
+  width: 88.1rem;
+}
+
+.servicesCardItemImageWrapper {
+  max-width: 39rem;
+  padding: 9rem 9.5rem;
+  text-align: center;
+  background-color: variables.$dark-main;
+}
+
+.servicesCardItemImageWrapperFree {
+  order: 1;
+}
+
+.servicesCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 67rem;
+  padding: 16.2rem 12.2rem;
+  background-color: variables.$dark-main;
+}
+
+.cardItemGroup {
+  width: 100%;
+  max-width: 20.9rem;
+}
+
+.cardItemTitle {
+  display: inline-block;
+  margin-bottom: 2rem;
+  font-weight: 500;
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+  text-transform: capitalize;
+  color: variables.$blue;
+}
+
+.advanced {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: 62%;
+    left: -90%;
+    margin-right: 0.6rem;
+    content: '';
+    width: 18.2rem;
+    height: 2rem;
+    background-image: url('../../images/icons/AdvancedTableBooking-arrow.svg');
+    background-repeat: no-repeat;
+  }
+
+  &::after {
+    position: absolute;
+    top: 72%;
+    right: 5%;
+    content: '';
+    width: 8.4rem;
+    height: 0.3rem;
+    background-color: variables.$primary-red;
+  }
+}
+
+.cardItemDescription {
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  text-transform: capitalize;
+}
+
+.free {
+  padding-top: 6rem;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: 85%;
+    left: 0;
+    content: '';
+    width: 8.4rem;
+    height: 0.3rem;
+    background-color: variables.$primary-red;
+  }
+
+  &::after {
+    position: absolute;
+    top: 78%;
+    left: 155%;
+    margin-right: 0.6rem;
+    content: '';
+    width: 27rem;
+    height: 2rem;
+    background-image: url('../../images/icons/FoodForFree-arrow.svg');
+    background-repeat: no-repeat;
+  }
+}
+
+.freeTitleRight {
+  display: block;
+  font-weight: 500;
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+  text-transform: capitalize;
+  color: variables.$blue;
+  text-align: right;
+}
+
+.servicesCardImage {
+  margin-bottom: 9rem;
+}
+
+.freeDelivery {
+}
+
+.cardItemGroupFree {
+  position: relative;
+  max-width: 24.4rem;
+  text-align: center;
+
+  &::after {
+    position: absolute;
+    content: '';
+    bottom: -2rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 19.2rem;
+    height: 0.3rem;
+    background-color: variables.$primary-red;
+  }
 }

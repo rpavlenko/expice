@@ -81,15 +81,15 @@
 
   &:hover {
     background-color: variables.$blue;
-    -webkit-box-shadow: 9px 7px 15px 5px rgba(46, 38, 111, 0.47);
-    box-shadow: 9px 7px 15px 5px rgba(46, 38, 111, 0.47);
+    -webkit-box-shadow: 0.9rem 0.7rem 1.5rem 0.5rem rgba(46, 38, 111, 0.47);
+    box-shadow: 0.9rem 0.7rem 1.5rem 0.5rem rgba(46, 38, 111, 0.47);
     transition: all 0.25s ease-in-out;
   }
 }
 
 .searchButtonText {
   display: block;
-  line-height: 30px;
+  line-height: 3rem;
   font-style: normal;
   text-transform: uppercase;
   font-weight: 600;

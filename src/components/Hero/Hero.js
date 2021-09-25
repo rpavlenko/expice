@@ -46,8 +46,6 @@ export default function Hero() {
                 prevEl: '.prevSlide',
                 nextEl: '.nextSlide',
               }}
-              onSlideChange={() => console.log('slide change')}
-              onSwiper={swiper => console.log(swiper)}
             >
               <SwiperSlide>
                 <StaticImage
