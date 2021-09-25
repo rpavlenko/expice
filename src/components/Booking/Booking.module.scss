@@ -10,14 +10,14 @@
 }
 
 .decorationImageLettuce {
-  position: absolute;
+  position: absolute !important;
   top: -2.5rem;
   left: 0;
   z-index: 1;
 }
 
 .decorationImageSalad {
-  position: absolute;
+  position: absolute !important;
   top: 50%;
   right: -7%;
   transform: translateY(-50%);
