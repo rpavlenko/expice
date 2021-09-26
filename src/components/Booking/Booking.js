@@ -105,17 +105,17 @@ export default function Booking() {
                 </select>
               </div>
             </div>
-            {isOpened && (
-              <DateRangePicker
-                className={styles.DateRangePicker}
-                ranges={[selectionRange]}
-                minDate={new Date()}
-                rangeColors={['#FD5B61']}
-                onChange={handleSelect}
-              />
-            )}
           </form>
         </div>
+        {isOpened && (
+          <DateRangePicker
+            className={styles.DateRangePicker}
+            ranges={[selectionRange]}
+            minDate={new Date()}
+            rangeColors={['#FD5B61']}
+            onChange={handleSelect}
+          />
+        )}
       </div>
     </section>
   );

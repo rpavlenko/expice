@@ -6,7 +6,6 @@
   align-items: center;
   height: 109rem;
   background-color: variables.$dark-main;
-  overflow: hidden;
 }
 
 .decorationImageLettuce {
@@ -40,7 +39,7 @@
   flex-direction: column;
   align-items: center;
   max-width: 54.4rem;
-  margin-left: 41.3rem;
+  margin: 0 auto;
 }
 
 .bookingTitle {
@@ -155,4 +154,13 @@
   border: none;
   color: variables.$blue;
   opacity: 0.6;
+}
+
+.DateRangePicker {
+  bottom: -50%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  position: absolute;
+  z-index: 25;
+  border-radius: 2rem !important;
 }

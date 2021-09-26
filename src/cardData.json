@@ -1,0 +1,44 @@
+[
+  {
+    "title": "Hand Sandwich 1",
+    "image": "./images/hand-sandwich.jpg",
+    "alt": "hand-sandwich-1",
+    "price": "10.25",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est, adipiscing. "
+  },
+  {
+    "title": "Hand Sandwich 2",
+    "image": "./images/hand-sandwich-2.jpg",
+    "alt": "hand-sandwich-2",
+    "price": "10.25",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est, adipiscing. "
+  },
+  {
+    "title": "Hand Sandwich 3",
+    "image": "./images/hand-sandwich-3.jpg",
+    "alt": "hand-sandwich-3",
+    "price": "10.25",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est, adipiscing. "
+  },
+  {
+    "title": "Hand Sandwich 4",
+    "image": "./images/hand-sandwich-4.jpg",
+    "alt": "hand-sandwich-4",
+    "price": "10.25",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est, adipiscing. "
+  },
+  {
+    "title": "Hand Sandwich 5",
+    "image": "./images/hand-sandwich-5.jpg",
+    "alt": "hand-sandwich-5",
+    "price": "10.25",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est, adipiscing. "
+  },
+  {
+    "title": "Hand Sandwich 6",
+    "image": "./images/hand-sandwich-6.jpg",
+    "alt": "hand-sandwich-6",
+    "price": "10.25",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est, adipiscing. "
+  }
+]
