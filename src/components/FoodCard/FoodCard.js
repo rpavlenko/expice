@@ -16,7 +16,7 @@ export default function FoodCard({ title, description, price, image, alt }) {
       <div className={styles.cardText}>
         <div className={styles.cardInnerTitle}>
           <h4 className={styles.cardTitle}>{title}</h4>
-          <span className={styles.cardPrice}>{price}</span>
+          <span className={styles.cardPrice}>${price}</span>
         </div>
 
         <p className={styles.cardDescription}>{description}</p>

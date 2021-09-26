@@ -1,4 +1,5 @@
 import { Helmet } from 'react-helmet';
+import { useEffect, useState } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import Hero from '../components/Hero/Hero';
 import Layout from '../components/Layout/Layout';
@@ -7,10 +8,19 @@ import Footer from '../components/Footer/Footer';
 import Booking from '../components/Booking/Booking';
 import Services from '../components/Services/Services';
 import ExploreFood from '../components/ExploreFoods/ExploreFood';
+import Loader from '../components/Loader/Loader';
 
 import '../styles/style.sass';
 
 export default function Home({ data }) {
+  const [loading, setLoading] = useState(false);
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 3000);
+  }, []);
+
   const { title } = data.site.siteMetadata;
   const cardsData = data.allCardDataJson.edges;
 
@@ -21,14 +31,20 @@ export default function Home({ data }) {
         <meta charSet="utf-8" />
         <title>{title}</title>
       </Helmet>
-      <Layout>
-        <Hero />
-      </Layout>
-      <Restaurants />
-      <Booking />
-      <Services />
-      <ExploreFood cardsData={cardsData} />
-      <Footer />
+      {loading ? (
+        <Loader />
+      ) : (
+        <>
+          <Layout>
+            <Hero />
+          </Layout>
+          <Restaurants />
+          <Booking />
+          <Services />
+          <ExploreFood cardsData={cardsData} />
+          <Footer />
+        </>
+      )}
     </>
   );
 }
