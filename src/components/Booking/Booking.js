@@ -1,8 +1,44 @@
 import { StaticImage } from 'gatsby-plugin-image';
+import { DateRange, DateRangePicker } from 'react-date-range';
+import { useState } from 'react';
 
 import * as styles from './Booking.module.scss';
 
 export default function Booking() {
+  const [searchInput, setSearchInput] = useState('');
+  const [startDate, setStartDate] = useState(new Date());
+  const [endDate, setEndDate] = useState(new Date());
+  const [isOpened, setIsOpened] = useState(false);
+
+  function toggle() {
+    setIsOpened(wasOpened => !wasOpened);
+  }
+
+  const resetInput = e => {
+    setSearchInput('');
+  };
+
+  const submitHandler = e => {
+    e.preventDefault();
+
+    if (isOpened) {
+      toggle();
+    }
+
+    resetInput();
+  };
+
+  const handleSelect = ranges => {
+    setStartDate(ranges.selection.startDate);
+    setEndDate(ranges.selection.endDate);
+  };
+
+  const selectionRange = {
+    startDate,
+    endDate,
+    key: 'selection',
+  };
+
   return (
     <section className={styles.booking}>
       <StaticImage
@@ -18,15 +54,21 @@ export default function Booking() {
       <div className={styles.bookingWrapper}>
         <div className={styles.bookingInner}>
           <h3 className={styles.bookingTitle}>advance booking</h3>
-          <form action="" className={styles.bookingSearch}>
+          <form
+            action=""
+            className={styles.bookingSearch}
+            onSubmit={submitHandler}
+          >
             <div className={styles.inputGroupSearch}>
               <input
                 className={styles.bookingSearchInput}
+                onChange={e => setSearchInput(e.target.value)}
+                value={searchInput}
                 type="search"
                 placeholder="search restaurant"
                 required
               />
-              <button className={styles.bookingButton} type="button">
+              <button className={styles.bookingButton} type="submit">
                 Go
               </button>
             </div>
@@ -36,7 +78,13 @@ export default function Booking() {
                 <label className={styles.inputTitle} htmlFor="date">
                   Date
                 </label>
-                <input type="date" id="date" className={styles.inputCalendar} />
+                <input
+                  className={styles.inputCalendar}
+                  // type="date"
+                  id="date"
+                  placeholder="01.01.2021"
+                  onClick={toggle}
+                />
               </div>
 
               <div className={styles.inputGroupElem}>
@@ -57,6 +105,15 @@ export default function Booking() {
                 </select>
               </div>
             </div>
+            {isOpened && (
+              <DateRangePicker
+                className={styles.DateRangePicker}
+                ranges={[selectionRange]}
+                minDate={new Date()}
+                rangeColors={['#FD5B61']}
+                onChange={handleSelect}
+              />
+            )}
           </form>
         </div>
       </div>
