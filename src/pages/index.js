@@ -1,13 +1,14 @@
 import { Helmet } from 'react-helmet';
 import { useEffect, useState } from 'react';
-import { graphql, useStaticQuery } from 'gatsby';
+import { graphql, useStaticQuery, Link } from 'gatsby';
 import Hero from '../components/Hero/Hero';
 import Layout from '../components/Layout/Layout';
 import Restaurants from '../components/Restaurants/Restaurants';
-import Footer from '../components/Footer/Footer';
 import Booking from '../components/Booking/Booking';
 import Services from '../components/Services/Services';
 import ExploreFood from '../components/ExploreFoods/ExploreFood';
+import Navbar from '../components/Navbar/Navbar';
+import Footer from '../components/Footer/Footer';
 import Loader from '../components/Loader/Loader';
 
 import '../styles/style.sass';
@@ -31,20 +32,12 @@ export default function Home({ data }) {
         <meta charSet="utf-8" />
         <title>{title}</title>
       </Helmet>
-      {loading ? (
-        <Loader />
-      ) : (
-        <>
-          <Layout>
-            <Hero />
-          </Layout>
-          <Restaurants />
-          <Booking />
-          <Services />
-          <ExploreFood cardsData={cardsData} />
-          <Footer />
-        </>
-      )}
+      <Hero />
+      <Restaurants />
+      <Booking />
+      <Services />
+      <ExploreFood cardsData={cardsData} />
+      <Footer />
     </>
   );
 }

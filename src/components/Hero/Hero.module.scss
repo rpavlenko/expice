@@ -1,9 +1,5 @@
 @use '../../styles/variables';
 
-.heroWrapper {
-  min-height: 100vh;
-}
-
 .heroInner {
   position: relative;
   display: flex;
@@ -14,9 +10,6 @@
 .heroSlider {
   position: relative;
   max-width: 80rem;
-}
-
-.heroContent {
 }
 
 .heroTitle {

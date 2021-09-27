@@ -1,25 +1,22 @@
 import { StaticImage } from 'gatsby-plugin-image';
 import SwiperCore, { Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import Navbar from '../Navbar/Navbar';
 import CityLabel from '../CityLabel/CityLabel';
 
 import * as styles from './Hero.module.scss';
 import 'swiper/swiper.scss';
 import 'swiper/components/navigation/navigation.scss';
+import Layout from '../Layout/Layout';
 
 SwiperCore.use([Navigation]);
 
 export default function Hero() {
   return (
     <>
-      <header>
-        <Navbar />
-      </header>
-      <div className={styles.heroWrapper}>
+      <Layout>
         <section className={styles.hero}>
           <div className={styles.heroInner}>
-            <div className={styles.heroContent}>
+            <div>
               <h1 className={styles.heroTitle}>Food</h1>
               <p className={styles.heroText}>
                 Discover Restaurant & Delicious Food
@@ -81,7 +78,7 @@ export default function Hero() {
           </div>
           <CityLabel cityName={'Rajshahi'} />
         </section>
-      </div>
+      </Layout>
     </>
   );
 }

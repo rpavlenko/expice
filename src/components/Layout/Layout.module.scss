@@ -3,6 +3,7 @@
 .layout {
   max-width: 192rem;
   margin: 0 auto;
+  min-height: 100vh;
   background: variables.$white url('../../images/hero-bg.jpg') no-repeat right
     top;
 }

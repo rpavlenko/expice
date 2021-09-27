@@ -40,7 +40,7 @@ export default function Booking() {
   };
 
   return (
-    <section className={styles.booking}>
+    <section className={`${styles.booking} fullContainer`}>
       <StaticImage
         src="../../images/lettuce.png"
         alt="lettuce"

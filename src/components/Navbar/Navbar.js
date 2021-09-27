@@ -21,7 +21,7 @@ export default function Navbar() {
         <h1 className={styles.logo}>{title}</h1>
       </Link>
       <div className={styles.navigationLinks}>
-        <Link className={styles.navigationLink} to="/menu-one">
+        <Link className={styles.navigationLink} to="/about">
           Menu One
         </Link>
         <Link className={styles.navigationLink} to="/menu-two">

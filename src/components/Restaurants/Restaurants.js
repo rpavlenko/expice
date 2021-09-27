@@ -8,7 +8,7 @@ export default function Restaurants() {
   const title = 'Some top restaurant for dining in or Take away!';
 
   return (
-    <section className={styles.restaurants}>
+    <section className={`${styles.restaurants} fullContainer`}>
       <div className="container">
         <div className={styles.restaurantsHeading}>
           <SectionTitle className="sectionTitle" sectionTitle={title} />
