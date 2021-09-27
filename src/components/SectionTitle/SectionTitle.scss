@@ -2,6 +2,9 @@
 
 .sectionTitle {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   max-width: 63.6rem;
   margin-left: 5.5rem;
   margin-right: 14.9rem;
@@ -24,6 +27,17 @@
 }
 
 .services {
-  max-width: 36.2rem;
-  width: 100%;
+  max-width: 30.7rem;
+  margin-right: 20.8rem;
+  height: 14rem;
+
+  &::before {
+    height: 100%;
+  }
+}
+
+.download {
+  max-width: 53.9rem;
+  margin-bottom: 2.1rem;
+  margin-right: 0;
 }

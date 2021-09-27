@@ -1,1 +1,30 @@
 @use '../../styles/variables';
+
+.download {
+  padding-top: 6.8rem;
+  padding-bottom: 5rem;
+}
+
+.downloadHeading {
+  display: flex;
+  flex-direction: column;
+  max-width: 53.9rem;
+}
+
+.downloadDescription {
+  margin-bottom: 3rem;
+  max-width: 44.9rem;
+  margin-left: 5.8rem;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  text-transform: capitalize;
+}
+
+.appImage {
+  border-radius: 10px;
+}
+
+.downloadButtons:not(:last-child) {
+  margin-left: 5.8rem;
+  margin-right: 2rem;
+}

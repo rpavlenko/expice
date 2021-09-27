@@ -15,7 +15,7 @@ export default function Hero() {
     <>
       <Layout>
         <section className={styles.hero}>
-          <div className={styles.heroInner}>
+          <div className={`container ${styles.heroInner}`}>
             <div>
               <h1 className={styles.heroTitle}>Food</h1>
               <p className={styles.heroText}>
@@ -76,7 +76,9 @@ export default function Hero() {
             <button className="prevSlide"></button>
             <button className="nextSlide"></button>
           </div>
-          <CityLabel cityName={'Rajshahi'} />
+          <div className="fullContainer">
+            <CityLabel cityName={'Rajshahi'} />
+          </div>
         </section>
       </Layout>
     </>

@@ -8,11 +8,13 @@
 
 .servicesHeading {
   display: flex;
-  gap: 2rem;
-  margin-bottom: 15rem;
+  row-gap: 2rem;
+  margin-right: 20.1rem;
+  margin-bottom: 16rem;
 }
 
 .servicesDescription {
+  padding-top: 2.9rem;
   font-size: 1.4rem;
   line-height: 2.4rem;
   max-width: 60.9rem;
@@ -24,16 +26,15 @@
 
 .servicesOffer {
   background-image: url('../../images/services-dots.svg');
-  background-position: left -7.5rem top 27.5rem;
+  background-position: left -7.1rem top 30.7rem;
   background-repeat: no-repeat;
 }
 
 .servicesInner {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
   gap: 10rem;
-  padding-top: 10.5rem;
+  padding-top: 10.6rem;
   padding-bottom: 9.9rem;
 }
 
@@ -52,9 +53,12 @@
 }
 
 .servicesCardItemImageWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   max-width: 39rem;
+  height: 38rem;
   padding: 9rem 9.5rem;
-  text-align: center;
   background-color: variables.$dark-main;
 }
 
@@ -68,7 +72,8 @@
   justify-content: center;
   align-items: center;
   max-width: 67rem;
-  padding: 16.2rem 12.2rem;
+  width: 100%;
+  padding: 14.8rem 12.2rem 12.2rem;
   background-color: variables.$dark-main;
 }
 
@@ -79,7 +84,7 @@
 
 .cardItemTitle {
   display: inline-block;
-  margin-bottom: 2rem;
+  margin-bottom: 1.4rem;
   font-weight: 500;
   font-size: 2.4rem;
   line-height: 3.2rem;
@@ -120,13 +125,12 @@
 }
 
 .free {
-  padding-top: 6rem;
   position: relative;
 
   &::before {
     position: absolute;
-    top: 85%;
-    left: 0;
+    top: 78.8%;
+    left: -0.2px;
     content: '';
     width: 8.4rem;
     height: 0.3rem;
@@ -135,8 +139,8 @@
 
   &::after {
     position: absolute;
-    top: 78%;
-    left: 155%;
+    top: 67%;
+    left: 154%;
     margin-right: 0.6rem;
     content: '';
     width: 27rem;

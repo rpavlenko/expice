@@ -41,6 +41,7 @@ export const query = graphql`
           title
           price
           description
+          alt
           image {
             childImageSharp {
               gatsbyImageData(
