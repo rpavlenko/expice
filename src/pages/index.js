@@ -1,27 +1,16 @@
 import { Helmet } from 'react-helmet';
-import { useEffect, useState } from 'react';
-import { graphql, useStaticQuery, Link } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import Hero from '../components/Hero/Hero';
-import Layout from '../components/Layout/Layout';
 import Restaurants from '../components/Restaurants/Restaurants';
 import Booking from '../components/Booking/Booking';
 import Services from '../components/Services/Services';
 import ExploreFood from '../components/ExploreFoods/ExploreFood';
-import Navbar from '../components/Navbar/Navbar';
 import Footer from '../components/Footer/Footer';
-import Loader from '../components/Loader/Loader';
 
 import '../styles/style.sass';
+import DownloadApp from '../components/DownloadApp/DownloadApp';
 
 export default function Home({ data }) {
-  const [loading, setLoading] = useState(false);
-  useEffect(() => {
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-    }, 3000);
-  }, []);
-
   const { title } = data.site.siteMetadata;
   const cardsData = data.allCardDataJson.edges;
 
@@ -37,6 +26,7 @@ export default function Home({ data }) {
       <Booking />
       <Services />
       <ExploreFood cardsData={cardsData} />
+      <DownloadApp />
       <Footer />
     </>
   );

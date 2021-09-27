@@ -1,5 +1,9 @@
 @use '../../styles/variables';
 
+.hero {
+  min-height: 100vh;
+}
+
 .heroInner {
   position: relative;
   display: flex;
