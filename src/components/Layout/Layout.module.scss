@@ -3,6 +3,20 @@
 .layout {
   max-width: 192rem;
   margin: 0 auto;
+  padding-top: 10.8rem;
+  background: linear-gradient(
+    to right,
+    variables.$white 75%,
+    variables.$primary-red 25%
+  );
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
   background: linear-gradient(
     to right,
     variables.$white 75%,
