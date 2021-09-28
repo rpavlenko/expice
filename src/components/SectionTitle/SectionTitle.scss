@@ -28,8 +28,8 @@
 
 .services {
   max-width: 30.7rem;
-  margin-right: 20.8rem;
   height: 14rem;
+  margin-right: 20.8rem;
 
   &::before {
     height: 100%;
@@ -37,7 +37,14 @@
 }
 
 .download {
-  max-width: 53.9rem;
+  max-width: 57rem;
+  height: 14rem;
   margin-bottom: 2.1rem;
   margin-right: 0;
+  margin-left: 6.3rem;
+
+  &::before {
+    height: 100%;
+    margin-left: -1rem;
+  }
 }
