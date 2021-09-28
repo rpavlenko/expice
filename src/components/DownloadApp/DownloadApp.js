@@ -50,7 +50,7 @@ export default function DownloadApp() {
         </div>
         <StaticImage
           className={styles.phoneImage}
-          src="../../images/phone.png"
+          src="../../images/phone_cropped.png"
           alt="Phone Image"
         />
       </section>

@@ -4,10 +4,9 @@
   display: flex;
   column-gap: 36rem;
   padding-top: 3.3rem;
-  padding-bottom: 5rem;
   background-image: url('../../images/salad-2.png'),
     url('../../images/download-app-dots.png');
-  background-position: right 38.1% top 61.2%, right 20.8% top 35%;
+  background-position: right 38.2% top 73.3%, right 20.8% top 35%;
   background-repeat: no-repeat;
 }
 
@@ -19,15 +18,15 @@
   display: flex;
   flex-direction: column;
   max-width: 53.9rem;
-  margin-top: 35.7rem;
-  margin-left: 0.9rem;
+  margin-top: 35.9rem;
+  margin-left: 0.8rem;
 }
 
 .downloadDescription {
   width: 53.9rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2.8rem;
   max-width: 44.9rem;
-  margin-left: 5.8rem;
+  margin-left: 6.2rem;
   font-size: 1.4rem;
   line-height: 2.4rem;
   text-transform: capitalize;
@@ -45,7 +44,7 @@
 
 .downloadButtons {
   &:not(:last-child) {
-    margin-left: 5.8rem;
+    margin-left: 6.2rem;
     margin-right: 2rem;
   }
 }
