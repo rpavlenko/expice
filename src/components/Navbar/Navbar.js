@@ -1,5 +1,7 @@
 import { Link, graphql, useStaticQuery } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
+import { useLayoutEffect, useRef } from 'react';
+
 import * as styles from './Navbar.module.scss';
 
 export default function Navbar() {
@@ -14,11 +16,40 @@ export default function Navbar() {
   `);
 
   const { title } = data.site.siteMetadata;
+  const navigation = useRef();
+  const logoImage = useRef();
+  const userName = useRef();
+
+  useLayoutEffect(() => {
+    const navigationContainer = navigation.current;
+    const logo = logoImage.current;
+    const userNameText = userName.current;
+
+    const menuChangeSize = () => {
+      if (window.scrollY > 50) {
+        navigationContainer.classList.add(`${styles.navigationSmall}`);
+        logo.classList.add(`${styles.logoSmall}`);
+        userNameText.classList.add(`${styles.userNameSmall}`);
+      } else {
+        navigationContainer.classList.remove(`${styles.navigationSmall}`);
+        logo.classList.remove(`${styles.logoSmall}`);
+        userNameText.classList.remove(`${styles.userNameSmall}`);
+      }
+    };
+
+    window.addEventListener('scroll', menuChangeSize);
+
+    return () => {
+      window.removeEventListener('scroll', menuChangeSize);
+    };
+  }, []);
 
   return (
-    <nav className={styles.navigation}>
+    <nav className={styles.navigation} ref={navigation}>
       <Link to="/" className={styles.link}>
-        <h1 className={styles.logo}>{title}</h1>
+        <h1 className={styles.logo} ref={logoImage}>
+          {title}
+        </h1>
       </Link>
       <div className={styles.navigationLinks}>
         <Link className={styles.navigationLink} to="/about">
@@ -35,12 +66,16 @@ export default function Navbar() {
         </Link>
       </div>
       <div className={styles.user}>
-        <StaticImage
-          src="../../images/icons/user-icon.svg"
-          alt="user icon"
-          className={styles.userIcon}
-        />
-        <span className={styles.userName}>User</span>
+        <div>
+          <StaticImage
+            src="../../images/icons/user-icon.svg"
+            alt="user icon"
+            className={styles.userIcon}
+          />
+        </div>
+        <span className={styles.userName} ref={userName}>
+          User
+        </span>
       </div>
     </nav>
   );

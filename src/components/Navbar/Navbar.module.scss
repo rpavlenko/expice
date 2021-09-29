@@ -7,6 +7,11 @@
   max-width: 165.2rem;
   padding-top: 2rem;
   margin: 0 auto;
+  transition: all 0.2s;
+}
+
+.navigationSmall {
+  padding: 0.5rem;
 }
 
 .link {
@@ -22,6 +27,12 @@
   font-size: 7.2rem;
   line-height: 10.8rem;
   color: variables.$primary-red;
+  transition: all 0.2s;
+}
+
+.logoSmall {
+  font-size: 4rem;
+  line-height: 5rem;
 }
 
 .navigationLinks {
@@ -59,8 +70,6 @@
 
 .userName {
   display: flex;
-  font-style: normal;
-  font-weight: normal;
   font-size: 1.6rem;
   line-height: 2.4rem;
   color: variables.$white;
@@ -72,6 +81,10 @@
     height: 0.4rem;
     margin-left: 0.7rem;
   }
+}
+
+.userNameSmall {
+  font-size: 1.4rem;
 }
 
 .userIcon {
