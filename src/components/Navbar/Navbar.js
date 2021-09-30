@@ -68,9 +68,9 @@ export default function Navbar() {
       <div className={styles.user}>
         <div>
           <StaticImage
+            className={styles.userIcon}
             src="../../images/icons/user-icon.svg"
             alt="user icon"
-            className={styles.userIcon}
           />
         </div>
         <span className={styles.userName} ref={userName}>

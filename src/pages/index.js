@@ -18,7 +18,6 @@ export default function Home({ data }) {
     <>
       <Helmet>
         <html lang="en" />
-        <meta charSet="utf-8" />
         <title>{title}</title>
       </Helmet>
       <Hero />
