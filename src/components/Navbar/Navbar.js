@@ -45,38 +45,40 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className={styles.navigation} ref={navigation}>
-      <Link to="/" className={styles.link}>
-        <h1 className={styles.logo} ref={logoImage}>
-          {title}
-        </h1>
-      </Link>
-      <div className={styles.navigationLinks}>
-        <Link className={styles.navigationLink} to="/about">
-          Menu One
+    <div className="container">
+      <nav className={styles.navigation} ref={navigation}>
+        <Link to="/" className={styles.link}>
+          <h1 className={styles.logo} ref={logoImage}>
+            {title}
+          </h1>
         </Link>
-        <Link className={styles.navigationLink} to="/menu-two">
-          Menu Two
-        </Link>
-        <Link className={styles.navigationLink} to="/menu-three">
-          Menu Three
-        </Link>
-        <Link className={styles.navigationLink} to="/menu-four">
-          Menu Four
-        </Link>
-      </div>
-      <div className={styles.user}>
-        <div>
-          <StaticImage
-            className={styles.userIcon}
-            src="../../images/icons/user-icon.svg"
-            alt="user icon"
-          />
+        <div className={styles.navigationLinks}>
+          <Link className={styles.navigationLink} to="/about">
+            Menu One
+          </Link>
+          <Link className={styles.navigationLink} to="/menu-two">
+            Menu Two
+          </Link>
+          <Link className={styles.navigationLink} to="/menu-three">
+            Menu Three
+          </Link>
+          <Link className={styles.navigationLink} to="/menu-four">
+            Menu Four
+          </Link>
         </div>
-        <span className={styles.userName} ref={userName}>
-          User
-        </span>
-      </div>
-    </nav>
+        <div className={styles.user}>
+          <div>
+            <StaticImage
+              className={styles.userIcon}
+              src="../../images/icons/user-icon.svg"
+              alt="user icon"
+            />
+          </div>
+          <span className={styles.userName} ref={userName}>
+            User
+          </span>
+        </div>
+      </nav>
+    </div>
   );
 }

@@ -46,6 +46,7 @@
   padding-top: 0.9rem;
   padding-bottom: 0.9rem;
   padding-right: 0.6rem;
+  background: variables.$white;
 
   form {
     max-width: 67rem;
@@ -60,8 +61,8 @@
   height: 100%;
   padding-left: 5rem;
   border: none;
-  color: variables.$primary-red;
-  background: transparent;
+  color: variables.$blue;
+  background: variables.$white;
   text-transform: capitalize;
 
   &::placeholder {

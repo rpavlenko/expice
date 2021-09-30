@@ -6,7 +6,7 @@
   padding-top: 10.8rem;
   background: linear-gradient(
     to right,
-    variables.$white 75%,
+    transparent 75%,
     variables.$primary-red 25%
   );
 }
@@ -19,7 +19,7 @@
   z-index: 10;
   background: linear-gradient(
     to right,
-    variables.$white 75%,
+    variables.$main 75%,
     variables.$primary-red 25%
   );
 }
