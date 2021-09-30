@@ -55,7 +55,7 @@ export default function Booking() {
         <div className={styles.bookingInner}>
           <h3 className={styles.bookingTitle}>advance booking</h3>
           <form
-            action=""
+            action="#"
             className={styles.bookingSearch}
             onSubmit={submitHandler}
           >

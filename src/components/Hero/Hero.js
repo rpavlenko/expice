@@ -22,7 +22,7 @@ export default function Hero() {
                 Discover Restaurant & Delicious Food
               </p>
               <div className={styles.heroSearch}>
-                <form action="">
+                <form action="#">
                   <input
                     className={styles.searchInput}
                     type="search"
