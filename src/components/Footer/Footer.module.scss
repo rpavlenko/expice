@@ -1,4 +1,46 @@
 @use '../../styles/variables';
 
-// .footer {
-// }
+.footer {
+  background: url('../../images/plant.png'), url('../../images/footer-dots.png');
+  background-position: left top 7rem, left top 7em;
+  background-repeat: no-repeat;
+  background-color: variables.$main;
+}
+
+.footerInner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 27.2rem;
+  padding-bottom: 6.5rem;
+}
+
+.footerInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 18.5rem;
+  margin-left: auto;
+}
+
+.socialLinks {
+  display: flex;
+  align-items: center;
+  margin-right: 8.48rem;
+}
+
+.socialLinksItem {
+  margin-right: 2.36rem;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.socialLink {
+  vertical-align: super;
+}
+
+.socialImage {
+  vertical-align: bottom;
+}

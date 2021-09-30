@@ -1,0 +1,88 @@
+@use '../../styles/variables';
+
+.notificationSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.notificationInner {
+  max-width: 56.6rem;
+}
+
+.notificationHeading {
+  max-width: 60.9rem;
+  text-align: center;
+}
+
+.sectionTitle {
+  font-style: normal;
+  font-weight: 400;
+  margin-bottom: 3rem;
+  font-size: 3.6rem;
+  line-height: 4.8rem;
+  color: variables.$blue;
+  text-transform: capitalize;
+}
+
+.sectionDescription {
+  margin-bottom: 6rem;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  color: variables.$gray;
+  text-transform: capitalize;
+}
+
+.notificationInput {
+  display: flex;
+  align-items: center;
+  height: 9rem;
+  margin-bottom: 6rem;
+  border: none;
+  border-radius: 10rem;
+  background: variables.$white;
+
+  form {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.emailInput {
+  width: 86%;
+  height: 100%;
+  padding-top: 3.8rem;
+  padding-bottom: 3.7rem;
+  padding-left: 5rem;
+  border: none;
+  border-radius: 10rem;
+  text-transform: capitalize;
+  color: variables.$blue;
+  box-shadow: 2px 2px 30px 2px #fff5ec;
+
+  &::placeholder {
+    color: #2e266f;
+    opacity: 0.6;
+  }
+}
+
+.notificationButton {
+  width: 5.6rem;
+  height: 5.6rem;
+  border-radius: 50%;
+  background-color: variables.$primary-red;
+  border: none;
+}
+
+.linkGroup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  max-width: 43.4rem;
+  margin: 0 auto;
+}
+
+.link:not(:last-child) {
+  margin-right: 3.5rem;
+}
