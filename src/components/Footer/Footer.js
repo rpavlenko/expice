@@ -2,7 +2,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 import Notification from '../Notification/Notification';
 import facebook from '../../images/icons/facebook.svg';
 import twitter from '../../images/icons/twitter.svg';
-import linkedin from '../../images/icons/linkedIn.svg';
+import linkedin from '../../images/icons/linkedin.svg';
 import behance from '../../images/icons/behance.svg';
 
 import * as styles from './Footer.module.scss';
