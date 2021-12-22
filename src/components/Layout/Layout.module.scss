@@ -23,3 +23,33 @@
     variables.$primary-red 25%
   );
 }
+
+@media (max-width: 768px) {
+  .header {
+    background: linear-gradient(
+      to right,
+      variables.$main 75%,
+      variables.$primary-red 25%
+    );
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    background: linear-gradient(
+      to right,
+      variables.$main 60%,
+      variables.$primary-red 40%
+    );
+  }
+}
+
+@media (max-width: 500px) {
+  .header {
+    background: linear-gradient(
+      to right,
+      variables.$main 73.5%,
+      variables.$primary-red 27.5%
+    );
+  }
+}

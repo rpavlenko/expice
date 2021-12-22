@@ -45,7 +45,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <div className="container">
+    <div className="container navbarContainer">
       <nav className={styles.navigation} ref={navigation}>
         <Link to="/" className={styles.link}>
           <h1 className={styles.logo} ref={logoImage}>

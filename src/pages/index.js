@@ -21,12 +21,12 @@ export default function Home({ data }) {
         <title>{title}</title>
       </Helmet>
       <Hero />
-      <Restaurants />
+      {/* <Restaurants />
       <Booking />
       <Services />
       <ExploreFood cardsData={cardsData} />
       <DownloadApp />
-      <Footer />
+      <Footer /> */}
     </>
   );
 }
