@@ -93,6 +93,13 @@
   margin-right: 0.9rem;
 }
 
+.hamburger {
+  display: none;
+  outline: none;
+  background-color: transparent;
+  border: none;
+}
+
 @media (max-width: 1250px) {
   .navigation {
     flex-wrap: wrap;
@@ -124,6 +131,10 @@
 
   .navigationLinks {
     display: none;
+  }
+
+  .hamburger {
+    display: block;
   }
 }
 

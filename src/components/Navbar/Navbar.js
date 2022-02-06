@@ -1,6 +1,7 @@
 import { Link, graphql, useStaticQuery } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 import { useLayoutEffect, useRef } from 'react';
+import hamburger from '../../images/icons/hamburger.svg';
 
 import * as styles from './Navbar.module.scss';
 
@@ -44,6 +45,10 @@ export default function Navbar() {
     };
   }, []);
 
+  const openMenu = () => {
+    console.log('open menu');
+  };
+
   return (
     <div className="container navbarContainer">
       <nav className={styles.navigation} ref={navigation}>
@@ -78,6 +83,9 @@ export default function Navbar() {
             User
           </span>
         </div>
+        <button className={styles.hamburger} onClick={openMenu}>
+          <img src={hamburger} alt="menu" />
+        </button>
       </nav>
     </div>
   );
