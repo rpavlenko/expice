@@ -1,7 +1,9 @@
 import { Link, graphql, useStaticQuery } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
-import { useLayoutEffect, useRef } from 'react';
+import { useLayoutEffect, useRef, useState } from 'react';
 import hamburger from '../../images/icons/hamburger.svg';
+import closeHamburger from '../../images/icons/close.svg';
+import NavbarMobile from '../NavbarMobile/NavbarMobile';
 
 import * as styles from './Navbar.module.scss';
 
@@ -20,6 +22,7 @@ export default function Navbar() {
   const navigation = useRef();
   const logoImage = useRef();
   const userName = useRef();
+  const [active, setActive] = useState(false);
 
   useLayoutEffect(() => {
     const navigationContainer = navigation.current;
@@ -46,7 +49,7 @@ export default function Navbar() {
   }, []);
 
   const openMenu = () => {
-    console.log('open menu');
+    setActive(active => !active);
   };
 
   return (
@@ -83,8 +86,10 @@ export default function Navbar() {
             User
           </span>
         </div>
+
+        <NavbarMobile menuActive={active ? 'active' : ''} />
         <button className={styles.hamburger} onClick={openMenu}>
-          <img src={hamburger} alt="menu" />
+          <img src={!active ? hamburger : closeHamburger} alt="menu" />
         </button>
       </nav>
     </div>
