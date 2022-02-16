@@ -16,7 +16,7 @@ export default function Hero() {
       <Layout>
         <section className={styles.hero}>
           <div className={`container ${styles.heroInner}`}>
-            <div>
+            <div className={styles.heroTitleGroup}>
               <h1 className={styles.heroTitle}>Food</h1>
               <p className={styles.heroText}>
                 Discover Restaurant & Delicious Food

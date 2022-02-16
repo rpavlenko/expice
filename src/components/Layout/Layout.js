@@ -7,7 +7,7 @@ export default function Layout({ children }) {
       <header className={styles.header}>
         <Navbar />
       </header>
-      {/* <div>{children}</div> */}
+      <div>{children}</div>
     </div>
   );
 }

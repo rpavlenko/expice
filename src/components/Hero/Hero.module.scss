@@ -95,3 +95,37 @@
   font-size: 3rem;
   color: #ffffff;
 }
+
+@media (max-width: 1195px) {
+  .heroTitleGroup {
+    z-index: 2;
+    position: relative;
+  }
+  .heroTitle {
+    font-size: 15rem;
+  }
+
+  .heroText {
+    font-size: 5rem;
+  }
+
+  .heroSlider {
+    max-width: 55rem;
+  }
+}
+
+@media (max-width: 1050px) {
+  .heroInner {
+    gap: 4rem;
+  }
+
+  .heroSlider {
+    max-width: 50rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  .heroInner {
+    flex-wrap: wrap;
+  }
+}
