@@ -2,7 +2,6 @@
 
 .cityLabel {
   position: relative;
-  left: -3rem;
   display: flex;
   align-items: center;
   width: 28rem;
@@ -24,6 +23,18 @@
   font-size: 3rem;
   color: #ffffff;
   text-transform: capitalize;
+}
+
+@media (min-width: 1850px) {
+  .cityLabel {
+    left: -14rem;
+  }
+}
+
+@media (max-width: 1600px) {
+  .cityLabel {
+    left: -3rem;
+  }
 }
 
 @media (max-width: 572px) {
