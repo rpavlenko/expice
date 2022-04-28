@@ -1,9 +1,12 @@
 @use '../../styles/variables';
 
 .cityLabel {
+  position: relative;
+  left: -3rem;
   display: flex;
   align-items: center;
-  max-width: 28rem;
+  width: 28rem;
+  margin-top: 9.9rem;
   padding-top: 2rem;
   padding-bottom: 2rem;
   padding-left: 5rem;
@@ -21,4 +24,10 @@
   font-size: 3rem;
   color: #ffffff;
   text-transform: capitalize;
+}
+
+@media (max-width: 572px) {
+  .cityLabel {
+    margin-top: 0;
+  }
 }

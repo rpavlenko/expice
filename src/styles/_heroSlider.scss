@@ -20,7 +20,7 @@
   position: absolute;
   width: 6.6rem;
   height: 4.5rem;
-  bottom: -20%;
+  bottom: 0;
   background-color: transparent;
   border: none;
   z-index: 2;
@@ -40,5 +40,69 @@
 .nextSlide {
   &:hover {
     transform: translate(10%);
+  }
+}
+
+@media (max-width: 1250px) {
+  .prevSlide {
+    right: 20rem;
+  }
+  .nextSlide {
+    right: 7rem;
+  }
+}
+
+@media (max-width: 1080px) {
+  .prevSlide,
+  .nextSlide {
+    bottom: 3%;
+  }
+  .prevSlide {
+    right: 17rem;
+  }
+  .nextSlide {
+    right: 5rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  .prevSlide,
+  .nextSlide {
+    bottom: 10%;
+  }
+
+  .nextSlide {
+    right: 3rem;
+  }
+
+  .prevSlide {
+    right: 12rem;
+  }
+}
+
+@media (max-width: 572px) {
+  .prevSlide,
+  .nextSlide {
+    bottom: 5%;
+  }
+
+  .swiper-container {
+    margin-right: 0.1;
+  }
+}
+
+@media (max-width: 500px) {
+  .prevSlide,
+  .nextSlide {
+    width: 4.6rem;
+    height: 3.5rem;
+  }
+
+  .nextSlide {
+    right: 2rem;
+  }
+
+  .prevSlide {
+    right: 8rem;
   }
 }

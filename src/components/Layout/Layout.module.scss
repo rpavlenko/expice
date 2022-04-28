@@ -35,7 +35,8 @@
 }
 
 @media (max-width: 768px) {
-  .header {
+  .header,
+  .layout {
     background: linear-gradient(
       to right,
       variables.$main 60%,
@@ -45,11 +46,12 @@
 }
 
 @media (max-width: 500px) {
-  .header {
+  .header,
+  .layout {
     background: linear-gradient(
       to right,
-      variables.$main 73.5%,
-      variables.$primary-red 27.5%
+      variables.$main 60%,
+      variables.$primary-red 40%
     );
   }
 }

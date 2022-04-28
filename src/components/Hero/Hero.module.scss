@@ -96,6 +96,16 @@
   color: #ffffff;
 }
 
+@media (max-width: 1400px) {
+  .heroTitle {
+    font-size: 10rem;
+  }
+
+  .heroText {
+    font-size: 5rem;
+  }
+}
+
 @media (max-width: 1195px) {
   .heroTitleGroup {
     z-index: 2;
@@ -106,26 +116,130 @@
   }
 
   .heroText {
-    font-size: 5rem;
+    font-size: 6rem;
+    line-height: 7rem;
   }
 
   .heroSlider {
     max-width: 55rem;
   }
+
+  .heroInner {
+    gap: 0;
+  }
 }
 
 @media (max-width: 1050px) {
   .heroInner {
-    gap: 4rem;
+    gap: 1rem;
   }
 
   .heroSlider {
     max-width: 50rem;
   }
+
+  .heroSearch {
+    max-width: 60rem;
+  }
 }
 
 @media (max-width: 1000px) {
   .heroInner {
+    gap: 0;
     flex-wrap: wrap;
+    margin-bottom: 0 !important;
+    padding-bottom: 18.7rem;
+  }
+
+  .heroSlider {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .heroTitleGroup {
+    width: 100%;
+  }
+
+  .heroTitle {
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+    font-size: 14rem;
+  }
+
+  .heroText {
+    width: 100%;
+    margin-bottom: 5rem;
+    font-size: 6rem;
+    line-height: 6rem;
+  }
+
+  .heroSearch {
+    max-width: 55rem;
+  }
+}
+
+@media (max-width: 572px) {
+  .heroInner {
+    padding-bottom: 2rem;
+  }
+  .heroTitle {
+    margin-top: 3.7rem;
+    font-size: 10rem;
+  }
+
+  .heroText {
+    margin-top: 0;
+    margin-bottom: 3rem;
+    max-width: 38.3rem;
+    font-size: 3.6rem;
+    line-height: 4.8rem;
+  }
+
+  .heroSearch {
+    margin-bottom: 5rem;
+    max-width: 46.2rem;
+  }
+
+  .searchInput {
+    padding-left: 3rem;
+  }
+
+  .searchButton {
+    width: 14.6rem;
+  }
+
+  .heroSlider {
+    max-width: 50.7rem;
+  }
+}
+
+@media (max-width: 572px) {
+  .heroTitle {
+    margin-top: 2rem;
+    font-size: 8rem;
+  }
+
+  .heroText {
+    margin-top: 0;
+    margin-bottom: 3rem;
+    max-width: 38.3rem;
+    font-size: 2.6rem;
+    line-height: 3rem;
+  }
+
+  .heroSearch {
+    margin-bottom: 5rem;
+    max-width: 35rem;
+  }
+
+  .searchInput {
+    padding-left: 1rem;
+    font-size: 90%;
+  }
+
+  .searchButton {
+    width: 8rem;
+    padding: 2.1rem 5rem 2.1rem 5rem;
+    font-size: auto;
   }
 }

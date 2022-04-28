@@ -19,7 +19,7 @@ export default function Hero() {
             <div className={styles.heroTitleGroup}>
               <h1 className={styles.heroTitle}>Food</h1>
               <p className={styles.heroText}>
-                Discover Restaurant & Delicious Food
+                Discover Restaurant &&nbsp;Delicious Food
               </p>
               <div className={styles.heroSearch}>
                 <form action="#">
@@ -34,6 +34,9 @@ export default function Hero() {
                   <span className={styles.searchButtonText}>go</span>
                 </button>
               </div>
+              {/* <div className="fullContainer"> */}
+              <CityLabel cityName={'Rajshahi'} />
+              {/* </div> */}
             </div>
             <Swiper
               className={styles.heroSlider}
@@ -75,9 +78,6 @@ export default function Hero() {
             </Swiper>
             <button className="prevSlide"></button>
             <button className="nextSlide"></button>
-          </div>
-          <div className="fullContainer">
-            <CityLabel cityName={'Rajshahi'} />
           </div>
         </section>
       </Layout>
