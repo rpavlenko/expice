@@ -41,3 +41,70 @@
   color: variables.$white;
   text-transform: capitalize;
 }
+
+@media (max-width: 1500px) {
+  .card {
+    max-width: 55rem;
+  }
+}
+
+@media (max-width: 1300px) {
+  .card {
+    max-width: 49.5rem;
+  }
+}
+
+@media (max-width: 1194px) {
+  .card {
+    max-width: 39rem;
+    padding: 1.8rem 0 6rem 3rem;
+  }
+
+  .cardLabelIcon {
+    display: none;
+  }
+
+  .cardLabelText {
+    margin-left: 2rem;
+  }
+
+  .cardDescription {
+    max-width: 31.7rem;
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  .card {
+    max-width: 60rem;
+  }
+}
+
+@media (max-width: 765px) {
+  .card {
+    max-width: 49.4rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .card {
+    max-width: 39.4rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .card {
+    margin-top: -19.7rem;
+    max-width: 38rem;
+    padding: 1.8rem 0 2.8rem 3rem;
+  }
+
+  .cardDescription {
+    max-width: 29.3rem;
+  }
+}
+@media (max-width: 320px) {
+  .card {
+    max-width: 30rem;
+  }
+}

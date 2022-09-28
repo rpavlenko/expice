@@ -11,3 +11,10 @@
   color: variables.$primary-red;
   text-transform: capitalize;
 }
+
+@media (max-width: 420px) {
+  .bookButton {
+    margin-top: -5.5rem;
+    padding: 1.5rem 4.2rem 1.4rem 3.8rem;
+  }
+}
