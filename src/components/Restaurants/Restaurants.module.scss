@@ -162,7 +162,13 @@
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 400px) {
+  .restaurantImage {
+    max-width: 33rem;
+  }
+}
+
+@media (max-width: 340px) {
   .restaurantImage {
     max-width: 30rem;
   }

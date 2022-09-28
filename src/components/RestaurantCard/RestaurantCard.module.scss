@@ -103,7 +103,14 @@
     max-width: 29.3rem;
   }
 }
-@media (max-width: 320px) {
+
+@media (max-width: 400px) {
+  .card {
+    max-width: 33rem;
+  }
+}
+
+@media (max-width: 340px) {
   .card {
     max-width: 30rem;
   }
