@@ -22,11 +22,11 @@ export default function Home({ data }) {
       </Helmet>
       <Hero />
       <Restaurants />
-      <Booking />
+      {/* <Booking />
       <Services />
       <ExploreFood cardsData={cardsData} />
       <DownloadApp />
-      <Footer />
+      <Footer /> */}
     </>
   );
 }

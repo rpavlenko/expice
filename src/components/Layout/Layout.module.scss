@@ -14,7 +14,7 @@
 .header {
   position: fixed;
   top: 0;
-  left: 0;
+  max-width: 192rem;
   width: 100%;
   z-index: 10;
   background: linear-gradient(
