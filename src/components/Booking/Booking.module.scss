@@ -164,3 +164,123 @@
   z-index: 25;
   border-radius: 2rem !important;
 }
+
+@media screen and (max-width: 1500px) {
+  .decorationImageLettuce {
+    left: -19rem;
+  }
+
+  .bookingWrapper {
+    margin-left: 0;
+    max-width: 97.1rem;
+  }
+
+  .bookingInner {
+    padding-left: 30rem;
+    max-width: none;
+  }
+
+  .inputCalendar {
+    width: 6rem;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .decorationImageSalad {
+    max-width: 25rem;
+  }
+}
+
+@media screen and (max-width: 1110px) {
+  .decorationImageLettuce {
+    left: -35%;
+  }
+
+  .bookingWrapper {
+    max-width: 77.1rem;
+  }
+
+  .bookingInner {
+    padding-left: 16rem;
+  }
+}
+
+@media screen and (max-width: 1110px) {
+  .decorationImageLettuce {
+    left: -30%;
+  }
+
+  .bookingWrapper {
+    padding-top: 7rem;
+    padding-bottom: 0;
+  }
+
+  .bookingTitle {
+    font-size: 2.4rem;
+    &::before {
+      left: 3.5rem;
+      width: 15rem;
+    }
+  }
+
+  .inputGroupSearch {
+    max-width: 40rem;
+  }
+
+  .bookingButton {
+    font-size: 2.4rem;
+    padding: 1rem 2rem;
+  }
+}
+
+@media screen and (max-width: 867px) {
+  .bookingWrapper {
+    min-height: initial;
+    margin-left: -37rem;
+  }
+
+  .booking {
+    height: 58.4rem;
+  }
+
+  .bookingInner {
+    padding-left: 0;
+  }
+
+  .decorationImageLettuce {
+    position: relative !important;
+    left: -25rem;
+  }
+  .decorationImageSalad {
+    max-width: 17.6rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .decorationImageLettuce {
+    left: -46%;
+  }
+
+  .bookingWrapper {
+    margin-left: -43rem;
+  }
+}
+
+@media screen and (max-width: 676px) {
+  .decorationImageLettuce {
+    left: -55%;
+    display: none;
+  }
+
+  .decorationImageSalad {
+    display: none;
+  }
+
+  .bookingWrapper {
+    margin-left: 0;
+  }
+
+  .bookingInner {
+    max-width: 40rem;
+  }
+}

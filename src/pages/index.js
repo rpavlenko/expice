@@ -22,8 +22,8 @@ export default function Home({ data }) {
       </Helmet>
       <Hero />
       <Restaurants />
-      {/* <Booking />
-      <Services />
+      <Booking />
+      {/* <Services /> *
       <ExploreFood cardsData={cardsData} />
       <DownloadApp />
       <Footer /> */}
