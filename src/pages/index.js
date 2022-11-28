@@ -23,10 +23,10 @@ export default function Home({ data }) {
       <Hero />
       <Restaurants />
       <Booking />
-      {/* <Services /> *
-      <ExploreFood cardsData={cardsData} />
-      <DownloadApp />
-      <Footer /> */}
+      <Services />
+      {/*<ExploreFood cardsData={cardsData} />*/}
+      {/*<DownloadApp />*/}
+      {/*<Footer /> */}
     </>
   );
 }
