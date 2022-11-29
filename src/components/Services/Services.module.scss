@@ -184,6 +184,13 @@
   }
 }
 
+@media screen and (max-width: 1400px) {
+  .servicesCard {
+    min-width: 30rem;
+    padding: 3.8rem 4.2rem 2.2rem;
+  }
+}
+
 @media screen and (max-width: 1300px) {
   .servicesAdvanced,
   .servicesFree {
