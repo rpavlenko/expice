@@ -49,7 +49,13 @@
   }
 }
 
-@media screen and (max-width: 876px) {
+@media screen and (max-width: 1000px) {
+  .cardList {
+    grid-template-columns: repeat(2, 36rem);
+  }
+}
+
+@media screen and (max-width: 767px) {
   .cardList {
     grid-template-columns: 51rem;
   }

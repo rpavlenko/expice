@@ -61,6 +61,8 @@
 
 @media screen and (max-width: 450px) {
   .cardTitle {
+    min-width: 20rem;
+    margin-right: 0;
     font-size: 1.8rem;
   }
 
