@@ -52,3 +52,89 @@
 .downloadButtons .phoneImage {
   width: 65rem;
 }
+
+@media screen and (max-width: 1600px) {
+  .download {
+    background-position: right 25.2% top 73.3%, right 20.8% top 35%;
+  }
+  .downloadHeading {
+    margin-top: 18.9rem;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .download {
+    column-gap: 23rem;
+    background-position: right 20.2% top 73.3%, right 20.8% top 35%;
+  }
+  .downloadHeading {
+    margin-top: 18.9rem;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .download {
+    column-gap: 10rem;
+    background-position: right 20.2% top 73.3%, right 20.8% top 35%;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .downloadHeading {
+    margin-top: 0;
+  }
+  .download {
+    column-gap: 10rem;
+    background-position: right 15.2% top 73.3%, right 20.8% top 35%;
+    background-size: 30%;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .download {
+    column-gap: 5rem;
+    // justify-content: center;
+  }
+
+  .phoneImage {
+    width: 50rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .download {
+    background-size: 23%;
+  }
+
+  .phoneImage {
+    margin: 0 auto;
+    width: 17rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .download {
+    flex-wrap: wrap;
+    background-position: right 70.2% top 73.3%, right 20.8% top 35%;
+    background-size: 43%;
+  }
+  .downloadDescription {
+    max-width: 100%;
+    width: auto;
+  }
+  .phoneImage {
+    width: 30rem;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .downloadDescription {
+    margin-left: 2.2rem;
+  }
+
+  .downloadButtons {
+    &:not(:last-child) {
+      margin-left: 2.2rem;
+    }
+  }
+}

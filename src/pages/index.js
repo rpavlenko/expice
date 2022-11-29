@@ -25,7 +25,7 @@ export default function Home({ data }) {
       <Booking />
       <Services />
       <ExploreFood cardsData={cardsData} />
-      {/*<DownloadApp />*/}
+      <DownloadApp />
       {/*<Footer /> */}
     </>
   );

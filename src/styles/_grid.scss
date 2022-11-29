@@ -20,6 +20,13 @@
   }
 }
 
+@media (max-width: 767px) {
+  .buttonGroup {
+    display: flex;
+    align-items: center;
+  }
+}
+
 @media (max-width: 576px) {
   .navbarContainer,
   .container {
