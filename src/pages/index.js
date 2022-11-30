@@ -9,6 +9,7 @@ import Footer from '../components/Footer/Footer';
 
 import '../styles/style.sass';
 import DownloadApp from '../components/DownloadApp/DownloadApp';
+import { ThemeContextProvider } from '../context/Context';
 
 export default function Home({ data }) {
   const { title } = data.site.siteMetadata;
@@ -20,7 +21,9 @@ export default function Home({ data }) {
         <html lang="en" />
         <title>{title}</title>
       </Helmet>
-      <Hero />
+      <ThemeContextProvider>
+        <Hero />
+      </ThemeContextProvider>
       <Restaurants />
       <Booking />
       <Services />

@@ -4,10 +4,21 @@
   max-width: 192rem;
   margin: 0 auto;
   padding-top: 10.8rem;
+}
+
+.layoutRed {
   background: linear-gradient(
     to right,
     transparent 75%,
     variables.$primary-red 25%
+  );
+}
+
+.layoutGreen {
+  background: linear-gradient(
+    to right,
+    transparent 75%,
+    variables.$primary-green 25%
   );
 }
 
