@@ -58,7 +58,6 @@
   border-radius: 10rem;
   text-transform: capitalize;
   color: variables.$blue;
-  box-shadow: 2px 2px 30px 2px #fff5ec;
 
   &::placeholder {
     color: #2e266f;
@@ -85,4 +84,34 @@
 
 .link:not(:last-child) {
   margin-right: 3.5rem;
+}
+
+@media screen and (max-width: 767px) {
+  .notificationHeading {
+    max-width: 40rem;
+  }
+  .emailInput {
+    width: 78%;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .linkGroup {
+    flex-direction: column;
+  }
+
+  .link {
+    margin-bottom: 3rem;
+  }
+
+  .link:not(:last-child) {
+    margin-right: 0;
+  }
+  .notificationInput {
+    height: 8rem;
+  }
+  .notificationButton {
+    width: 4.6rem;
+    height: 4.6rem;
+  }
 }
