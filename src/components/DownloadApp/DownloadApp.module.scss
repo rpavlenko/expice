@@ -57,6 +57,7 @@
   .download {
     background-position: right 25.2% top 73.3%, right 20.8% top 35%;
   }
+
   .downloadHeading {
     margin-top: 18.9rem;
   }
@@ -67,6 +68,7 @@
     column-gap: 23rem;
     background-position: right 20.2% top 73.3%, right 20.8% top 35%;
   }
+
   .downloadHeading {
     margin-top: 18.9rem;
   }
@@ -83,6 +85,7 @@
   .downloadHeading {
     margin-top: 0;
   }
+
   .download {
     column-gap: 10rem;
     background-position: right 15.2% top 73.3%, right 20.8% top 35%;
@@ -93,7 +96,6 @@
 @media screen and (max-width: 990px) {
   .download {
     column-gap: 5rem;
-    // justify-content: center;
   }
 
   .phoneImage {
@@ -118,10 +120,12 @@
     background-position: right 70.2% top 73.3%, right 20.8% top 35%;
     background-size: 43%;
   }
+
   .downloadDescription {
     max-width: 100%;
     width: auto;
   }
+
   .phoneImage {
     width: 30rem;
   }
