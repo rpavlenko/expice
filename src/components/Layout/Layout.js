@@ -1,27 +1,22 @@
 import Navbar from '../Navbar/Navbar';
-import * as styles from './Layout.module.scss';
 import { useContext } from 'react';
 import { ThemeContext } from '../../context/Context';
 
-export default function Layout({ children }) {
-  const { theme, toggleTheme } = useContext(ThemeContext);
-  const handleClick = () => {
-    toggleTheme();
-  };
+import * as styles from './Layout.module.scss';
 
+export default function Layout({ children }) {
+  const { theme } = useContext(ThemeContext);
   return (
     <div
       className={`${styles.layout} ${
-        theme ? styles.layoutGreen : styles.layoutRed
+        theme ? styles.layoutGreen : styles.layout
       }`}
     >
-      <button
-        className={theme ? 'greenTheme' : 'redTheme'}
-        onClick={handleClick}
+      <header
+        className={`${styles.header}
+      ${theme ? styles.headerGreen : styles.header}
+      `}
       >
-        Switch color
-      </button>
-      <header className={styles.header}>
         <Navbar />
       </header>
       <div>{children}</div>

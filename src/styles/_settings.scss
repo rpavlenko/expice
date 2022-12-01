@@ -53,3 +53,21 @@ input[type='date']::-webkit-calendar-picker-indicator {
 input[type='time']::-webkit-calendar-picker-indicator {
   // background: none;
 }
+
+.colorTheme {
+  width: 12.6rem;
+  margin: 1rem;
+  padding: 1rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid variables.$dark-main;
+}
+
+.colorThemeRed {
+  background: variables.$primary-red;
+  color: variables.$dark-main;
+}
+
+.colorThemeGreen {
+  background: variables.$primary-green;
+  color: variables.$dark-main;
+}

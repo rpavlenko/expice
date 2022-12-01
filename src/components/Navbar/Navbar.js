@@ -1,6 +1,7 @@
 import { Link, graphql, useStaticQuery } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
-import { useLayoutEffect, useRef, useState } from 'react';
+import { useLayoutEffect, useRef, useState, useContext } from 'react';
+import { ThemeContext } from '../../context/Context';
 import hamburger from '../../images/icons/hamburger.svg';
 import closeHamburger from '../../images/icons/close.svg';
 import NavbarMobile from '../NavbarMobile/NavbarMobile';
@@ -52,11 +53,22 @@ export default function Navbar() {
     setActive(active => !active);
   };
 
+  const { theme, toggleTheme, defaultColor, toggleColorText } =
+    useContext(ThemeContext);
+  const handleClick = () => {
+    toggleTheme();
+    toggleColorText();
+  };
+
   return (
     <div className="container navbarContainer">
       <nav className={styles.navigation} ref={navigation}>
         <Link to="/" className={styles.link}>
-          <h1 className={styles.logo} ref={logoImage}>
+          <h1
+            className={`${styles.logo} 
+            ${theme ? styles.logoGreen : styles.logo}`}
+            ref={logoImage}
+          >
             {title}
           </h1>
         </Link>
@@ -73,7 +85,16 @@ export default function Navbar() {
           <Link className={styles.navigationLink} to="/menu-four">
             Menu Four
           </Link>
+          <button
+            className={`${'colorTheme'} ${
+              theme ? 'colorThemeGreen' : 'colorThemeRed'
+            }`}
+            onClick={handleClick}
+          >
+            Make it {defaultColor ? 'green' : 'red'}
+          </button>
         </div>
+
         <div className={styles.user}>
           <div>
             <StaticImage

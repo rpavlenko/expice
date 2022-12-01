@@ -30,6 +30,10 @@
   transition: all 0.2s;
 }
 
+.logoGreen {
+  color: variables.$primary-green;
+}
+
 .logoSmall {
   font-size: 4rem;
   line-height: 5rem;

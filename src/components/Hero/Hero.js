@@ -1,16 +1,19 @@
 import { StaticImage } from 'gatsby-plugin-image';
+import { useContext } from 'react';
+import { ThemeContext } from '../../context/Context';
 import SwiperCore, { Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import CityLabel from '../CityLabel/CityLabel';
+import Layout from '../Layout/Layout';
 
 import * as styles from './Hero.module.scss';
 import 'swiper/swiper.scss';
 import 'swiper/components/navigation/navigation.scss';
-import Layout from '../Layout/Layout';
 
 SwiperCore.use([Navigation]);
 
 export default function Hero() {
+  const { theme } = useContext(ThemeContext);
   return (
     <>
       <Layout>
@@ -30,7 +33,10 @@ export default function Hero() {
                     required
                   />
                 </form>
-                <button className={styles.searchButton}>
+                <button
+                  className={`${styles.searchButton}
+                ${theme ? styles.searchButtonGreen : styles.searchButton}`}
+                >
                   <span className={styles.searchButtonText}>go</span>
                 </button>
               </div>

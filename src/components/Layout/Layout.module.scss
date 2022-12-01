@@ -4,14 +4,12 @@
   max-width: 192rem;
   margin: 0 auto;
   padding-top: 10.8rem;
-}
-
-.layoutRed {
   background: linear-gradient(
     to right,
     transparent 75%,
     variables.$primary-red 25%
   );
+  transition: all 0.2s;
 }
 
 .layoutGreen {
@@ -20,6 +18,7 @@
     transparent 75%,
     variables.$primary-green 25%
   );
+  transition: all 0.2s;
 }
 
 .header {
@@ -33,6 +32,15 @@
     variables.$main 75%,
     variables.$primary-red 25%
   );
+  transition: all 0.2s;
+}
+
+.headerGreen {
+  background: linear-gradient(
+    to right,
+    variables.$main 75%,
+    variables.$primary-green 25%
+  );
 }
 
 @media (max-width: 768px) {
@@ -41,6 +49,14 @@
       to right,
       variables.$main 75%,
       variables.$primary-red 25%
+    );
+  }
+
+  .headerGreen {
+    background: linear-gradient(
+      to right,
+      variables.$main 75%,
+      variables.$primary-green 25%
     );
   }
 }
@@ -52,6 +68,14 @@
       to right,
       variables.$main 60%,
       variables.$primary-red 40%
+    );
+  }
+  .headerGreen,
+  .layoutGreen {
+    background: linear-gradient(
+      to right,
+      variables.$main 60%,
+      variables.$primary-green 40%
     );
   }
 }
@@ -63,6 +87,15 @@
       to right,
       variables.$main 60%,
       variables.$primary-red 40%
+    );
+  }
+
+  .headerGreen,
+  .layoutGreen {
+    background: linear-gradient(
+      to right,
+      variables.$main 60%,
+      variables.$primary-green 40%
     );
   }
 }

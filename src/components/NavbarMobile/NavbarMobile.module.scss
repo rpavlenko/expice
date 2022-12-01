@@ -21,6 +21,10 @@
   }
 }
 
+.navigationLinksMobileGreen {
+  background: variables.$primary-green;
+}
+
 @media (max-width: 1195px) {
   .navigationLink {
     margin-bottom: 3rem;
