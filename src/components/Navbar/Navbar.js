@@ -51,6 +51,9 @@ export default function Navbar() {
 
   const openMenu = () => {
     setActive(active => !active);
+    active
+      ? (document.body.style.overflow = '')
+      : (document.body.style.overflow = 'hidden');
   };
 
   const { theme, toggleTheme, defaultColor, toggleColorText } =
