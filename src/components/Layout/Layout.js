@@ -5,7 +5,7 @@ import { ThemeContext } from '../../context/Context';
 import * as styles from './Layout.module.scss';
 
 export default function Layout({ children }) {
-  const { theme } = useContext(ThemeContext);
+  const { theme } = useContext(ThemeContext) || false;
   return (
     <div
       className={`${styles.layout} ${

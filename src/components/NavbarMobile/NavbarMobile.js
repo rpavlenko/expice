@@ -5,7 +5,7 @@ import * as styles from './NavbarMobile.module.scss';
 
 export default function NavbarMobile({ menuActive }) {
   const { theme, toggleTheme, defaultColor, toggleColorText } =
-    useContext(ThemeContext);
+    useContext(ThemeContext) || false;
   const handleClick = () => {
     toggleTheme();
     toggleColorText();

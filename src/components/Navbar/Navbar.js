@@ -57,7 +57,7 @@ export default function Navbar() {
   };
 
   const { theme, toggleTheme, defaultColor, toggleColorText } =
-    useContext(ThemeContext);
+    useContext(ThemeContext) || false;
   const handleClick = () => {
     toggleTheme();
     toggleColorText();

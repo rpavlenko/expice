@@ -13,7 +13,7 @@ import 'swiper/components/navigation/navigation.scss';
 SwiperCore.use([Navigation]);
 
 export default function Hero() {
-  const { theme } = useContext(ThemeContext);
+  const { theme } = useContext(ThemeContext) || false;
   return (
     <>
       <Layout>
