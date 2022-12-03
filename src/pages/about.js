@@ -1,6 +1,6 @@
 import Layout from '../components/Layout/Layout';
 import Footer from '../components/Footer/Footer';
-import { graphql } from 'gatsby';
+import { Link, graphql } from 'gatsby';
 
 export default function About({ data }) {
   return (
@@ -8,12 +8,24 @@ export default function About({ data }) {
       <Layout>
         <div className="container">
           <h1>New Page</h1>
+
           {data.allWpPost.nodes.map(node => (
+            <div key={node.slug}>
+              {/* highlight-start */}
+              <Link to={`${node.slug}`}>
+                <p>{node.title}</p>
+              </Link>
+              {/* highlight-end */}
+              <div dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+            </div>
+          ))}
+
+          {/* {data.allWpPost.nodes.map(node => (
             <div>
               <p>{node.title}</p>
               <div dangerouslySetInnerHTML={{ __html: node.excerpt }} />
             </div>
-          ))}
+          ))} */}
           {/* <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit ut
             suscipit aliquid ipsa dolores ad beatae reiciendis doloribus nemo et
@@ -65,6 +77,7 @@ export const pageQuery = graphql`
     allWpPost(sort: { fields: [date] }) {
       nodes {
         title
+        excerpt
         slug
       }
     }
