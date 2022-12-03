@@ -21,16 +21,6 @@ export default function Home({ data }) {
         <html lang="en" />
         <title>{title}</title>
       </Helmet>
-      {data.allWpPost.nodes.map(node => (
-        <div key={node.slug}>
-          {/* highlight-start */}
-          <Link to={node.slug}>
-            <p>{node.title}</p>
-          </Link>
-          {/* highlight-end */}
-          <div dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-        </div>
-      ))}
       <ThemeContextProvider>
         <Hero />
       </ThemeContextProvider>
