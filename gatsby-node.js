@@ -4,7 +4,7 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
   return graphql(`
     {
-      allWpPost(sort: { fields: [date] }) {
+      allWpPost(sort: { date: ASC }) {
         nodes {
           title
           excerpt

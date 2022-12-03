@@ -74,7 +74,7 @@ export default function About({ data }) {
 
 export const pageQuery = graphql`
   query {
-    allWpPost(sort: { fields: [date] }) {
+    allWpPost(sort: { date: ASC }) {
       nodes {
         title
         excerpt
