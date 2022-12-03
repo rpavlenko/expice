@@ -5,7 +5,7 @@ import { ThemeContext } from '../../context/Context';
 import * as styles from './CityLabel.module.scss';
 
 export default function CityLabel({ cityName }) {
-  const { theme } = useContext(ThemeContext);
+  const { theme } = useContext(ThemeContext) || false;
   return (
     <div
       className={`
