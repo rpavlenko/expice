@@ -1,6 +1,7 @@
+import { useState, useContext } from 'react';
+import { ThemeContext } from '../../context/Context';
 import { StaticImage } from 'gatsby-plugin-image';
 import { DateRange, DateRangePicker } from 'react-date-range';
-import { useState } from 'react';
 
 import * as styles from './Booking.module.scss';
 
@@ -9,6 +10,7 @@ export default function Booking() {
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
   const [isOpened, setIsOpened] = useState(false);
+  const { theme } = useContext(ThemeContext) || false;
 
   function toggle() {
     setIsOpened(wasOpened => !wasOpened);
@@ -53,7 +55,13 @@ export default function Booking() {
       />
       <div className={styles.bookingWrapper}>
         <div className={styles.bookingInner}>
-          <h3 className={styles.bookingTitle}>advance booking</h3>
+          <h3
+            className={`${styles.bookingTitle} ${
+              theme ? styles.bookingTitleGreen : ''
+            }`}
+          >
+            advance booking
+          </h3>
           <form
             action="#"
             className={styles.bookingSearch}

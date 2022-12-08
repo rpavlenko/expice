@@ -63,6 +63,12 @@
   }
 }
 
+.bookingTitleGreen {
+  &::before {
+    background-color: variables.$primary-green;
+  }
+}
+
 .bookingSearch {
   display: flex;
   flex-direction: column;

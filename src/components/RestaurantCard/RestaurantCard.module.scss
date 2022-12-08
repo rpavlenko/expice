@@ -12,6 +12,10 @@
   border-radius: 0 0 2rem 2rem;
 }
 
+.cardGreen {
+  background-color: rgba(variables.$primary-green, 0.7);
+}
+
 .cardTitle {
   margin-bottom: 2rem;
   font-size: 2.4rem;

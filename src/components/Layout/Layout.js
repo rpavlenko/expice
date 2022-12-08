@@ -7,11 +7,7 @@ import * as styles from './Layout.module.scss';
 export default function Layout({ children }) {
   const { theme } = useContext(ThemeContext) || false;
   return (
-    <div
-      className={`${styles.layout} ${
-        theme ? styles.layoutGreen : styles.layout
-      }`}
-    >
+    <div className={`${styles.layout} ${theme ? styles.layoutGreen : ''}`}>
       <header
         className={`${styles.header}
       ${theme ? styles.headerGreen : styles.header}

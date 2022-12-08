@@ -10,7 +10,7 @@ export default function CityLabel({ cityName }) {
     <div
       className={`
       ${styles.cityLabel} 
-      ${theme ? styles.cityLabelGreen : styles.cityLabel}`}
+      ${theme ? styles.cityLabelGreen : ''}`}
     >
       <StaticImage
         src="../../images/icons/geolabel.svg"

@@ -69,7 +69,7 @@ export default function Navbar() {
         <Link to="/" className={styles.link}>
           <h1
             className={`${styles.logo} 
-            ${theme ? styles.logoGreen : styles.logo}`}
+            ${theme ? styles.logoGreen : ''}`}
             ref={logoImage}
           >
             {title}

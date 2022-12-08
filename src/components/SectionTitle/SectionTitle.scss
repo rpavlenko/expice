@@ -26,6 +26,12 @@
   }
 }
 
+.sectionTitleGreen {
+  &::before {
+    background-color: variables.$primary-green;
+  }
+}
+
 .services {
   max-width: 30.7rem;
   height: 14rem;

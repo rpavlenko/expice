@@ -35,7 +35,7 @@ export default function Hero() {
                 </form>
                 <button
                   className={`${styles.searchButton}
-                ${theme ? styles.searchButtonGreen : styles.searchButton}`}
+                ${theme ? styles.searchButtonGreen : ''}`}
                 >
                   <span className={styles.searchButtonText}>go</span>
                 </button>

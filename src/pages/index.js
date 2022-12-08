@@ -23,13 +23,13 @@ export default function Home({ data }) {
       </Helmet>
       <ThemeContextProvider>
         <Hero />
+        <Restaurants />
+        <Booking />
+        <Services />
+        <ExploreFood cardsData={cardsData} />
+        <DownloadApp />
+        <Footer />
       </ThemeContextProvider>
-      <Restaurants />
-      <Booking />
-      <Services />
-      <ExploreFood cardsData={cardsData} />
-      <DownloadApp />
-      <Footer />
     </>
   );
 }

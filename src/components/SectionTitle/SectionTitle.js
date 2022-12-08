@@ -1,5 +1,17 @@
+import { useContext } from 'react';
+import { ThemeContext } from '../../context/Context';
+
 import './SectionTitle.scss';
 
 export default function SectionTitle({ sectionTitle, className }) {
-  return <h2 className={className}>{sectionTitle}</h2>;
+  const { theme } = useContext(ThemeContext) || false;
+
+  return (
+    <h2
+      className={`${className}
+  ${theme ? 'sectionTitleGreen' : ''}`}
+    >
+      {sectionTitle}
+    </h2>
+  );
 }

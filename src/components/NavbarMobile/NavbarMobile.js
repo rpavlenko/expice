@@ -16,11 +16,7 @@ export default function NavbarMobile({ menuActive }) {
       className={`
           ${styles.navigationLinksMobile} 
           ${menuActive ? styles.active : ''}
-          ${
-            theme
-              ? styles.navigationLinksMobileGreen
-              : styles.navigationLinksMobile
-          }
+          ${theme ? styles.navigationLinksMobileGreen : ''}
         `}
     >
       <Link className={styles.navigationLink} to="/about">
