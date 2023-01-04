@@ -76,16 +76,36 @@ export default function Navbar() {
           </h1>
         </Link>
         <div className={styles.navigationLinks}>
-          <Link className={styles.navigationLink} to="/about">
-            Menu One
+          <Link
+            className={`${styles.navigationLink} ${
+              theme ? styles.navigationLinkGreen : ''
+            }`}
+            to="/about"
+          >
+            Blog
           </Link>
-          <Link className={styles.navigationLink} to="/menu-two">
+          <Link
+            className={`${styles.navigationLink} ${
+              theme ? styles.navigationLinkGreen : ''
+            }`}
+            to="/menu-two"
+          >
             Menu Two
           </Link>
-          <Link className={styles.navigationLink} to="/menu-three">
+          <Link
+            className={`${styles.navigationLink} ${
+              theme ? styles.navigationLinkGreen : ''
+            }`}
+            to="/menu-three"
+          >
             Menu Three
           </Link>
-          <Link className={styles.navigationLink} to="/menu-four">
+          <Link
+            className={`${styles.navigationLink} ${
+              theme ? styles.navigationLinkGreen : ''
+            }`}
+            to="/menu-four"
+          >
             Menu Four
           </Link>
           <button

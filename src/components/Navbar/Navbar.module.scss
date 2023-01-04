@@ -61,6 +61,13 @@
   }
 }
 
+.navigationLinkGreen {
+  &:hover {
+    color: variables.$primary-green;
+    border-bottom: 2px solid variables.$primary-green;
+  }
+}
+
 .user {
   display: flex;
   align-items: center;

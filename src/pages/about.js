@@ -7,7 +7,7 @@ export default function About({ data }) {
     <>
       <Layout>
         <div className="container">
-          <h1>New Page</h1>
+          <h1>Blog articles</h1>
 
           {data.allWpPost.nodes.map(node => (
             <div key={node.slug}>
