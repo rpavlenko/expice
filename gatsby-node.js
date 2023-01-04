@@ -17,7 +17,7 @@ exports.createPages = ({ graphql, actions }) => {
     //highlight-start
     result.data.allWpPost.nodes.forEach(node => {
       createPage({
-        path: `about/${node.slug}`,
+        path: `blog/${node.slug}`,
         component: path.resolve(`./src/templates/blog-post.js`),
         context: {
           // This is the $slug variable

@@ -80,7 +80,7 @@ export default function Navbar() {
             className={`${styles.navigationLink} ${
               theme ? styles.navigationLinkGreen : ''
             }`}
-            to="/about"
+            to="/blog"
           >
             Blog
           </Link>
@@ -90,7 +90,7 @@ export default function Navbar() {
             }`}
             to="/menu-two"
           >
-            Menu Two
+            Shop
           </Link>
           <Link
             className={`${styles.navigationLink} ${

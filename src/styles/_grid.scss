@@ -12,6 +12,13 @@
   margin: 0 auto;
 }
 
+.listContainer {
+  max-width: 120rem;
+  padding-top: 8rem;
+  padding-left: 5rem;
+  padding-right: 1rem;
+}
+
 @media (max-width: 1195px) {
   .navbarContainer,
   .container {

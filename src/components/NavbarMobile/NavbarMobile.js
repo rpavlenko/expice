@@ -19,11 +19,11 @@ export default function NavbarMobile({ menuActive }) {
           ${theme ? styles.navigationLinksMobileGreen : ''}
         `}
     >
-      <Link className={styles.navigationLink} to="/about">
-        Menu One
+      <Link className={styles.navigationLink} to="/blog">
+        Blog
       </Link>
-      <Link className={styles.navigationLink} to="/menu-two">
-        Menu Two
+      <Link className={styles.navigationLink} to="/shop">
+        Shop
       </Link>
       <Link className={styles.navigationLink} to="/menu-three">
         Menu Three

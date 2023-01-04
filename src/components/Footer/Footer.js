@@ -21,7 +21,7 @@ export default function Footer() {
   const { copyright } = data.site.siteMetadata;
 
   return (
-    <footer className={styles.footer}>
+    <footer className={` ${styles.footer} fullContainer`}>
       <div className={styles.footerInner}>
         <Notification />
         <div className={styles.footerInfo}>
