@@ -1,8 +1,12 @@
+import { useContext } from 'react';
+import { ThemeContext } from '../../context/Context';
 import arrow from '../../images/icons/notification-input-arrow.svg';
 
 import * as styles from './Notification.module.scss';
 
 export default function Notification() {
+  const { theme } = useContext(ThemeContext) || false;
+
   return (
     <div className={`container ${styles.notificationSection}`}>
       <div className={styles.notificationInner}>
@@ -23,7 +27,11 @@ export default function Notification() {
               placeholder="email"
               required
             />
-            <button className={styles.notificationButton}>
+            <button
+              className={`${styles.notificationButton} ${
+                theme ? styles.notificationButtonGreen : ''
+              }`}
+            >
               <img src={arrow} alt="notification arrow button" />
             </button>
           </form>

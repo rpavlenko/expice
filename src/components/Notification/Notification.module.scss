@@ -73,6 +73,10 @@
   border: none;
 }
 
+.notificationButtonGreen {
+  background-color: variables.$primary-green;
+}
+
 .linkGroup {
   display: flex;
   justify-content: center;

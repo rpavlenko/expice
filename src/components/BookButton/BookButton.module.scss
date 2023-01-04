@@ -12,6 +12,10 @@
   text-transform: capitalize;
 }
 
+.bookButtonGreen {
+  color: variables.$primary-green;
+}
+
 @media (max-width: 420px) {
   .bookButton {
     margin-top: -5.5rem;

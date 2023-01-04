@@ -76,7 +76,12 @@ export default function Booking() {
                 placeholder="search restaurant"
                 required
               />
-              <button className={styles.bookingButton} type="submit">
+              <button
+                className={`${styles.bookingButton} ${
+                  theme ? styles.bookingButtonGreen : ''
+                }`}
+                type="submit"
+              >
                 Go
               </button>
             </div>
