@@ -3,16 +3,16 @@
 .postWrapper {
   margin-bottom: 2rem;
   padding-bottom: 2rem;
-  border-bottom: 1px solid #e5e9ec;
+  border-bottom: 0.1rem solid #e5e9ec;
   transition: all 0.2s ease-in-out;
 
   &:hover {
-    border-bottom: 1px solid variables.$primary-red;
+    border-bottom: 0.1rem solid variables.$primary-red;
   }
 }
 
 .postWrapperGreen {
   &:hover {
-    border-bottom: 1px solid variables.$primary-green;
+    border-bottom: 0.1rem solid variables.$primary-green;
   }
 }

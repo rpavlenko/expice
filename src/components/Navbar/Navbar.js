@@ -44,6 +44,9 @@ export default function Navbar() {
 
     window.addEventListener('scroll', menuChangeSize);
 
+    // remove overflow hidden after page refresh
+    document.body.style.overflow = '';
+
     return () => {
       window.removeEventListener('scroll', menuChangeSize);
     };
