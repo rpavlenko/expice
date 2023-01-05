@@ -47,7 +47,7 @@ export default function Hero() {
             <Swiper
               className={styles.heroSlider}
               slidesPerView={1}
-              loop={true}
+              // loop={true}
               navigation={{
                 prevEl: '.prevSlide',
                 nextEl: '.nextSlide',

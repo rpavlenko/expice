@@ -28,7 +28,7 @@
     "react-date-range": "^1.4.0",
     "react-dom": "^18.1.0",
     "react-helmet": "^6.1.0",
-    "swiper": "^8.4.5"
+    "swiper": "^6.8.4"
   },
   "devDependencies": {
     "eslint": "^7.32.0",
