@@ -48,6 +48,7 @@ export default function Hero() {
               className={styles.heroSlider}
               slidesPerView={1}
               loop={true}
+              lazy={true}
               navigation={{
                 prevEl: '.prevSlide',
                 nextEl: '.nextSlide',
