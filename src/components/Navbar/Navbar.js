@@ -1,6 +1,12 @@
 import { Link, graphql, useStaticQuery } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
-import { useLayoutEffect, useRef, useState, useContext } from 'react';
+import {
+  useLayoutEffect,
+  useRef,
+  useState,
+  useContext,
+  useEffect,
+} from 'react';
 import { ThemeContext } from '../../context/Context';
 import hamburger from '../../images/icons/hamburger.svg';
 import closeHamburger from '../../images/icons/close.svg';
