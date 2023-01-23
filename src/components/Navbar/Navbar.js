@@ -65,12 +65,22 @@ export default function Navbar() {
       : (document.body.style.overflow = 'hidden');
   };
 
-  const { theme, toggleTheme, defaultColor, toggleColorText } =
-    useContext(ThemeContext) || false;
-  const handleClick = () => {
-    toggleTheme();
+  const {
+    theme,
+    toggleTheme,
+    defaultColor,
+    toggleColorText,
+    onChange,
+    checked,
+  } = useContext(ThemeContext) || false;
+  const handleClick = e => {
+    // toggleTheme();
     toggleColorText();
+    onChange(e);
+    // console.log(checked);
   };
+
+  console.log('current theme: ', theme);
 
   return (
     <div className="container navbarContainer">
@@ -78,7 +88,7 @@ export default function Navbar() {
         <Link to="/" className={styles.link}>
           <h1
             className={`${styles.logo} 
-            ${theme ? styles.logoGreen : ''}`}
+            ${theme ? 'logoGreen' : ''}`}
             ref={logoImage}
           >
             {title}
@@ -118,11 +128,17 @@ export default function Navbar() {
             Menu Four
           </Link>
           <button
-            className={`${'colorTheme'} ${
-              theme ? 'colorThemeGreen' : 'colorThemeRed'
-            }`}
-            onClick={handleClick}
+            className={`${'colorTheme'} ${theme ? 'green' : 'red'}`}
+            // checked={checked}
+            onChange={e => handleClick(e)}
+            type="checkbox"
           >
+            <input
+              type="checkbox"
+              className={`${'colorTheme'} ${theme ? 'green' : 'red'}`}
+              checked={checked}
+              onChange={e => handleClick(e)}
+            />
             Make it {defaultColor ? 'green' : 'red'}
           </button>
         </div>
