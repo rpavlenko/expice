@@ -4,11 +4,18 @@ import { ThemeContext } from '../../context/Context';
 import * as styles from './NavbarMobile.module.scss';
 
 export default function NavbarMobile({ menuActive }) {
-  const { theme, toggleTheme, defaultColor, toggleColorText } =
-    useContext(ThemeContext) || false;
+  const {
+    theme,
+    toggleTheme,
+    defaultColor,
+    toggleColorText,
+    toggleChecked,
+    checked,
+  } = useContext(ThemeContext) || false;
   const handleClick = () => {
-    toggleTheme();
     toggleColorText();
+    toggleChecked();
+    toggleTheme();
   };
 
   return (
@@ -35,10 +42,16 @@ export default function NavbarMobile({ menuActive }) {
         className={`${'colorTheme'} ${
           theme ? 'colorThemeGreen' : 'colorThemeRed'
         }`}
-        onClick={handleClick}
+        onChange={handleClick}
       >
         Make it {defaultColor ? 'green' : 'red'}
       </button>
+      <input
+        type="checkbox"
+        className={`${'colorTheme'} ${theme ? 'green' : 'red'}`}
+        checked={checked}
+        onChange={handleClick}
+      />
     </div>
   );
 }
