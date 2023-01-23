@@ -70,13 +70,15 @@ export default function Navbar() {
     toggleTheme,
     defaultColor,
     toggleColorText,
-    onChange,
+    // onChange,
+    toggleChecked,
     checked,
   } = useContext(ThemeContext) || false;
   const handleClick = e => {
     // toggleTheme();
     toggleColorText();
-    onChange(e);
+    toggleChecked();
+    toggleTheme();
     // console.log(checked);
   };
 
@@ -130,14 +132,14 @@ export default function Navbar() {
           <button
             className={`${'colorTheme'} ${theme ? 'green' : 'red'}`}
             // checked={checked}
-            onChange={e => handleClick(e)}
+            // onChange={toggleChecked}
             type="checkbox"
           >
             <input
               type="checkbox"
               className={`${'colorTheme'} ${theme ? 'green' : 'red'}`}
               checked={checked}
-              onChange={e => handleClick(e)}
+              onChange={handleClick}
             />
             Make it {defaultColor ? 'green' : 'red'}
           </button>

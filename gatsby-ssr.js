@@ -33,6 +33,7 @@ exports.onRenderBody = ({ setHeadComponents }) => {
         try {
           preferredTheme = localStorage.getItem('theme');
           console.log('preferredTheme:', preferredTheme);
+          // window.__preferredTheme = preferredTheme;
         } catch (e) {}
 
         // Is there an Operating System Preference?

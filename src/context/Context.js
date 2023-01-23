@@ -7,10 +7,14 @@ function ThemeContextProvider(props) {
     return null;
   }
 
-  const [theme, setTheme] = useState(window.__theme);
+  const [theme, setTheme] = useState(window.__theme === 'true');
   const [checked, setChecked] = useState(window.__theme === 'false');
   const [defaultColor, setDefaultColor] = useState(false);
   const toggleTheme = () => setTheme(!theme);
+  const toggleChecked = () => {
+    setChecked(checked => !checked);
+    window.__setPreferredTheme(checked ? 'true' : 'false');
+  };
   const toggleColorText = () => setDefaultColor(!defaultColor);
 
   // useLayoutEffect(() => {
@@ -21,15 +25,15 @@ function ThemeContextProvider(props) {
   //   window.localStorage.setItem('theme', theme);
   // }, [theme]);
 
-  const onChange = useCallback(
-    e => {
-      const isChecked = e.target.checked;
-      setChecked(isChecked);
-      setTheme(isChecked);
-      window.__setPreferredTheme(isChecked ? 'true' : 'false');
-    },
-    [setChecked]
-  );
+  // const onChange = useCallback(
+  //   e => {
+  //     // const isChecked = e.target.checked;
+  //     // setChecked(isChecked);
+  //     // setTheme(isChecked);
+  //     // window.__setPreferredTheme(isChecked ? 'true' : 'false');
+  //   },
+  //   [setChecked]
+  // );
 
   return (
     <div>
@@ -39,7 +43,8 @@ function ThemeContextProvider(props) {
           toggleTheme,
           defaultColor,
           toggleColorText,
-          onChange,
+          // onChange,
+          toggleChecked,
           checked,
         }}
       >
