@@ -38,20 +38,18 @@ export default function NavbarMobile({ menuActive }) {
       <Link className={styles.navigationLink} to="/menu-four">
         Menu Four
       </Link>
-      <button
-        className={`${'colorTheme'} ${
-          theme ? 'colorThemeGreen' : 'colorThemeRed'
-        }`}
-        onChange={handleClick}
-      >
-        Make it {defaultColor ? 'green' : 'red'}
-      </button>
-      <input
-        type="checkbox"
-        className={`${'colorTheme'} ${theme ? 'green' : 'red'}`}
-        checked={checked}
-        onChange={handleClick}
-      />
+      <div className={`${'colorTheme'} ${theme ? 'green' : 'red'}`}>
+        <label className="themeButton">
+          <input
+            type="checkbox"
+            className={`${'colorThemeCheckbox'}`}
+            checked={checked}
+            onChange={handleClick}
+            hidden
+          />
+          Make it {defaultColor ? 'green' : 'red'}
+        </label>
+      </div>
     </div>
   );
 }

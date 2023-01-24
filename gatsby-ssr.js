@@ -8,8 +8,6 @@ exports.onRenderBody = ({ setHeadComponents }) => {
         (function() {
           function setTheme(theme) {
             window.__theme = theme;
-            // console.log(theme);
-            // console.log('Theme updated:', theme);
 
             if (theme === 'true') {
               console.log('Theme green');
@@ -43,7 +41,7 @@ exports.onRenderBody = ({ setHeadComponents }) => {
         // 1. Use the theme from localStorage, if any
         // 2. Use the OS theme, if any
         // 3. Default to light
-        setTheme(preferredTheme);
+        setTheme(preferredTheme || 'false');
       })();
         `,
       }}

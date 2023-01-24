@@ -9,24 +9,11 @@
 :root .red {
   background-color: variables.$primary-red;
   color: variables.$dark-main;
-  // color: variables.$dark-main;
-  // --color-text: #222;
-  // --color-primary: #164bc5;
-  /* ... more colors */
 }
 
-/* Dark Mode */
 :root .green {
   background-color: variables.$primary-green;
   color: variables.$dark-main;
-  // --color-primary: #0f9640;
-  /* ... more colors */
-}
-
-:root .logoGreen {
-  color: variables.$primary-green;
-  // --color-primary: #0f9640;
-  /* ... more colors */
 }
 
 html {
@@ -78,11 +65,11 @@ input[type='time']::-webkit-calendar-picker-indicator {
 }
 
 .colorTheme {
+  display: inline-block;
   width: 12.6rem;
-  margin: 1rem;
-  padding: 1rem 1rem;
   border-radius: 0.5rem;
   border: 1px solid variables.$dark-main;
+  cursor: pointer;
 }
 
 .colorThemeRed {
@@ -93,4 +80,20 @@ input[type='time']::-webkit-calendar-picker-indicator {
 .colorThemeGreen {
   background: variables.$primary-green;
   color: variables.$dark-main;
+}
+
+.colorThemeCheckbox {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.themeButton {
+  position: relative;
+  width: 100%;
+  display: inline-block;
+  padding: 1rem 1rem;
+  text-align: center;
+  color: inherit;
+  cursor: pointer;
 }

@@ -1,12 +1,6 @@
 import { Link, graphql, useStaticQuery } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
-import {
-  useLayoutEffect,
-  useRef,
-  useState,
-  useContext,
-  useEffect,
-} from 'react';
+import { useLayoutEffect, useRef, useState, useContext } from 'react';
 import { ThemeContext } from '../../context/Context';
 import hamburger from '../../images/icons/hamburger.svg';
 import closeHamburger from '../../images/icons/close.svg';
@@ -70,19 +64,14 @@ export default function Navbar() {
     toggleTheme,
     defaultColor,
     toggleColorText,
-    // onChange,
     toggleChecked,
     checked,
   } = useContext(ThemeContext) || false;
   const handleClick = e => {
-    // toggleTheme();
     toggleColorText();
     toggleChecked();
     toggleTheme();
-    // console.log(checked);
   };
-
-  console.log('current theme: ', theme);
 
   return (
     <div className="container navbarContainer">
@@ -90,7 +79,7 @@ export default function Navbar() {
         <Link to="/" className={styles.link}>
           <h1
             className={`${styles.logo} 
-            ${theme ? 'logoGreen' : ''}`}
+            ${theme ? styles.logoGreen : ''}`}
             ref={logoImage}
           >
             {title}
@@ -129,20 +118,18 @@ export default function Navbar() {
           >
             Menu Four
           </Link>
-          <button
-            className={`${'colorTheme'} ${theme ? 'green' : 'red'}`}
-            // checked={checked}
-            // onChange={toggleChecked}
-            type="checkbox"
-          >
-            <input
-              type="checkbox"
-              className={`${'colorTheme'} ${theme ? 'green' : 'red'}`}
-              checked={checked}
-              onChange={handleClick}
-            />
-            Make it {defaultColor ? 'green' : 'red'}
-          </button>
+          <div className={`${'colorTheme'} ${theme ? 'green' : 'red'}`}>
+            <label className="themeButton">
+              <input
+                type="checkbox"
+                className={`${'colorThemeCheckbox'}`}
+                checked={checked}
+                onChange={handleClick}
+                hidden
+              />
+              Make it {defaultColor ? 'green' : 'red'}
+            </label>
+          </div>
         </div>
 
         <div className={styles.user}>
