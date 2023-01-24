@@ -3,6 +3,8 @@ const React = require('react');
 exports.onRenderBody = ({ setHeadComponents }) => {
   setHeadComponents([
     <script
+      // add key to avoid warning "Each child in a list should have a unique "key" prop."
+      key="1"
       dangerouslySetInnerHTML={{
         __html: `
         (function() {

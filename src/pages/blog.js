@@ -20,7 +20,7 @@ export default function Blog({ data }) {
                   <article key={node.slug}>
                     {/* highlight-start */}
                     <Post>
-                      <Link to={`${node.slug}`}>
+                      <Link to={node.slug}>
                         <PostTitle title={node.title} />
                         {/* highlight-end */}
                         {/* <div
