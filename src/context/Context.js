@@ -3,13 +3,14 @@ import { useState, createContext } from 'react';
 const ThemeContext = createContext();
 
 function ThemeContextProvider(props) {
+  if (typeof window === 'undefined') {
+    return null;
+  }
+
   const [theme, setTheme] = useState(window.__theme === 'true');
   const [checked, setChecked] = useState(window.__theme === 'false');
   const [defaultColor, setDefaultColor] = useState(false);
 
-  if (typeof window === 'undefined') {
-    return null;
-  }
   const toggleTheme = () => setTheme(!theme);
 
   const toggleChecked = () => {
