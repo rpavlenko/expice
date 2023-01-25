@@ -20,9 +20,10 @@ export default function Notification() {
           </p>
         </div>
         <div className={styles.notificationInput}>
-          <form action="#">
+          <form name="contact form" method="POST" netlify action="/thank-you">
             <input
               className={styles.emailInput}
+              name="email"
               type="email"
               placeholder="email"
               required
@@ -31,6 +32,7 @@ export default function Notification() {
               className={`${styles.notificationButton} ${
                 theme ? styles.notificationButtonGreen : ''
               }`}
+              type="submit"
             >
               <img src={arrow} alt="notification arrow button" />
             </button>
