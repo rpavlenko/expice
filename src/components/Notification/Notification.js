@@ -23,7 +23,7 @@ export default function Notification() {
           <form
             name="contact"
             // method="POST"
-            data-netlify="true"
+            netlify
             // action="/thank-you/"
           >
             <input
