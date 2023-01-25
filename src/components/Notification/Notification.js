@@ -24,15 +24,18 @@ export default function Notification() {
             name="contact"
             method="POST"
             data-netlify="true"
+            netlify-honeypot="bot-field"
             // action="/thank-you/"
           >
-            <input
-              className={styles.emailInput}
-              name="email"
-              type="email"
-              placeholder="email"
-              required
-            />
+            <label>
+              <input
+                className={styles.emailInput}
+                name="email"
+                type="email"
+                placeholder="email"
+                required
+              />
+            </label>
             <button
               className={`${styles.notificationButton} ${
                 theme ? styles.notificationButtonGreen : ''
