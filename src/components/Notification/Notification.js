@@ -20,7 +20,12 @@ export default function Notification() {
           </p>
         </div>
         <div className={styles.notificationInput}>
-          <form name="contact form" method="POST" netlify action="/thank-you">
+          <form
+            name="contact form"
+            method="POST"
+            data-netlify="true"
+            action="/pages/thank-you"
+          >
             <input
               className={styles.emailInput}
               name="email"
