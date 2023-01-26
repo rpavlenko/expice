@@ -7,12 +7,12 @@ export default function BlogPost({ data }) {
   const post = data.allWpPost.nodes[0];
   console.log(post);
 
-  const featuredImage = getImage(post.featuredImage.node.gatsbyImage);
+  const featuredImage = getImage(post.featuredImage?.node?.gatsbyImage);
   console.log(featuredImage);
 
   return (
     <>
-      <Layout>
+      <Layout blogList={'blogList'}>
         <div>
           <h1>{post.title}</h1>
           <div dangerouslySetInnerHTML={{ __html: post.content }} />

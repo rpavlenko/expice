@@ -14,7 +14,7 @@ export default function Blog({ data }) {
   return (
     <>
       <ThemeContextProvider>
-        <Layout>
+        <Layout blogList={'blogList'}>
           <div className="container">
             <div className="listContainer">
               <section>
