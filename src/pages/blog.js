@@ -1,4 +1,5 @@
 import { Link, graphql } from 'gatsby';
+import { GatsbyImage, getImage, StaticImage } from 'gatsby-plugin-image';
 import Layout from '../components/Layout/Layout';
 import Footer from '../components/Footer/Footer';
 import PostListTitle from '../components/PostListTitle/PostListTitle';
@@ -8,6 +9,8 @@ import PostTitle from '../components/PostTitle/PostTitle';
 import Post from '../components/Post/Post';
 
 export default function Blog({ data }) {
+  const posts = data.allWpPost.nodes;
+
   return (
     <>
       <ThemeContextProvider>
@@ -16,11 +19,27 @@ export default function Blog({ data }) {
             <div className="listContainer">
               <section>
                 <PostListTitle />
-                {data.allWpPost.nodes.map(node => (
+                {posts.map(node => (
                   <article key={node.slug}>
                     {/* highlight-start */}
                     <Post>
                       <Link to={node.slug}>
+                        {getImage(node.featuredImage?.node?.gatsbyImage) ? (
+                          <GatsbyImage
+                            image={getImage(
+                              node.featuredImage?.node?.gatsbyImage
+                            )}
+                            alt={` image`}
+                          />
+                        ) : (
+                          <StaticImage
+                            src="../images/no-image2.png"
+                            alt="no image"
+                            width={200}
+                            height={100}
+                          />
+                        )}
+
                         <PostTitle title={node.title} />
                         {/* highlight-end */}
                         {/* <div
@@ -53,6 +72,11 @@ export const pageQuery = graphql`
         title
         excerpt
         slug
+        featuredImage {
+          node {
+            gatsbyImage(width: 200, height: 100)
+          }
+        }
       }
     }
   }

@@ -6,6 +6,12 @@
   border-bottom: 0.1rem solid #e5e9ec;
   transition: all 0.2s ease-in-out;
 
+  & a {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+
   &:hover {
     border-bottom: 0.1rem solid variables.$primary-red;
   }
