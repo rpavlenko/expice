@@ -12,10 +12,6 @@
   transition: all 0.2s;
 }
 
-.layoutBlogList {
-  background: none;
-}
-
 .layoutGreen {
   background: linear-gradient(
     to right,
@@ -102,4 +98,8 @@
       variables.$primary-green 40%
     );
   }
+}
+
+.layoutBlogList {
+  background: none;
 }

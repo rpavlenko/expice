@@ -1,0 +1,52 @@
+.postContent {
+  font-size: 1.5rem;
+
+  h1 {
+    margin-bottom: 1rem;
+  }
+
+  h4 {
+    margin-bottom: 3rem;
+    font-weight: normal;
+  }
+
+  h5 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-family: inherit;
+    font-weight: bold;
+  }
+
+  ul {
+    padding-left: 2rem;
+    margin-bottom: 3rem;
+    list-style: disc;
+  }
+
+  p {
+    margin-bottom: 2rem;
+  }
+
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.postContainer {
+  max-width: 75rem;
+  margin: 0 auto;
+  padding-top: 8rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.postTitle {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-size: 4rem;
+}
+
+.postDate {
+  margin-bottom: 3rem;
+}
