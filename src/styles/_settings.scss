@@ -16,6 +16,31 @@
   color: variables.$dark-main;
 }
 
+.page404 {
+  padding-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background: url('../images/404.jpg') no-repeat center center;
+  background-size: contain;
+  height: 100%;
+}
+
+.titlePage404 {
+  margin-bottom: 2rem;
+}
+
+.linkPage404 {
+  text-decoration: underline;
+}
+
+.imageLicensePage404 {
+  position: absolute;
+  bottom: 0;
+  font-size: 0.8rem;
+}
+
 html {
   font-size: 10px;
   font-style: normal;
