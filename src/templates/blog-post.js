@@ -1,5 +1,6 @@
 import { graphql } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import { ThemeContextProvider } from '../context/Context';
 import Layout from '../components/Layout/Layout';
 import Footer from '../components/Footer/Footer';
 
@@ -14,24 +15,26 @@ export default function BlogPost({ data }) {
 
   return (
     <>
-      <Layout blogList={'blogList'}>
-        <div className={styles.postContainer}>
-          <h1 className={styles.postTitle}>{post.title}</h1>
-          <div
-            className={styles.postDate}
-            dangerouslySetInnerHTML={{
-              __html: post.date,
-            }}
-          />
-          <div
-            className={styles.postContent}
-            dangerouslySetInnerHTML={{ __html: post.content }}
-          />
+      <ThemeContextProvider>
+        <Layout blogList={'blogList'}>
+          <div className={styles.postContainer}>
+            <h1 className={styles.postTitle}>{post.title}</h1>
+            <div
+              className={styles.postDate}
+              dangerouslySetInnerHTML={{
+                __html: post.date,
+              }}
+            />
+            <div
+              className={styles.postContent}
+              dangerouslySetInnerHTML={{ __html: post.content }}
+            />
 
-          {/* <GatsbyImage image={featuredImage} alt={`${post.title} image`} /> */}
-        </div>
-      </Layout>
-      <Footer />
+            {/* <GatsbyImage image={featuredImage} alt={`${post.title} image`} /> */}
+          </div>
+        </Layout>
+        <Footer />
+      </ThemeContextProvider>
     </>
   );
 }

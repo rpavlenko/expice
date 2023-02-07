@@ -26,6 +26,7 @@ export default function Blog({ data }) {
                       <Link to={node.slug}>
                         {getImage(node.featuredImage?.node?.gatsbyImage) ? (
                           <GatsbyImage
+                            className="listImage"
                             image={getImage(
                               node.featuredImage?.node?.gatsbyImage
                             )}
@@ -35,6 +36,7 @@ export default function Blog({ data }) {
                           <StaticImage
                             src="../images/no-image2.png"
                             alt="no image"
+                            className="listImage"
                             width={200}
                             height={100}
                           />
