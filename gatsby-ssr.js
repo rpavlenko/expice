@@ -12,10 +12,8 @@ exports.onRenderBody = ({ setHeadComponents }) => {
             window.__theme = theme;
 
             if (theme === 'true') {
-              console.log('Theme green');
               document.documentElement.className = 'green';
             } else {
-              console.log('Theme red');
               document.documentElement.className = 'red';
             }
           };
@@ -24,7 +22,6 @@ exports.onRenderBody = ({ setHeadComponents }) => {
           setTheme(theme);
           try {
             localStorage.setItem('theme', theme);
-            console.log('Theme saved:', theme);
           } catch (e) {}
         };
 
@@ -32,12 +29,8 @@ exports.onRenderBody = ({ setHeadComponents }) => {
         let preferredTheme;
         try {
           preferredTheme = localStorage.getItem('theme');
-          console.log('preferredTheme:', preferredTheme);
           // window.__preferredTheme = preferredTheme;
         } catch (e) {}
-
-        // Is there an Operating System Preference?
-        // let darkQuery = window.matchMedia('(prefers-color-scheme: dark)');
 
         // PICK THE INITIAL THEME
         // 1. Use the theme from localStorage, if any

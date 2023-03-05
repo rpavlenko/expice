@@ -1,6 +1,7 @@
 import { Link } from 'gatsby';
 import { useContext } from 'react';
 import { ThemeContext } from '../../context/Context';
+
 import * as styles from './NavbarMobile.module.scss';
 
 export default function NavbarMobile({ menuActive }) {

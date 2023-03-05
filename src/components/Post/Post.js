@@ -1,5 +1,6 @@
 import { useContext } from 'react';
 import { ThemeContext } from '../../context/Context';
+
 import * as styles from './Post.module.scss';
 
 export default function Post({ children }) {

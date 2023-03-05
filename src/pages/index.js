@@ -1,15 +1,15 @@
+import { graphql } from 'gatsby';
 import { Helmet } from 'react-helmet';
-import { graphql, Link } from 'gatsby';
+import { ThemeContextProvider } from '../context/Context';
 import Hero from '../components/Hero/Hero';
 import Restaurants from '../components/Restaurants/Restaurants';
 import Booking from '../components/Booking/Booking';
 import Services from '../components/Services/Services';
 import ExploreFood from '../components/ExploreFoods/ExploreFood';
 import Footer from '../components/Footer/Footer';
+import DownloadApp from '../components/DownloadApp/DownloadApp';
 
 import '../styles/style.sass';
-import DownloadApp from '../components/DownloadApp/DownloadApp';
-import { ThemeContextProvider } from '../context/Context';
 
 export default function Home({ data }) {
   const { title } = data.site.siteMetadata;

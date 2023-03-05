@@ -1,10 +1,9 @@
 import { Link, graphql } from 'gatsby';
 import { GatsbyImage, getImage, StaticImage } from 'gatsby-plugin-image';
+import { ThemeContextProvider } from '../context/Context';
 import Layout from '../components/Layout/Layout';
 import Footer from '../components/Footer/Footer';
 import PostListTitle from '../components/PostListTitle/PostListTitle';
-
-import { ThemeContextProvider } from '../context/Context';
 import PostTitle from '../components/PostTitle/PostTitle';
 import Post from '../components/Post/Post';
 
@@ -21,7 +20,6 @@ export default function Blog({ data }) {
                 <PostListTitle />
                 {posts.map(node => (
                   <article key={node.slug}>
-                    {/* highlight-start */}
                     <Post>
                       <Link to={node.slug}>
                         {getImage(node.featuredImage?.node?.gatsbyImage) ? (
@@ -43,21 +41,11 @@ export default function Blog({ data }) {
                         )}
 
                         <PostTitle title={node.title} />
-                        {/* highlight-end */}
-                        {/* <div
-                          dangerouslySetInnerHTML={{ __html: node.excerpt }}
-                        /> */}
                       </Link>
                     </Post>
                   </article>
                 ))}
               </section>
-              {/* {data.allWpPost.nodes.map(node => (
-            <div>
-              <p>{node.title}</p>
-              <div dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-            </div>
-          ))} */}
             </div>
           </div>
         </Layout>

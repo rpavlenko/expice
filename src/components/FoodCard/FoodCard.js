@@ -1,6 +1,5 @@
 import { useContext } from 'react';
 import { ThemeContext } from '../../context/Context';
-import { StaticImage } from 'gatsby-plugin-image';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 import * as styles from './FoodCard.module.scss';

@@ -1,6 +1,4 @@
 import SectionTitle from '../SectionTitle/SectionTitle';
-import google from '../../images/google-play.jpg';
-import apple from '../../images/app-store.jpg';
 import { StaticImage } from 'gatsby-plugin-image';
 
 import * as styles from './DownloadApp.module.scss';
@@ -28,9 +26,9 @@ export default function DownloadApp() {
               target="_blank"
               rel="noreferrer"
             >
-              <img
+              <StaticImage
                 className={styles.appImage}
-                src={google}
+                src="../../images/google-play.jpg"
                 alt="google play logo"
               />
             </a>
@@ -40,9 +38,9 @@ export default function DownloadApp() {
               target="_blank"
               rel="noreferrer"
             >
-              <img
+              <StaticImage
                 className={styles.appImage}
-                src={apple}
+                src="../../images/app-store.jpg"
                 alt="apple store logo"
               />
             </a>

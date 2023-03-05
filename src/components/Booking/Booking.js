@@ -1,7 +1,6 @@
 import { useState, useContext } from 'react';
 import { ThemeContext } from '../../context/Context';
 import { StaticImage } from 'gatsby-plugin-image';
-import { DateRange, DateRangePicker } from 'react-date-range';
 
 import * as styles from './Booking.module.scss';
 
@@ -91,13 +90,7 @@ export default function Booking() {
                 <label className={styles.inputTitle} htmlFor="date">
                   Date
                 </label>
-                <input
-                  className={styles.inputCalendar}
-                  // type="date"
-                  id="date"
-                  placeholder="01.01.2021"
-                  onClick={toggle}
-                />
+                <input className={styles.inputCalendar} id="date" type="date" />
               </div>
 
               <div className={styles.inputGroupElem}>
@@ -120,15 +113,6 @@ export default function Booking() {
             </div>
           </form>
         </div>
-        {isOpened && (
-          <DateRangePicker
-            className={styles.DateRangePicker}
-            ranges={[selectionRange]}
-            minDate={new Date()}
-            rangeColors={['#FD5B61']}
-            onChange={handleSelect}
-          />
-        )}
       </div>
     </section>
   );

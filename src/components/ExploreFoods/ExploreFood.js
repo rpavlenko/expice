@@ -1,27 +1,8 @@
-// import { useState, useEffect } from 'react';
 import FoodCard from '../FoodCard/FoodCard';
 
 import * as styles from './ExploreFood.module.scss';
 
 export default function ExploreFood({ cardsData }) {
-  // const [testData, setTestData] = useState([]);
-
-  // cardsData.forEach(item => {
-  //   console.log(item.node);
-  // });
-
-  // useEffect(() => {
-  //   // get data from GitHub api
-  //   async function getData() {
-  //     let response = await fetch(
-  //       `https://api.jsonbin.io/b/6150b8ed4a82881d6c55ef69`
-  //     );
-  //     response = await response.json();
-  //     setTestData(response);
-  //   }
-  //   getData();
-  // }, []);
-
   return (
     <section className="container">
       <div className={styles.exploreHeading}>

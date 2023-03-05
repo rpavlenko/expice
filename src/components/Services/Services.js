@@ -2,6 +2,7 @@ import { StaticImage } from 'gatsby-plugin-image';
 import SectionTitle from '../SectionTitle/SectionTitle';
 
 import * as styles from './Services.module.scss';
+
 export default function Services() {
   const title = 'Our Services';
   return (
@@ -23,9 +24,11 @@ export default function Services() {
             </p>
           </div>
           <div className={styles.servicesInner}>
-            <div className={styles.servicesContent}>
+            <div>
               <div
-                className={`${styles.servicesCardItem} ${styles.servicesAdvanced}`}
+                className={`
+                ${styles.servicesCardItem} 
+                ${styles.servicesAdvanced}`}
               >
                 <div className={styles.servicesCardItemImageWrapper}>
                   <StaticImage
@@ -49,7 +52,9 @@ export default function Services() {
                 className={`${styles.servicesCardItem} ${styles.servicesFree}`}
               >
                 <div
-                  className={`${styles.servicesCardItemImageWrapper} ${styles.servicesCardItemImageWrapperFree}`}
+                  className={`
+                  ${styles.servicesCardItemImageWrapper} 
+                  ${styles.servicesCardItemImageWrapperFree}`}
                 >
                   <StaticImage
                     src="../../images/icons/food-for-free.svg"
@@ -75,9 +80,7 @@ export default function Services() {
                 className={styles.servicesCardImage}
               />
               <div className={styles.cardItemGroupFree}>
-                <span
-                  className={`${styles.cardItemTitle} ${styles.freeDelivery}`}
-                >
+                <span className={`${styles.cardItemTitle} `}>
                   free home delivery at your door steps
                 </span>
                 <p className={styles.cardItemDescription}>

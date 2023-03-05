@@ -1,8 +1,8 @@
-import { StaticImage } from 'gatsby-plugin-image';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import SwiperCore, { Navigation } from 'swiper';
 import { useContext } from 'react';
 import { ThemeContext } from '../../context/Context';
-import SwiperCore, { Navigation } from 'swiper';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { StaticImage } from 'gatsby-plugin-image';
 import CityLabel from '../CityLabel/CityLabel';
 import Layout from '../Layout/Layout';
 
@@ -40,9 +40,7 @@ export default function Hero() {
                   <span className={styles.searchButtonText}>go</span>
                 </button>
               </div>
-              {/* <div className="fullContainer"> */}
               <CityLabel cityName={'Rajshahi'} />
-              {/* </div> */}
             </div>
             <Swiper
               className={styles.heroSlider}
@@ -57,28 +55,24 @@ export default function Hero() {
                 <StaticImage
                   src="../../images/hero-image-1.png"
                   alt="salad hero image 1"
-                  className={styles.heroImage}
                 />
               </SwiperSlide>
               <SwiperSlide>
                 <StaticImage
                   src="../../images/hero-image-2.png"
                   alt="salad hero image 2"
-                  className={styles.heroImage}
                 />
               </SwiperSlide>
               <SwiperSlide>
                 <StaticImage
                   src="../../images/hero-image-3.png"
                   alt="salad hero image 3"
-                  className={styles.heroImage}
                 />
               </SwiperSlide>
               <SwiperSlide>
                 <StaticImage
                   src="../../images/hero-image-4.png"
                   alt="salad hero image 4"
-                  className={styles.heroImage}
                 />
               </SwiperSlide>
             </Swiper>

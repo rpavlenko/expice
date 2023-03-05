@@ -1,6 +1,6 @@
-import { StaticImage } from 'gatsby-plugin-image';
 import { useContext } from 'react';
 import { ThemeContext } from '../../context/Context';
+import { StaticImage } from 'gatsby-plugin-image';
 
 import * as styles from './CityLabel.module.scss';
 

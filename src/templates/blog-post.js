@@ -1,5 +1,4 @@
 import { graphql } from 'gatsby';
-import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { ThemeContextProvider } from '../context/Context';
 import Layout from '../components/Layout/Layout';
 import Footer from '../components/Footer/Footer';
@@ -9,9 +8,6 @@ import * as styles from './blog-post.module.scss';
 export default function BlogPost({ data }) {
   const post = data.allWpPost.nodes[0];
   console.log(post);
-
-  const featuredImage = getImage(post.featuredImage?.node?.gatsbyImage);
-  console.log(featuredImage);
 
   return (
     <>
@@ -29,8 +25,6 @@ export default function BlogPost({ data }) {
               className={styles.postContent}
               dangerouslySetInnerHTML={{ __html: post.content }}
             />
-
-            {/* <GatsbyImage image={featuredImage} alt={`${post.title} image`} /> */}
           </div>
         </Layout>
         <Footer />
@@ -45,11 +39,6 @@ export const query = graphql`
         title
         content
         date(formatString: "DD MMMM, YYYY", locale: "en")
-        featuredImage {
-          node {
-            gatsbyImage(height: 300, width: 300)
-          }
-        }
       }
     }
   }
