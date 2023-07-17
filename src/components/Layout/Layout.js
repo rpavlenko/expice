@@ -4,7 +4,7 @@ import Navbar from '../Navbar/Navbar';
 
 import * as styles from './Layout.module.scss';
 
-export default function Layout({ children, blogList }) {
+export default function Layout({ children, blogList, productList }) {
   const { theme } = useContext(ThemeContext) || false;
 
   return (
@@ -12,7 +12,7 @@ export default function Layout({ children, blogList }) {
       className={`
       ${styles.layout} 
       ${theme ? styles.layoutGreen : ''} 
-      ${blogList ? styles.layoutBlogList : ''}
+      ${blogList || productList ? styles.layoutBlogList : ''}
       `}
     >
       <header

@@ -1,0 +1,19 @@
+@use '../../styles/variables';
+
+.storeProductListContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+}
+
+.storeProductListTitle {
+  font-size: 4rem;
+  margin-bottom: 5rem;
+  text-align: center;
+}
+
+.storeProductGroup {
+  // max-width: 10rem;
+}

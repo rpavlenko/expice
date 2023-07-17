@@ -98,7 +98,7 @@ export default function Navbar() {
             className={`${styles.navigationLink} ${
               theme ? styles.navigationLinkGreen : ''
             }`}
-            to="/menu-two"
+            to="/shop"
           >
             Shop
           </Link>

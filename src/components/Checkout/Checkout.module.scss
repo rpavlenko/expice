@@ -1,0 +1,16 @@
+@use '../../styles/variables';
+
+.checkoutStyle {
+  padding: 12px 60px;
+  font-size: 13px;
+  text-align: center;
+  background-color: variables.$primary-red;
+  color: #fff;
+  border-radius: 10px;
+  border: none;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    background: #2e266f;
+  }
+}
