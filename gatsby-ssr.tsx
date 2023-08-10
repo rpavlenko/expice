@@ -29,6 +29,7 @@ exports.onRenderBody = ({ setHeadComponents }) => {
         let preferredTheme;
         try {
           preferredTheme = localStorage.getItem('theme');
+          preferredTheme ? preferredTheme : preferredTheme = localStorage.setItem('theme', 'false');
           // window.__preferredTheme = preferredTheme;
         } catch (e) {}
 

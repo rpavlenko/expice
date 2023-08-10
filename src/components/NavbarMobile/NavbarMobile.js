@@ -48,7 +48,7 @@ export default function NavbarMobile({ menuActive }) {
             onChange={handleClick}
             hidden
           />
-          Make it {defaultColor ? 'green' : 'red'}
+          Make it {defaultColor ? 'red' : 'green'}
         </label>
       </div>
     </div>
