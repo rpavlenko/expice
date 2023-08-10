@@ -49,6 +49,6 @@ module.exports = {
   siteMetadata: {
     title: 'expice',
     description: 'Expice Restaurant web site',
-    copyright: '2020 Expice Studio',
+    copyright: '2023 Expice Studio',
   },
 };
