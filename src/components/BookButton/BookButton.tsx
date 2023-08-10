@@ -3,7 +3,11 @@ import { ThemeContext } from '../../context/Context';
 
 import * as styles from './BookButton.module.scss';
 
-export default function BookButton({ buttonText }) {
+interface BookButton {
+  buttonText: string;
+}
+
+export default function BookButton({ buttonText }: BookButton) {
   const { theme } = useContext(ThemeContext) || false;
 
   return (
