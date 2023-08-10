@@ -9,7 +9,7 @@ function ThemeContextProvider(props) {
 
   const [theme, setTheme] = useState(window.__theme === 'true');
   const [checked, setChecked] = useState(window.__theme === 'false');
-  const [defaultColor, setDefaultColor] = useState(false);
+  const [defaultColor, setDefaultColor] = useState(window.__theme === 'true');
 
   const toggleTheme = () => setTheme(!theme);
 
