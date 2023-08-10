@@ -280,7 +280,7 @@
 @media screen and (max-width: 676px) {
   .decorationImageLettuce {
     left: -55%;
-    display: none;
+    display: none !important;
   }
 
   .decorationImageSalad {
