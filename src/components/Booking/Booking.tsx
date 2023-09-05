@@ -6,8 +6,6 @@ import * as styles from './Booking.module.scss';
 
 export default function Booking() {
   const [searchInput, setSearchInput] = useState('');
-  const [startDate, setStartDate] = useState(new Date());
-  const [endDate, setEndDate] = useState(new Date());
   const [isOpened, setIsOpened] = useState(false);
   const { theme } = useContext(ThemeContext) || false;
 
@@ -15,11 +13,11 @@ export default function Booking() {
     setIsOpened(wasOpened => !wasOpened);
   }
 
-  const resetInput = e => {
+  const resetInput = () => {
     setSearchInput('');
   };
 
-  const submitHandler = e => {
+  const submitHandler = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     if (isOpened) {
@@ -27,17 +25,6 @@ export default function Booking() {
     }
 
     resetInput();
-  };
-
-  const handleSelect = ranges => {
-    setStartDate(ranges.selection.startDate);
-    setEndDate(ranges.selection.endDate);
-  };
-
-  const selectionRange = {
-    startDate,
-    endDate,
-    key: 'selection',
   };
 
   return (

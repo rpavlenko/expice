@@ -4,7 +4,11 @@ import { StaticImage } from 'gatsby-plugin-image';
 
 import * as styles from './CityLabel.module.scss';
 
-export default function CityLabel({ cityName }) {
+interface ICityName {
+  cityName: string;
+}
+
+export default function CityLabel({ cityName }: ICityName) {
   const { theme } = useContext(ThemeContext) || false;
   return (
     <div
