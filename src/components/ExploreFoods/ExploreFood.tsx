@@ -1,8 +1,26 @@
 import FoodCard from '../FoodCard/FoodCard';
+import { IGatsbyImageData } from 'gatsby-plugin-image';
 
 import * as styles from './ExploreFood.module.scss';
 
-export default function ExploreFood({ cardsData }) {
+interface ICardsData {
+  cardsData: {
+    node: {
+      title: string;
+      description: string;
+      price: string;
+      image: {
+        childImageSharp: {
+          gatsbyImageData: IGatsbyImageData;
+        };
+      };
+      alt: string;
+      id: number;
+    };
+  }[];
+}
+
+export default function ExploreFood({ cardsData }: ICardsData) {
   return (
     <section className="container">
       <div className={styles.exploreHeading}>
