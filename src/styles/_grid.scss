@@ -18,14 +18,19 @@
   padding-right: 1rem;
 }
 
-.blogContainer {
+.shopContainer {
   margin: 0 auto;
-  padding-left: 30%;
 }
 
 .listImage {
   min-width: 20rem;
   height: 10rem;
+}
+
+@media (min-width: 1300px) {
+  .shopContainer {
+    padding-left: 30%;
+  }
 }
 
 @media (max-width: 1195px) {

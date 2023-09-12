@@ -39,6 +39,7 @@
   margin: 0 auto;
   padding-top: 8rem;
   padding-right: 1.5rem;
+  padding-left: 1.5rem;
 }
 
 .postTitle {
@@ -49,4 +50,10 @@
 
 .postDate {
   margin-bottom: 3rem;
+}
+
+@media (min-width: 900px) {
+  .postContainer {
+    padding-left: 0;
+  }
 }

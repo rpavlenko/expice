@@ -10,7 +10,7 @@ export default function Shop() {
         <Layout productList={'productList'}>
           <div className="container">
             <div className="listContainer">
-              <section className="blogContainer">
+              <section className="shopContainer">
                 <StoreProductList />
               </section>
             </div>

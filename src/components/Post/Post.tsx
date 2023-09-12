@@ -3,7 +3,11 @@ import { ThemeContext } from '../../context/Context';
 
 import * as styles from './Post.module.scss';
 
-export default function Post({ children }) {
+type Props = {
+  children: React.ReactNode;
+};
+
+export default function Post({ children }: Props) {
   const { theme } = useContext(ThemeContext) || false;
   return (
     <div

@@ -1,8 +1,21 @@
 import { useState, createContext } from 'react';
 
-const ThemeContext = createContext();
+interface ThemeContextProps {
+  theme: boolean;
+  toggleTheme: () => void;
+  toggleColorText: () => void;
+  toggleChecked: () => void;
+  defaultColor: boolean;
+  checked: boolean;
+}
 
-function ThemeContextProvider(props) {
+interface Props {
+  children: React.ReactNode;
+}
+
+const ThemeContext = createContext<ThemeContextProps>({} as ThemeContextProps);
+
+function ThemeContextProvider(props: Props) {
   if (typeof window === 'undefined') {
     return null;
   }
