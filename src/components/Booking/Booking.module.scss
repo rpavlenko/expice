@@ -130,7 +130,7 @@
 .inputGroupSelect {
   display: flex;
   align-items: center;
-  gap: 7rem;
+  gap: 5rem;
   margin-bottom: 4rem;
 }
 
@@ -176,6 +176,12 @@
   border-radius: 2rem !important;
 }
 
+@media screen and (min-width: 768px) {
+  .inputGroupSelect {
+    gap: 3rem;
+  }
+}
+
 @media screen and (max-width: 1500px) {
   .decorationImageLettuce {
     left: -19rem;
@@ -192,7 +198,7 @@
   }
 
   .inputCalendar {
-    width: 6rem;
+    width: 10rem;
   }
 }
 
@@ -296,7 +302,7 @@
   }
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 460px) {
   .inputGroupSelect {
     flex-direction: column;
   }
