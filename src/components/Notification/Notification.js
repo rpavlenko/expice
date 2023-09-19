@@ -7,6 +7,25 @@ import * as styles from './Notification.module.scss';
 export default function Notification() {
   const { theme } = useContext(ThemeContext) || false;
 
+  const handleSubmit = event => {
+    event.preventDefault();
+
+    const myForm = event.target;
+    const formData = new FormData(myForm);
+
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(formData).toString(),
+    })
+      .then(() => {
+        console.log('Form successfully submitted');
+        alert('Form successfully submitted');
+        myForm.reset();
+      })
+      .catch(error => alert(error));
+  };
+
   return (
     <div className={`container ${styles.notificationSection}`}>
       <div className={styles.notificationInner}>
@@ -19,7 +38,7 @@ export default function Notification() {
             adipiscing cursus auctor eget sed phasellus senectus.
           </p>
         </div>
-        <div className={styles.notificationInput}>
+        {/* <div className={styles.notificationInput}>
           <form
             name="contact"
             method="POST"
@@ -40,6 +59,34 @@ export default function Notification() {
                 theme ? styles.notificationButtonGreen : ''
               }`}
               type="submit"
+            >
+              <img src={arrow} alt="notification arrow button" />
+            </button>
+          </form>
+        </div> */}
+        <p>Ajax form below</p>
+        <div className={styles.notificationInput}>
+          <form
+            name="contactAjax"
+            method="POST"
+            data-netlify="true"
+            // data-netlify-honeypot="bot-field"
+            // action="/thank-you"
+            onSubmit={handleSubmit}
+          >
+            <input type="hidden" name="form-name-ajax" value="contact" />
+            <input
+              className={styles.emailInput}
+              name="email"
+              type="email"
+              placeholder="email ajax"
+              required
+            />
+            <button
+              className={`${styles.notificationButton} ${
+                theme ? styles.notificationButtonGreen : ''
+              }`}
+              // type="submit"
             >
               <img src={arrow} alt="notification arrow button" />
             </button>
