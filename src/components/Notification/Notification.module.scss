@@ -90,6 +90,19 @@
   margin-right: 3.5rem;
 }
 
+.successMessage {
+  display: none;
+  margin-top: 1rem;
+  text-align: center;
+  color: green;
+  transition: all 2s ease-in-out;
+}
+
+.successMessageShow {
+  display: block;
+  animation: fadeIn 1s;
+}
+
 @media screen and (max-width: 767px) {
   .notificationHeading {
     max-width: 40rem;
@@ -120,5 +133,22 @@
   .notificationButton {
     width: 4.6rem;
     height: 4.6rem;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

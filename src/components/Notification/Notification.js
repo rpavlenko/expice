@@ -1,4 +1,4 @@
-import { useContext, useState, useEffect } from 'react';
+import { useContext, useState, useEffect, useRef } from 'react';
 import { ThemeContext } from '../../context/Context';
 import arrow from '../../images/icons/notification-input-arrow.svg';
 
@@ -7,10 +7,10 @@ import * as styles from './Notification.module.scss';
 export default function Notification() {
   const { theme } = useContext(ThemeContext) || false;
   const [isSubmitted, setIsSubmitted] = useState(false);
-
   const [formData, setFormData] = useState({
     email: '',
   });
+  const successMessage = useRef();
 
   const handleChange = e => {
     const { name, value } = e.target;
@@ -22,13 +22,18 @@ export default function Notification() {
     e.preventDefault();
   };
 
+  const showSuccessMessage = () => {
+    successMessage.current.classList.add(`${styles.successMessageShow}`);
+    setTimeout(() => {
+      successMessage.current.classList.remove(`${styles.successMessageShow}`);
+    }, 3000);
+  };
+
   const encode = data => {
     return Object.keys(data)
       .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
       .join('&');
   };
-
-  console.log(formData);
 
   useEffect(() => {
     if (isSubmitted) {
@@ -37,10 +42,12 @@ export default function Notification() {
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: encode({ 'form-name': 'contact', ...formData }),
       })
-        .then(() => alert('Success!'))
+        .then(() => {
+          showSuccessMessage();
+        })
         .then(() => setIsSubmitted(false))
         .then(() => setFormData({ email: '' }))
-        .catch(error => alert(error));
+        .catch(error => console.log(error));
     }
   }, [formData, isSubmitted]);
 
@@ -56,40 +63,12 @@ export default function Notification() {
             adipiscing cursus auctor eget sed phasellus senectus.
           </p>
         </div>
-        {/* <div className={styles.notificationInput}>
-          <form
-            name="contact"
-            method="POST"
-            data-netlify="true"
-            data-netlify-honeypot="bot-field"
-            action="/thank-you"
-          >
-            <input type="hidden" name="form-name" value="contact" />
-            <input
-              className={styles.emailInput}
-              name="email"
-              type="email"
-              placeholder="email"
-              required
-            />
-            <button
-              className={`${styles.notificationButton} ${
-                theme ? styles.notificationButtonGreen : ''
-              }`}
-              type="submit"
-            >
-              <img src={arrow} alt="notification arrow button" />
-            </button>
-          </form>
-        </div> */}
-        <p>Ajax form below</p>
         <div className={styles.notificationInput}>
           <form
             name="contact"
             method="POST"
             data-netlify="true"
             data-netlify-honeypot="bot-field"
-            // action="/thank-you"
             onSubmit={handleSubmit}
           >
             <input type="hidden" name="form-name" value="contact" />
@@ -97,7 +76,7 @@ export default function Notification() {
               className={styles.emailInput}
               name="email"
               type="email"
-              placeholder="email ajax"
+              placeholder="Enter you e-mail to be notified!"
               value={formData.email}
               onChange={handleChange}
               required
@@ -106,10 +85,13 @@ export default function Notification() {
               className={`${styles.notificationButton} ${
                 theme ? styles.notificationButtonGreen : ''
               }`}
-              // type="submit"
             >
               <img src={arrow} alt="notification arrow button" />
             </button>
+
+            <p className={`${styles.successMessage}`} ref={successMessage}>
+              Thank you, form sent!
+            </p>
           </form>
         </div>
         <ul className={styles.linkGroup}>
