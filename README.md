@@ -14,27 +14,37 @@ Live link: [Expice web app](https://upbeat-jennings-ef82c3.netlify.app/)
 
 ## General info
 
-"Expice" is a frontend Web application which was developed as a pet project, where Gatsby framework is connected to WordPress CMS, which sends blog posts data to application using GraphQL.
+"Expice" is a restaurant website. It is a frontend web application developed as a pet project, where Gatsby framework is connected to WordPress CMS, which sends blog posts data for static site generation using GraphQL.
+\
 All new added posts in WordPress are synced with Netlify platform, where frontend app is published, so each time user adds new blog post in WordPress CMS app is automatically rebuilded on Netlify.
+
+## Figma project: [Link](<https://www.figma.com/file/BPNGsnvGLONFyLlcxbNaKU/Expice-Restaurant-Template-(Copy)?type=design&node-id=0%3A1&mode=design&t=ih5HnB99eijhh0JA-1>)
 
 ## Technologies used:
 
-- Gatsby React-Based Framework for SSG:
-  - gatsby-plugin-image
-  - gatsby-plugin-nprogress
-  - gatsby-plugin-react-helmet
-  - gatsby-plugin-sharp
-  - gatsby-source-filesystem
-  - gatsby-source-wordpress
+- Gatsby React-Based Framework for SSG. Used plugins:
+  - [gatsby-plugin-image](https://www.gatsbyjs.com/plugins/gatsby-plugin-image/)
+  - [gatsby-plugin-nprogress](https://www.gatsbyjs.com/plugins/gatsby-plugin-nprogress/)
+  - [gatsby-plugin-react-helmet](https://www.gatsbyjs.com/plugins/gatsby-plugin-react-helmet/)
+  - [gatsby-plugin-sass](https://www.gatsbyjs.com/plugins/gatsby-plugin-sass/)
+  - [gatsby-plugin-sharp](https://www.gatsbyjs.com/plugins/gatsby-plugin-sharp/)
+  - [gatsby-source-filesystem](https://www.gatsbyjs.com/plugins/gatsby-source-filesystem/)
+  - [gatsby-source-wordpress](https://www.gatsbyjs.com/plugins/gatsby-source-wordpress/)
+  - [gatsby-transformer-json](https://www.gatsbyjs.com/plugins/gatsby-transformer-json/)
+  - [gatsby-transformer-sharp](https://www.gatsbyjs.com/plugins/gatsby-transformer-sharp/)
 - React: Router, Hooks, Context API
 - TypeScript
 - Sass
 - GraphQL
 - Wordpress
 - SwiperJS
-- Stripe
+- Stripe (payments)
 - Prettier
 - Eslint
+
+## Aplication
+
+Form is using [Netlify Forms setup](https://docs.netlify.com/forms/setup/).
 
 ## Setup
 
@@ -53,7 +63,7 @@ npm install
 Start local server:
 
 ```sh
-npm run gatsby develop
+gatsby develop
 ```
 
 &nbsp;
