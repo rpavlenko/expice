@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useState, useEffect } from 'react';
 import { ThemeContext } from '../../context/Context';
 import arrow from '../../images/icons/notification-input-arrow.svg';
 
@@ -6,25 +6,41 @@ import * as styles from './Notification.module.scss';
 
 export default function Notification() {
   const { theme } = useContext(ThemeContext) || false;
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleSubmit = event => {
-    event.preventDefault();
+  const [formData, setFormData] = useState({
+    email: '',
+  });
 
-    const myForm = event.target;
-    const formData = new FormData(myForm);
-
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams(formData).toString(),
-    })
-      .then(() => {
-        console.log('Form successfully submitted');
-        alert('Form successfully submitted');
-        myForm.reset();
-      })
-      .catch(error => alert(error));
+  const handleChange = e => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
   };
+
+  const handleSubmit = e => {
+    setIsSubmitted(true);
+    e.preventDefault();
+  };
+
+  const encode = data => {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+      .join('&');
+  };
+
+  useEffect(() => {
+    if (isSubmitted) {
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: encode({ 'form-name': 'contactAjax', ...formData }),
+      })
+        .then(() => alert('Success!'))
+        .then(() => setIsSubmitted(false))
+        .then(() => setFormData({ email: '' }))
+        .catch(error => alert(error));
+    }
+  }, [formData, isSubmitted]);
 
   return (
     <div className={`container ${styles.notificationSection}`}>
@@ -80,6 +96,8 @@ export default function Notification() {
               name="email"
               type="email"
               placeholder="email ajax"
+              value={formData.email}
+              onChange={handleChange}
               required
             />
             <button
