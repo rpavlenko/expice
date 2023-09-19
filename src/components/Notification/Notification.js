@@ -76,7 +76,7 @@ export default function Notification() {
               className={styles.emailInput}
               name="email"
               type="email"
-              placeholder="Enter you e-mail to be notified!"
+              placeholder="e-mail"
               value={formData.email}
               onChange={handleChange}
               required
