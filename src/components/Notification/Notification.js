@@ -70,7 +70,7 @@ export default function Notification() {
             name="contactAjax"
             method="POST"
             data-netlify="true"
-            // data-netlify-honeypot="bot-field"
+            data-netlify-honeypot="bot-field"
             // action="/thank-you"
             onSubmit={handleSubmit}
           >
