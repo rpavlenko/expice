@@ -8,7 +8,7 @@ import NavbarMobile from '../NavbarMobile/NavbarMobile';
 
 import * as styles from './Navbar.module.scss';
 
-export default function Navbar() {
+export default function Navbar({ authentification, logIn, logOut }) {
   const data = useStaticQuery(graphql`
     query SiteInfo {
       site {
@@ -23,6 +23,7 @@ export default function Navbar() {
   const navigation = useRef();
   const logoImage = useRef();
   const userName = useRef();
+  const logOutButton = useRef();
   const [active, setActive] = useState(false);
 
   useLayoutEffect(() => {
@@ -132,18 +133,43 @@ export default function Navbar() {
           </div>
         </div>
 
-        <div className={styles.user}>
-          <div>
-            <StaticImage
-              className={styles.userIcon}
-              src="../../images/icons/user-icon.svg"
-              alt="user icon"
-            />
+        {authentification ? (
+          <div className={styles.userInner}>
+            <div className={styles.user}>
+              <StaticImage
+                className={styles.userIcon}
+                src="../../images/icons/user-icon.svg"
+                alt={authentification.displayName}
+              />
+              <span className={styles.userName} ref={userName}>
+                {authentification.displayName}
+              </span>
+            </div>
+
+            <div
+              className={styles.logOutButton}
+              ref={logOutButton}
+              onClick={logOut}
+            >
+              log out
+            </div>
           </div>
-          <span className={styles.userName} ref={userName}>
-            User
-          </span>
-        </div>
+        ) : (
+          <div className={styles.userInner}>
+            <div className={styles.user}>
+              <div onClick={logIn}>
+                <StaticImage
+                  className={styles.userIcon}
+                  src="../../images/icons/user-icon.svg"
+                  alt="user icon"
+                />
+              </div>
+              <span className={styles.userName} ref={userName}>
+                Login
+              </span>
+            </div>
+          </div>
+        )}
 
         <NavbarMobile menuActive={active ? 'active' : ''} />
         <button className={styles.hamburger} onClick={openMenu}>

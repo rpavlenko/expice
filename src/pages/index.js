@@ -1,6 +1,8 @@
 import { graphql } from 'gatsby';
 import { Helmet } from 'react-helmet';
 import { ThemeContextProvider } from '../context/Context';
+import { useEffect, useState } from 'react';
+import { useAuth } from '../hooks/useAuth';
 import Hero from '../components/Hero/Hero';
 import Restaurants from '../components/Restaurants/Restaurants';
 import Booking from '../components/Booking/Booking';
@@ -10,10 +12,13 @@ import Footer from '../components/Footer/Footer';
 import DownloadApp from '../components/DownloadApp/DownloadApp';
 
 import '../styles/style.sass';
+import { authFirebase } from '../utils/firebase';
 
 export default function Home({ data }) {
   const { title } = data.site.siteMetadata;
   const cardsData = data.allCardDataJson.edges;
+
+  const auth = useAuth(authFirebase);
 
   return (
     <>
@@ -22,7 +27,7 @@ export default function Home({ data }) {
         <title>{title}</title>
       </Helmet>
       <ThemeContextProvider>
-        <Hero />
+        <Hero auth={auth} />
         <Restaurants />
         <Booking />
         <Services />

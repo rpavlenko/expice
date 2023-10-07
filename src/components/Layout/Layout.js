@@ -4,9 +4,8 @@ import Navbar from '../Navbar/Navbar';
 
 import * as styles from './Layout.module.scss';
 
-export default function Layout({ children, blogList, productList }) {
+export default function Layout({ children, blogList, productList, auth }) {
   const { theme } = useContext(ThemeContext) || false;
-
   return (
     <div
       className={`
@@ -20,7 +19,7 @@ export default function Layout({ children, blogList, productList }) {
       ${theme ? styles.headerGreen : styles.header}
       `}
       >
-        <Navbar />
+        <Navbar {...auth} />
       </header>
       <div>{children}</div>
     </div>

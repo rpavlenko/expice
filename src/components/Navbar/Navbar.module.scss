@@ -66,6 +66,10 @@
     border-bottom: 2px solid variables.$primary-green;
   }
 }
+.userInner {
+  display: flex;
+  align-items: center;
+}
 
 .user {
   display: flex;
@@ -91,6 +95,10 @@
     height: 0.4rem;
     margin-left: 0.7rem;
   }
+}
+
+.logOutButton {
+  margin-left: 1rem;
 }
 
 .userNameSmall {

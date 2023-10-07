@@ -12,11 +12,11 @@ import 'swiper/components/navigation/navigation.scss';
 
 SwiperCore.use([Navigation]);
 
-export default function Hero() {
+export default function Hero({ auth }) {
   const { theme } = useContext(ThemeContext) || false;
   return (
     <>
-      <Layout>
+      <Layout auth={auth}>
         <section className={styles.hero}>
           <div className={`container ${styles.heroInner}`}>
             <div className={styles.heroTitleGroup}>

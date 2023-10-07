@@ -8,7 +8,7 @@ Live link: [Expice web app](https://upbeat-jennings-ef82c3.netlify.app/)
 
 - [Info](#general-info)
 - [Technologies](#technologies)
-- [Development](#development)
+- [Aplication](#aplication)
 - [Setup](#setup)
 - [Deployment](#deployment)
 
@@ -20,7 +20,7 @@ All new added posts in WordPress are synced with Netlify platform, where fronten
 
 ## Figma project: [Link](<https://www.figma.com/file/BPNGsnvGLONFyLlcxbNaKU/Expice-Restaurant-Template-(Copy)?type=design&node-id=0%3A1&mode=design&t=ih5HnB99eijhh0JA-1>)
 
-## Technologies used:
+## Technologies
 
 - Gatsby React-Based Framework for SSG. Used plugins:
   - [gatsby-plugin-image](https://www.gatsbyjs.com/plugins/gatsby-plugin-image/)
