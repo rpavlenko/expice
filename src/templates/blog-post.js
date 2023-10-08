@@ -1,5 +1,5 @@
 import { graphql } from 'gatsby';
-import { ThemeContextProvider } from '../context/Context';
+import { ThemeContextProvider, AuthContextProvider } from '../context/Context';
 import Layout from '../components/Layout/Layout';
 import Footer from '../components/Footer/Footer';
 
@@ -11,24 +11,26 @@ export default function BlogPost({ data }) {
 
   return (
     <>
-      <ThemeContextProvider>
-        <Layout blogList={'blogList'}>
-          <div className={styles.postContainer}>
-            <h1 className={styles.postTitle}>{post.title}</h1>
-            <div
-              className={styles.postDate}
-              dangerouslySetInnerHTML={{
-                __html: post.date,
-              }}
-            />
-            <div
-              className={styles.postContent}
-              dangerouslySetInnerHTML={{ __html: post.content }}
-            />
-          </div>
-        </Layout>
-        <Footer />
-      </ThemeContextProvider>
+      <AuthContextProvider>
+        <ThemeContextProvider>
+          <Layout blogList={'blogList'}>
+            <div className={styles.postContainer}>
+              <h1 className={styles.postTitle}>{post.title}</h1>
+              <div
+                className={styles.postDate}
+                dangerouslySetInnerHTML={{
+                  __html: post.date,
+                }}
+              />
+              <div
+                className={styles.postContent}
+                dangerouslySetInnerHTML={{ __html: post.content }}
+              />
+            </div>
+          </Layout>
+          <Footer />
+        </ThemeContextProvider>
+      </AuthContextProvider>
     </>
   );
 }

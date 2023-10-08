@@ -1,8 +1,8 @@
 export default function ThankYou() {
   return (
     <div>
-      <h2>Thank you page</h2>
-      <p>Form Sent</p>
+      <h2>Thank you!</h2>
+      <p>We will send the book to you via e-mail.</p>
     </div>
   );
 }

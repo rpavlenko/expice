@@ -19,6 +19,33 @@
   &.active {
     transform: translateY(0);
   }
+
+  .userInnerMobile {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .user {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .userIcon {
+    width: 5.2rem;
+    height: 5.2rem;
+  }
+
+  .userName {
+    display: flex;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    color: variables.$white;
+  }
 }
 
 .navigationLinksMobileGreen {

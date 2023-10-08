@@ -43,6 +43,8 @@
 }
 
 .navigationLink {
+  display: inline-block;
+  position: relative;
   font-size: 1.6rem;
   line-height: 2.4rem;
   text-align: center;
@@ -51,8 +53,24 @@
 
   &:hover {
     color: variables.$primary-red;
-    border-bottom: 2px solid variables.$primary-red;
     transition: all 0.25s;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 0.2rem;
+    bottom: 0;
+    left: 0;
+    background-color: variables.$primary-red;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+
+  &:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
   }
 
   &:not(:last-child) {
@@ -63,12 +81,31 @@
 .navigationLinkGreen {
   &:hover {
     color: variables.$primary-green;
-    border-bottom: 2px solid variables.$primary-green;
+    transition: all 0.25s;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 0.2rem;
+    bottom: 0;
+    left: 0;
+    background-color: variables.$primary-green;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+
+  &:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
   }
 }
 .userInner {
   display: flex;
   align-items: center;
+  min-width: 20rem;
 }
 
 .user {
@@ -99,6 +136,7 @@
 
 .logOutButton {
   margin-left: 1rem;
+  cursor: pointer;
 }
 
 .userNameSmall {
@@ -144,7 +182,7 @@
 }
 
 @media (max-width: 1195px) {
-  .user {
+  .userInner {
     display: none;
   }
 

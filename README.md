@@ -22,7 +22,7 @@ All new added posts in WordPress are synced with Netlify platform, where fronten
 
 ## Technologies
 
-- Gatsby React-Based Framework for SSG. Used plugins:
+- Gatsby v5 React-Based Framework for SSG. Used plugins:
   - [gatsby-plugin-image](https://www.gatsbyjs.com/plugins/gatsby-plugin-image/)
   - [gatsby-plugin-nprogress](https://www.gatsbyjs.com/plugins/gatsby-plugin-nprogress/)
   - [gatsby-plugin-react-helmet](https://www.gatsbyjs.com/plugins/gatsby-plugin-react-helmet/)
@@ -39,12 +39,13 @@ All new added posts in WordPress are synced with Netlify platform, where fronten
 - Wordpress
 - SwiperJS
 - Stripe (payments)
+- Firebase authentication with Google provider
 - Prettier
 - Eslint
 
 ## Aplication
 
-Form is using [Netlify Forms setup](https://docs.netlify.com/forms/setup/).
+Netlify Forms were used in application for form submitting: [Netlify Forms setup](https://docs.netlify.com/forms/setup/).
 
 ## Setup
 

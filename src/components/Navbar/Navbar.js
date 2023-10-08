@@ -1,6 +1,6 @@
 import { Link, graphql, useStaticQuery } from 'gatsby';
 import { useLayoutEffect, useRef, useState, useContext } from 'react';
-import { ThemeContext } from '../../context/Context';
+import { ThemeContext, AuthContext } from '../../context/Context';
 import { StaticImage } from 'gatsby-plugin-image';
 import hamburger from '../../images/icons/hamburger.svg';
 import closeHamburger from '../../images/icons/close.svg';
@@ -8,7 +8,7 @@ import NavbarMobile from '../NavbarMobile/NavbarMobile';
 
 import * as styles from './Navbar.module.scss';
 
-export default function Navbar({ authentification, logIn, logOut }) {
+export default function Navbar() {
   const data = useStaticQuery(graphql`
     query SiteInfo {
       site {
@@ -68,6 +68,7 @@ export default function Navbar({ authentification, logIn, logOut }) {
     toggleChecked,
     checked,
   } = useContext(ThemeContext) || false;
+  const { authentification, logIn, logOut } = useContext(AuthContext) || false;
   const handleClick = e => {
     toggleColorText();
     toggleChecked();
@@ -138,7 +139,7 @@ export default function Navbar({ authentification, logIn, logOut }) {
             <div className={styles.user}>
               <StaticImage
                 className={styles.userIcon}
-                src="../../images/icons/user-icon.svg"
+                src="../../images/icons/user-icon.png"
                 alt={authentification.displayName}
               />
               <span className={styles.userName} ref={userName}>
@@ -151,7 +152,11 @@ export default function Navbar({ authentification, logIn, logOut }) {
               ref={logOutButton}
               onClick={logOut}
             >
-              log out
+              <StaticImage
+                width={25}
+                src="../../images/exit.svg"
+                alt={authentification.displayName}
+              />
             </div>
           </div>
         ) : (
@@ -160,7 +165,7 @@ export default function Navbar({ authentification, logIn, logOut }) {
               <div onClick={logIn}>
                 <StaticImage
                   className={styles.userIcon}
-                  src="../../images/icons/user-icon.svg"
+                  src="../../images/icons/user-icon.png"
                   alt="user icon"
                 />
               </div>
@@ -171,7 +176,10 @@ export default function Navbar({ authentification, logIn, logOut }) {
           </div>
         )}
 
-        <NavbarMobile menuActive={active ? 'active' : ''} />
+        <NavbarMobile
+          {...{ authentification, logIn, logOut }}
+          menuActive={active ? 'active' : ''}
+        />
         <button className={styles.hamburger} onClick={openMenu}>
           <img src={!active ? hamburger : closeHamburger} alt="menu" />
         </button>

@@ -1,4 +1,6 @@
 import { useState, createContext } from 'react';
+import { useAuth } from '../hooks/useAuth';
+import { authFirebase } from '../utils/firebase';
 
 interface ThemeContextProps {
   theme: boolean;
@@ -14,6 +16,23 @@ interface Props {
 }
 
 const ThemeContext = createContext<ThemeContextProps>({} as ThemeContextProps);
+const AuthContext = createContext();
+
+function AuthContextProvider(props: Props) {
+  const auth = useAuth(authFirebase);
+
+  return (
+    <div>
+      <AuthContext.Provider
+        value={{
+          ...auth,
+        }}
+      >
+        {props.children}
+      </AuthContext.Provider>
+    </div>
+  );
+}
 
 function ThemeContextProvider(props: Props) {
   if (typeof window === 'undefined') {
@@ -51,4 +70,4 @@ function ThemeContextProvider(props: Props) {
   );
 }
 
-export { ThemeContext, ThemeContextProvider };
+export { ThemeContext, ThemeContextProvider, AuthContext, AuthContextProvider };

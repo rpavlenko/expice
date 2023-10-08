@@ -33,8 +33,8 @@ const Checkout = ({ price }) => {
     const { error } = await stripe.redirectToCheckout({
       mode: 'payment',
       lineItems: [{ price: `${price}`, quantity: 1 }],
-      successUrl: `http://localhost:8000/thank-you`,
-      cancelUrl: `http://localhost:8000/`,
+      successUrl: `https://upbeat-jennings-ef82c3.netlify.app/thank-you`,
+      cancelUrl: `https://upbeat-jennings-ef82c3.netlify.app/`,
     });
 
     if (error) {

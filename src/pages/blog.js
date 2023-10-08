@@ -1,6 +1,6 @@
 import { Link, graphql } from 'gatsby';
 import { GatsbyImage, getImage, StaticImage } from 'gatsby-plugin-image';
-import { ThemeContextProvider } from '../context/Context';
+import { ThemeContextProvider, AuthContextProvider } from '../context/Context';
 import Layout from '../components/Layout/Layout';
 import Footer from '../components/Footer/Footer';
 import PostListTitle from '../components/PostListTitle/PostListTitle';
@@ -12,45 +12,47 @@ export default function Blog({ data }) {
 
   return (
     <>
-      <ThemeContextProvider>
-        <Layout blogList={'blogList'}>
-          <div className="container">
-            <div className="listContainer">
-              <section>
-                <PostListTitle />
-                {posts.map(node => (
-                  <article key={node.slug}>
-                    <Post>
-                      <Link to={node.slug}>
-                        {getImage(node.featuredImage?.node?.gatsbyImage) ? (
-                          <GatsbyImage
-                            className="listImage"
-                            image={getImage(
-                              node.featuredImage?.node?.gatsbyImage
-                            )}
-                            alt={` image`}
-                          />
-                        ) : (
-                          <StaticImage
-                            src="../images/no-image2.png"
-                            alt="no image"
-                            className="listImage"
-                            width={200}
-                            height={100}
-                          />
-                        )}
+      <AuthContextProvider>
+        <ThemeContextProvider>
+          <Layout blogList={'blogList'}>
+            <div className="container">
+              <div className="listContainer">
+                <section>
+                  <PostListTitle />
+                  {posts.map(node => (
+                    <article key={node.slug}>
+                      <Post>
+                        <Link to={node.slug}>
+                          {getImage(node.featuredImage?.node?.gatsbyImage) ? (
+                            <GatsbyImage
+                              className="listImage"
+                              image={getImage(
+                                node.featuredImage?.node?.gatsbyImage
+                              )}
+                              alt={` image`}
+                            />
+                          ) : (
+                            <StaticImage
+                              src="../images/no-image2.png"
+                              alt="no image"
+                              className="listImage"
+                              width={200}
+                              height={100}
+                            />
+                          )}
 
-                        <PostTitle title={node.title} />
-                      </Link>
-                    </Post>
-                  </article>
-                ))}
-              </section>
+                          <PostTitle title={node.title} />
+                        </Link>
+                      </Post>
+                    </article>
+                  ))}
+                </section>
+              </div>
             </div>
-          </div>
-        </Layout>
-        <Footer />
-      </ThemeContextProvider>
+          </Layout>
+          <Footer />
+        </ThemeContextProvider>
+      </AuthContextProvider>
     </>
   );
 }
