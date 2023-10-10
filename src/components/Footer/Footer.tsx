@@ -18,7 +18,7 @@ export default function Footer() {
     }
   `);
 
-  const { copyright } = data.site.siteMetadata;
+  const { copyright }: { copyright: string } = data.site.siteMetadata;
 
   return (
     <footer className={` ${styles.footer} fullContainer`}>

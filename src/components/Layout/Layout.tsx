@@ -4,7 +4,13 @@ import Navbar from '../Navbar/Navbar';
 
 import * as styles from './Layout.module.scss';
 
-export default function Layout({ children, blogList, productList }) {
+interface ILayout {
+  children: React.ReactNode;
+  blogList: string;
+  productList: string;
+}
+
+export default function Layout({ children, blogList, productList }: ILayout) {
   const { theme } = useContext(ThemeContext) || false;
   return (
     <div
