@@ -3,7 +3,15 @@ import { ThemeContext } from '../../context/Context';
 
 import './SectionTitle.scss';
 
-export default function SectionTitle({ sectionTitle, className }) {
+interface ISectionTitle {
+  sectionTitle: string;
+  className: string;
+}
+
+export default function SectionTitle({
+  sectionTitle,
+  className,
+}: ISectionTitle) {
   const { theme } = useContext(ThemeContext) || false;
 
   return (

@@ -1,6 +1,6 @@
 import * as styles from './StoreProductList.module.scss';
-import StoreItem from '../../components/StoreItem/StoreItem';
-import Checkout from '../../components/Checkout/Checkout';
+import StoreItem from '../StoreItem/StoreItem';
+import Checkout from '../Checkout/Checkout';
 import { StaticImage } from 'gatsby-plugin-image';
 
 export default function StoreProductList() {

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { loadStripe } from '@stripe/stripe-js';
+import { loadStripe, Stripe } from '@stripe/stripe-js';
 
 import * as styles from './Checkout.module.scss';
 
@@ -12,7 +12,7 @@ const buttonDisabledStyles = {
   cursor: 'not-allowed',
 };
 
-let stripePromise;
+let stripePromise: Promise<Stripe | null>;
 const getStripe = () => {
   if (!stripePromise) {
     stripePromise = loadStripe(
@@ -22,14 +22,26 @@ const getStripe = () => {
   return stripePromise;
 };
 
-const Checkout = ({ price }) => {
+interface ICheckout {
+  price: string;
+}
+
+const Checkout = ({ price }: ICheckout) => {
   const [loading, setLoading] = useState(false);
 
-  const redirectToCheckout = async event => {
+  const redirectToCheckout = async (
+    event: React.SyntheticEvent<EventTarget>
+  ) => {
     event.preventDefault();
     setLoading(true);
 
     const stripe = await getStripe();
+    if (!stripe) {
+      console.warn('Error: Stripe.js failed to load');
+      setLoading(false);
+      return;
+    }
+
     const { error } = await stripe.redirectToCheckout({
       mode: 'payment',
       lineItems: [{ price: `${price}`, quantity: 1 }],

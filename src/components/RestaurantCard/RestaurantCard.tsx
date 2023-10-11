@@ -5,11 +5,17 @@ import BookButton from '../BookButton/BookButton';
 
 import * as styles from './RestaurantCard.module.scss';
 
+interface IRestaurantCard {
+  cardTitle: string;
+  cardDescription: string;
+  cardLabel: string;
+}
+
 export default function RestaurantCard({
   cardTitle,
   cardDescription,
   cardLabel,
-}) {
+}: IRestaurantCard) {
   const { theme } = useContext(ThemeContext) || false;
 
   return (
