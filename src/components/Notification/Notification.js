@@ -70,6 +70,7 @@ export default function Notification() {
             data-netlify="true"
             data-netlify-honeypot="bot-field"
             onSubmit={handleSubmit}
+            id="contact"
           >
             <input type="hidden" name="form-name" value="contact" />
             <input

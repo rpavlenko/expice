@@ -108,17 +108,17 @@ export default function Navbar() {
             className={`${styles.navigationLink} ${
               theme ? styles.navigationLinkGreen : ''
             }`}
-            to="/menu-three"
+            to="/blog-markdown/my-first-blog-post/"
           >
-            Menu Three
+            Markdown Blog
           </Link>
           <Link
             className={`${styles.navigationLink} ${
               theme ? styles.navigationLinkGreen : ''
             }`}
-            to="/menu-four"
+            to="#contact"
           >
-            Menu Four
+            Contact
           </Link>
           <div className={`${'colorTheme'} ${theme ? 'green' : 'red'}`}>
             <label className="themeButton">
@@ -179,6 +179,7 @@ export default function Navbar() {
         <NavbarMobile
           {...{ authentification, logIn, logOut }}
           menuActive={active ? 'active' : ''}
+          openMenu={openMenu}
         />
         <button className={styles.hamburger} onClick={openMenu}>
           <img src={!active ? hamburger : closeHamburger} alt="menu" />

@@ -10,6 +10,7 @@ export default function NavbarMobile({
   authentification,
   logIn,
   logOut,
+  openMenu,
 }) {
   const {
     theme,
@@ -39,11 +40,14 @@ export default function NavbarMobile({
       <Link className={styles.navigationLink} to="/shop">
         Shop
       </Link>
-      <Link className={styles.navigationLink} to="/menu-three">
-        Menu Three
+      <Link
+        className={styles.navigationLink}
+        to="/blog-markdown/my-first-blog-post/"
+      >
+        Markdown Blog
       </Link>
-      <Link className={styles.navigationLink} to="/menu-four">
-        Menu Four
+      <Link className={styles.navigationLink} to="#contact" onClick={openMenu}>
+        Contact
       </Link>
       <div className={`${'colorTheme'} ${theme ? 'green' : 'red'}`}>
         <label className="themeButton">
@@ -57,6 +61,7 @@ export default function NavbarMobile({
           Make it {defaultColor ? 'red' : 'green'}
         </label>
       </div>
+
       {authentification ? (
         <div className={styles.userInnerMobile}>
           <div className={styles.user}>

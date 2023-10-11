@@ -27,6 +27,13 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `content`,
+        path: `${__dirname}/src/content`,
+      },
+    },
+    {
       resolve: `gatsby-plugin-nprogress`,
       options: {
         // Setting a color is optional.
@@ -35,6 +42,7 @@ module.exports = {
         showSpinner: false,
       },
     },
+    `gatsby-transformer-remark`,
     {
       resolve: `gatsby-source-wordpress`,
       options: {
