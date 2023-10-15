@@ -20,10 +20,10 @@ export default function Navbar() {
   `);
 
   const { title } = data.site.siteMetadata;
-  const navigation = useRef();
-  const logoImage = useRef();
-  const userName = useRef();
-  const logOutButton = useRef();
+  const navigation = useRef<HTMLDivElement>(null);
+  const logoImage = useRef<HTMLDivElement>(null);
+  const userName = useRef<HTMLDivElement>(null);
+  const logOutButton = useRef<HTMLDivElement>(null);
   const [active, setActive] = useState(false);
 
   useLayoutEffect(() => {
@@ -32,6 +32,8 @@ export default function Navbar() {
     const userNameText = userName.current;
 
     const menuChangeSize = () => {
+      if (!navigationContainer || !logo || !userNameText) return;
+
       if (window.scrollY > 50) {
         navigationContainer.classList.add(`${styles.navigationSmall}`);
         logo.classList.add(`${styles.logoSmall}`);
@@ -69,7 +71,7 @@ export default function Navbar() {
     checked,
   } = useContext(ThemeContext) || false;
   const { authentification, logIn, logOut } = useContext(AuthContext) || false;
-  const handleClick = e => {
+  const handleClick = (e: React.ChangeEvent<HTMLInputElement>) => {
     toggleColorText();
     toggleChecked();
     toggleTheme();

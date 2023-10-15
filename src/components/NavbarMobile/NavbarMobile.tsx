@@ -5,13 +5,23 @@ import { StaticImage } from 'gatsby-plugin-image';
 
 import * as styles from './NavbarMobile.module.scss';
 
+interface INavbarMobile {
+  menuActive: string;
+  authentification: {
+    displayName: string;
+  };
+  openMenu(): void;
+  logIn(): void;
+  logOut(): void;
+}
+
 export default function NavbarMobile({
   menuActive,
   authentification,
   logIn,
   logOut,
   openMenu,
-}) {
+}: INavbarMobile) {
   const {
     theme,
     toggleTheme,

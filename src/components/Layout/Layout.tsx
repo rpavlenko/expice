@@ -6,8 +6,8 @@ import * as styles from './Layout.module.scss';
 
 interface ILayout {
   children: React.ReactNode;
-  blogList: string;
-  productList: string;
+  blogList?: string;
+  productList?: string;
 }
 
 export default function Layout({ children, blogList, productList }: ILayout) {

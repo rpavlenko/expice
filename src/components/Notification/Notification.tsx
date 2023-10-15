@@ -10,26 +10,28 @@ export default function Notification() {
   const [formData, setFormData] = useState({
     email: '',
   });
-  const successMessage = useRef();
+  const successMessage = useRef<HTMLParagraphElement>(null);
 
-  const handleChange = e => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = e => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     setIsSubmitted(true);
     e.preventDefault();
   };
 
   const showSuccessMessage = () => {
+    if (!successMessage.current) return;
+
     successMessage.current.classList.add(`${styles.successMessageShow}`);
     setTimeout(() => {
-      successMessage.current.classList.remove(`${styles.successMessageShow}`);
+      successMessage.current!.classList.remove(`${styles.successMessageShow}`);
     }, 3000);
   };
 
-  const encode = data => {
+  const encode = (data: { [key: string]: string }) => {
     return Object.keys(data)
       .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
       .join('&');

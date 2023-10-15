@@ -16,7 +16,15 @@ interface Props {
 }
 
 const ThemeContext = createContext<ThemeContextProps>({} as ThemeContextProps);
-const AuthContext = createContext();
+interface AuthContextProps {
+  authentification: {
+    displayName: string;
+  };
+  logIn(): void;
+  logOut(): void;
+}
+
+const AuthContext = createContext<AuthContextProps>({} as AuthContextProps);
 
 function AuthContextProvider(props: Props) {
   const auth = useAuth(authFirebase);
