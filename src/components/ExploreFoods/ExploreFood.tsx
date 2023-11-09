@@ -15,7 +15,7 @@ interface ICardsData {
         };
       };
       alt: string;
-      id: number;
+      id: string;
     };
   }[];
 }

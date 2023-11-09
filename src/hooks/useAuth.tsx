@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-export function useAuth(authFirebase) {
+export function useAuth(authFirebase: any) {
   const [authentification, setAuthentification] = useState(null);
 
   if (!authFirebase) return;
@@ -12,16 +12,18 @@ export function useAuth(authFirebase) {
     auth
       .signInWithPopup(provider)
       .then()
-      .catch(err => console.log(err));
+      .catch((err: any) => {
+        console.error(err);
+      });
 
   const logOut = () =>
     auth
       .signOut()
       .then()
-      .catch(err => console.log(err));
+      .catch((err: Error) => console.log(err));
 
   useEffect(() => {
-    auth.onAuthStateChanged(user => {
+    auth.onAuthStateChanged((user: any) => {
       if (user) {
         setAuthentification(user);
       } else {

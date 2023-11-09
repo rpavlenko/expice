@@ -1,4 +1,5 @@
 import { graphql } from 'gatsby';
+import { IGatsbyImageData } from 'gatsby-plugin-image';
 import { Helmet } from 'react-helmet';
 import { ThemeContextProvider, AuthContextProvider } from '../context/Context';
 import Hero from '../components/Hero/Hero';
@@ -11,7 +12,36 @@ import DownloadApp from '../components/DownloadApp/DownloadApp';
 
 import '../styles/style.sass';
 
-export default function Home({ data }) {
+interface IData {
+  data: {
+    allCardDataJson: {
+      edges: {
+        node: {
+          id: string;
+          title: string;
+          price: string;
+          description: string;
+          alt: string;
+          image: { childImageSharp: { gatsbyImageData: IGatsbyImageData } };
+        };
+      }[];
+    };
+    allWpPost: {
+      nodes: {
+        title: string;
+        excerpt: string;
+        slug: string;
+      };
+    };
+    site: {
+      siteMetadata: {
+        title: string;
+      };
+    };
+  };
+}
+
+export default function Home({ data }: IData) {
   const { title } = data.site.siteMetadata;
   const cardsData = data.allCardDataJson.edges;
 
@@ -23,7 +53,6 @@ export default function Home({ data }) {
       </Helmet>
       <AuthContextProvider>
         <ThemeContextProvider>
-          {/* <Hero auth={auth} /> */}
           <Hero />
           <Restaurants />
           <Booking />

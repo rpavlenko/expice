@@ -163,17 +163,17 @@ export default function Navbar() {
           </div>
         ) : (
           <div className={styles.userInner}>
-            <div className={styles.user}>
-              <div onClick={logIn}>
+            <div onClick={logIn}>
+              <div className={styles.user}>
                 <StaticImage
                   className={styles.userIcon}
                   src="../../images/icons/user-icon.png"
                   alt="user icon"
                 />
+                <span className={styles.userName} ref={userName}>
+                  Login
+                </span>
               </div>
-              <span className={styles.userName} ref={userName}>
-                Login
-              </span>
             </div>
           </div>
         )}
