@@ -5,7 +5,19 @@ import Footer from '../components/Footer/Footer';
 
 import * as styles from './blog-post.module.scss';
 
-export default function BlogPost({ data }) {
+interface IData {
+  data: {
+    allWpPost: {
+      nodes: {
+        title: string;
+        content: string;
+        date: string;
+      }[];
+    };
+  };
+}
+
+export default function BlogPost({ data }: IData) {
   const post = data.allWpPost.nodes[0];
   console.log(post);
 

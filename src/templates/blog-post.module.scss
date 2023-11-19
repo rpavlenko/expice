@@ -6,6 +6,7 @@
   }
 
   h4 {
+    margin-top: 3rem;
     margin-bottom: 3rem;
     font-weight: normal;
   }
@@ -27,6 +28,10 @@
     margin-bottom: 2rem;
   }
 
+  figure {
+    text-align: center;
+  }
+
   img {
     display: block;
     margin: 0 auto;
@@ -34,6 +39,11 @@
 
   ol > li {
     margin-left: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  ul > li {
+    margin-bottom: 1rem;
   }
 }
 
@@ -54,6 +64,13 @@
 
 .postDate {
   margin-bottom: 3rem;
+}
+
+.markDownImage {
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 @media (min-width: 900px) {

@@ -8,13 +8,13 @@ Live link: [Expice web app](https://upbeat-jennings-ef82c3.netlify.app/)
 
 - [Info](#general-info)
 - [Technologies](#technologies)
-- [Aplication](#aplication)
+- [Application description](#application)
 - [Setup](#setup)
 - [Deployment](#deployment)
 
 ## General info
 
-"Expice" is a restaurant website. It is a frontend web application developed as a pet project, where Gatsby framework is connected to WordPress CMS, which sends blog posts data for static site generation using GraphQL.
+"Expice" is a restaurant multipage website. It is a frontend web application developed as a pet project, where Gatsby framework is connected to WordPress CMS, which sends blog posts data for static site generation using GraphQL.
 \
 All new added posts in WordPress are synced with Netlify platform, where frontend app is published, so each time user adds new blog post in WordPress CMS app is automatically rebuilded on Netlify.
 
@@ -36,16 +36,53 @@ All new added posts in WordPress are synced with Netlify platform, where fronten
 - TypeScript
 - Sass
 - GraphQL
-- Wordpress
-- SwiperJS
+- Wordpress (as blog posts backend)
+- SwiperJS (slider)
 - Stripe (payments)
 - Firebase authentication with Google provider
+- Markdown for blog posts
 - Prettier
 - Eslint
 
-## Aplication
+## Application - page description
+
+### Main Page
+
+![](./src/images/readme-screens/main-page.png 'Main page')
+
+### Blog posts list
+
+![](./src/images/readme-screens/blog-post-list.png 'Blog posts list')
+
+### Shop items list
+
+![](./src/images/readme-screens/shop-items-list.png 'Shop items list')
+
+### Blog post page (Post data from Wordpress)
+
+![](./src/images/readme-screens/blog-post-md.png 'Blog post page from Wordpress')
+
+### Blog post page (Post data from Markdown file)
+
+![](./src/images/readme-screens/blog-post-md.png 'Blog post page from Markdown')
+
+### Netlify form submission (Send form to site owner via Netlify Forms)
 
 Netlify Forms were used in application for form submitting: [Netlify Forms setup](https://docs.netlify.com/forms/setup/).
+
+![](./src/images/readme-screens/netlify-form.png 'Netlify form submission')
+
+### React Context color form theme switch
+
+![](./src/images/readme-screens/make-it.png 'Change color')
+
+### Burger menu for mobile phones
+
+![](./src/images/readme-screens/burger-closed.png 'Burger menu')
+
+### Logged-in user
+
+![](./src/images/readme-screens/logged.png 'Logged-in user')
 
 ## Setup
 
