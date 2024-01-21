@@ -22,7 +22,7 @@ export default function BlogPost({ data }: IData) {
   const post = data.allWpPost.nodes[0];
 
   let disqusConfig = {
-    url: `${config.siteUrl + location.pathname}`,
+    url: `${'https://upbeat-jennings-ef82c3.netlify.app/' + location.pathname}`,
     identifier: post.id,
     title: post.title,
   };
