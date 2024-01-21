@@ -42,6 +42,12 @@ module.exports = {
         showSpinner: false,
       },
     },
+    {
+      resolve: `gatsby-plugin-disqus`,
+      options: {
+        shortname: `expice`,
+      },
+    },
     `gatsby-transformer-remark`,
     {
       resolve: `gatsby-source-wordpress`,

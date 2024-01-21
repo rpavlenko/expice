@@ -73,8 +73,19 @@
   margin: 0 auto;
 }
 
+.disqus {
+  margin: 0 auto;
+  margin-top: 3rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 @media (min-width: 900px) {
   .postContainer {
     padding-left: 0;
+  }
+
+  .disqus {
+    max-width: 50%;
   }
 }

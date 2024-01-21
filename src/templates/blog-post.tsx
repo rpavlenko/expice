@@ -2,6 +2,7 @@ import { graphql } from 'gatsby';
 import { ThemeContextProvider, AuthContextProvider } from '../context/Context';
 import Layout from '../components/Layout/Layout';
 import Footer from '../components/Footer/Footer';
+import { Disqus } from 'gatsby-plugin-disqus';
 
 import * as styles from './blog-post.module.scss';
 
@@ -19,7 +20,12 @@ interface IData {
 
 export default function BlogPost({ data }: IData) {
   const post = data.allWpPost.nodes[0];
-  console.log(post);
+
+  let disqusConfig = {
+    url: `${'https://upbeat-jennings-ef82c3.netlify.app/'}`,
+    identifier: post.id,
+    title: post.title,
+  };
 
   return (
     <>
@@ -39,6 +45,7 @@ export default function BlogPost({ data }: IData) {
                 dangerouslySetInnerHTML={{ __html: post.content }}
               />
             </div>
+            <Disqus className={styles.disqus} config={disqusConfig} />
           </Layout>
           <Footer />
         </ThemeContextProvider>
