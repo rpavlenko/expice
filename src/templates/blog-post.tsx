@@ -20,9 +20,10 @@ interface IData {
 
 export default function BlogPost({ data }: IData) {
   const post = data.allWpPost.nodes[0];
+  let pathname = typeof window !== 'undefined' ? window.location.pathname : '';
 
   let disqusConfig = {
-    url: `${'https://upbeat-jennings-ef82c3.netlify.app/' + location.pathname}`,
+    url: `${'https://upbeat-jennings-ef82c3.netlify.app/' + pathname}`,
     identifier: post.id,
     title: post.title,
   };
