@@ -50,6 +50,7 @@ export default function Home({ data }: IData) {
       <Helmet>
         <html lang="en" />
         <title>{title}</title>
+        <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="ea12f686-13c1-42a9-9723-caad27b78ec8" data-blockingmode="auto" type="text/javascript" async></script>
       </Helmet>
       <AuthContextProvider>
         <ThemeContextProvider>
