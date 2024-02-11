@@ -59,6 +59,21 @@ module.exports = {
         url: `https://romanpavlenko.pl/expice-blog/index.php?graphql`,
       },
     },
+    {
+    resolve: "gatsby-plugin-cookiebot",
+    options: {
+        // Required. Site's Cookiebot ID.
+        cookiebotId: "ea12f686-13c1-42a9-9723-caad27b78ec8",
+        // Optional. Turns on Cookiebot's manual mode. Defaults to false.
+        manualMode: true,
+        //  Optional. Skip blocking of GTM. Defaults to true if manualMode is set to true.
+        // blockGtm: false,
+        // Optional. Enables plugin in development. Will cause gatsby-plugin-google-tagmanager to thrown an error when pushing to dataLayer. Defaults to false.
+        includeInDevelopment: true,
+        // Optional. Debug mode for plugin development. Defaults to false.
+        pluginDebug: true,
+      },
+    },
   ],
   siteMetadata: {
     title: 'expice',
