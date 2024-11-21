@@ -56,14 +56,14 @@ module.exports = {
          * The full URL of the WordPress site's GraphQL API.
          * Example : 'https://www.example-site.com/graphql'
          */
-        url: `https://romanpavlenko.pl/expice-blog/index.php?graphql`,
+        url: `https://rpavlenko.pl/expice-blog/index.php?graphql`,
       },
     },
     {
-    resolve: "gatsby-plugin-cookiebot",
-    options: {
+      resolve: 'gatsby-plugin-cookiebot',
+      options: {
         // Required. Site's Cookiebot ID.
-        cookiebotId: "ea12f686-13c1-42a9-9723-caad27b78ec8",
+        cookiebotId: 'ea12f686-13c1-42a9-9723-caad27b78ec8',
         // Optional. Turns on Cookiebot's manual mode. Defaults to false.
         manualMode: true,
         //  Optional. Skip blocking of GTM. Defaults to true if manualMode is set to true.
