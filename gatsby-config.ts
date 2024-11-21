@@ -4,6 +4,8 @@
  * See: https://www.gatsbyjs.com/docs/gatsby-config/
  */
 
+require('dotenv').config();
+
 module.exports = {
   /* Your site config here */
   plugins: [
@@ -56,7 +58,7 @@ module.exports = {
          * The full URL of the WordPress site's GraphQL API.
          * Example : 'https://www.example-site.com/graphql'
          */
-        url: `https://rpavlenko.pl/expice-blog/index.php?graphql`,
+        url: process.env.GATSBY_API_URL,
       },
     },
     {
