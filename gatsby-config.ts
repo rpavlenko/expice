@@ -71,7 +71,7 @@ module.exports = {
         // Optional. Enables plugin in development. Will cause gatsby-plugin-google-tagmanager to thrown an error when pushing to dataLayer. Defaults to false.
         includeInDevelopment: true,
         // Optional. Debug mode for plugin development. Defaults to false.
-        pluginDebug: true,
+        // pluginDebug: false,
       },
     },
   ],
